@@ -1,518 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the list of SCI Journals published by Rajesh Kumar">
-    <title>SCI Journals List</title>
-    <style>
-        /* General reset and box-sizing */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="47 journal articles, including newly listed 2025–2027 research, with author order and publisher links from the CV.">
+<meta name="color-scheme" content="light">
+<title>Journal articles | Rajesh Kumar — Publications</title>
+<style>
+:root {color-scheme:light;--ink:#292530;--sub:#635e68;--primary:#82465a;--primary-dark:#6b3549;--accent:#ecdfe4;--line:#e8e1e5;--bg:#faf8f9;--surface:#fff;--shadow:0 5px 25px rgba(56,31,44,.045)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font:15px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--primary)}a:hover{text-decoration-color:var(--ink)}a:focus-visible,select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid #bd87a0;outline-offset:3px}
+.wrap{width:min(1200px,calc(100% - 44px));margin:auto}
+.hero{background:linear-gradient(126deg,#693849,#82465a 57%,#9b5c72);color:white;padding:38px 0 34px}
+.eyebrow{font-size:.78rem;font-weight:750;text-transform:uppercase;letter-spacing:.13em;opacity:.85;margin:0 0 12px}
+h1{font-size:clamp(2rem,4vw,3.1rem);line-height:1.16;margin:0;letter-spacing:-.03em}
+.hero p{color:#f6eaf0;margin:12px 0 0;max-width:720px;font-size:1rem}
+.nav{background:#fff;border-bottom:1px solid var(--line)}.nav .wrap{display:flex;gap:4px;align-items:center;flex-wrap:wrap;padding:10px 0}
+.nav a{text-decoration:none;white-space:nowrap;font-size:.9rem;padding:9px 12px;border-radius:7px;color:#554953;font-weight:600}
+.nav a:hover{background:#f5edf0}.nav a[aria-current="page"]{background:var(--accent);color:var(--primary-dark)}
+main{padding:26px 0 54px}.intro{display:flex;align-items:flex-end;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:22px}
+.intro h2{font-size:1.3rem;letter-spacing:-.015em;margin:0}.intro p{margin:5px 0 0;color:var(--sub);max-width:780px}
+.count{font-variant-numeric:tabular-nums;font-weight:750;color:var(--primary);font-size:1.06rem}
+.category-strip{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 24px}
+.category-strip a{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:20px;color:var(--ink);background:white;padding:8px 13px;text-decoration:none;font-size:.88rem}
+.category-strip a:hover{border-color:#d2a4b3;background:#fff8fa}.category-strip b{color:var(--primary);font-variant-numeric:tabular-nums}
+.tools{display:grid;grid-template-columns:minmax(220px,1fr) repeat(2,minmax(160px,190px));gap:12px;background:white;padding:15px;border:1px solid var(--line);border-radius:12px;margin-bottom:16px;box-shadow:var(--shadow)}
+.tools label{font-size:.79rem;color:var(--sub);font-weight:700;display:block;margin:0 0 5px}
+.tools input,.tools select{background:white;width:100%;padding:10px 12px;border:1px solid #d8cdd2;border-radius:7px;color:var(--ink);font:inherit;min-height:43px}
+.results{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 2px 10px;font-size:.88rem;color:var(--sub)}
+.paper-table{border:1px solid var(--line);width:100%;border-spacing:0;border-radius:13px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
+.paper-table th{background:#f0e7eb;text-align:left;white-space:nowrap;color:#5c3848;padding:13px 12px;font-size:.76rem;text-transform:uppercase;letter-spacing:.05em}
+.paper-table td{padding:17px 12px;vertical-align:top;border-top:1px solid var(--line);font-size:.89rem}
+.paper-table tbody tr:hover{background:#fdfafb}.num{width:40px;color:#877a81;white-space:nowrap;font-variant-numeric:tabular-nums}
+.papertitle{font-weight:720;color:#2c2630;font-size:.98rem;line-height:1.4;margin-bottom:6px}
+.authors{font-size:.81rem;line-height:1.5;color:#6c626b}.self{font-weight:770;color:var(--primary-dark)}
+.source{min-width:170px;max-width:310px;color:#4c4550}.source small{display:block;margin-top:5px;color:#7d737d}
+.year,.position,.citations{white-space:nowrap;font-variant-numeric:tabular-nums}
+.year small{display:block;font-size:.71rem;color:#976079;white-space:normal}
+.pill{display:inline-block;border:1px solid #e1c9d1;background:#faf1f4;color:#754156;padding:4px 7px;border-radius:5px;font-size:.76rem;font-weight:750;white-space:nowrap}
+.outlink{white-space:nowrap;display:inline-block;background:var(--primary);color:white;text-decoration:none;padding:7px 11px;border-radius:6px;font-size:.81rem;font-weight:750}
+.outlink:hover{background:var(--primary-dark);color:white}
+.notes{margin-top:17px;border-top:1px solid var(--line);padding:17px 2px;font-size:.82rem;color:var(--sub)}.notes p{margin:0 0 7px}
+.empty{padding:20px!important;text-align:center;color:var(--sub)}
+footer{padding:20px 0 35px;color:#827780;text-align:center;font-size:.78rem}
+@media(max-width:900px){.tools{grid-template-columns:1fr 1fr}.tools>.search{grid-column:1/-1}.paper-table th,.paper-table .num{display:none}
+.paper-table,.paper-table tbody,.paper-table tr,.paper-table td{display:block;width:100%}.paper-table{border:0;background:transparent;box-shadow:none}.paper-table tr{border:1px solid var(--line);border-radius:11px;background:white;margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden;padding:8px 14px}.paper-table td{border:0;padding:6px 0;min-width:0;max-width:none;font-size:.87rem}.paper-table td::before{content:attr(data-label);font-size:.72rem;color:#85747d;font-weight:740;letter-spacing:.01em;display:inline-block;width:95px;vertical-align:top}.paper-table td.title-cell::before{display:none}.paper-table td.title-cell{padding:12px 0 4px}.paper-table .source small{display:inline}.paper-table .year small{display:inline;margin-left:6px}.paper-table td.link-cell{padding:11px 0}.paper-table td.link-cell::before{display:none}}
+@media(max-width:520px){.wrap{width:min(100% - 28px,1200px)}.hero{padding:30px 0 27px}.nav .wrap{gap:0}.nav a{font-size:.81rem;padding:8px}.tools{grid-template-columns:1fr}.tools>.search{grid-column:auto}.intro{align-items:flex-start}.results{align-items:flex-start}.category-strip a{padding:7px 10px}.paper-table td::before{width:87px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f7fc;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5em;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.2em;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 20px auto;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-
-        th, td {
-            padding: 15px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        tr:hover {
-            background-color: #f1f1f1;
-            cursor: pointer;
-        }
-
-        .button {
-            display: inline-block;
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            text-align: center;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #45a049;
-        }
-
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            table {
-                font-size: 0.9em;
-            }
-
-            .button {
-                font-size: 1em;
-                padding: 8px 16px;
-            }
-        }
-    </style>
+.tools-master{grid-template-columns:minmax(210px,1fr) repeat(3,minmax(150px,180px))}@media(max-width:900px){.tools-master{grid-template-columns:1fr 1fr}.tools-master>.search{grid-column:1/-1}}@media(max-width:520px){.tools-master{grid-template-columns:1fr}.tools-master>.search{grid-column:auto}}</style>
 </head>
 <body>
+<header class="hero"><div class="wrap"><p class="eyebrow">Rajesh Kumar · Academic publications</p>
+<h1>Journal articles</h1><p>47 journal articles, including newly listed 2025–2027 research, with author order and publisher links from the CV.</p></div></header>
+<nav class="nav" aria-label="Research portfolio sections"><div class="wrap"><a href="research-portfolio.html">Portfolio</a><a href="publications.html">All papers</a><a href="journal-papers.html" aria-current="page">Journals</a><a href="conference-papers.html">Conferences</a><a href="other-articles.html">Other articles</a><a href="book-chapter.html">Book chapters</a><a href="preprints.html">Preprints</a><a href="patents.html">Patents &amp; designs</a></div></nav>
+<main class="wrap"><section class="intro" aria-label="Page introduction"><div><h2>Publication list</h2><p>Full titles, authors, publication details and original source links.</p></div><div class="count">47 records</div></section>
+<div class="category-strip" aria-label="Browse by type"><a href="journal-papers.html">Journal articles <b>47</b></a><a href="other-articles.html">Other peer-reviewed articles <b>5</b></a><a href="conference-papers.html">Conference papers <b>19</b></a><a href="book-chapter.html">Book chapters <b>1</b></a><a href="preprints.html">Preprints <b>6</b></a></div>
+<div class="tools" role="search" aria-label="Search papers">
+<div class="search"><label for="search">Search papers, authors or venues</label><input id="search" type="search" placeholder="Search by keyword, title or author…" autocomplete="off"></div>
 
-    <!-- Header Section -->
-    <header>
-        <h1>SCI Journals List</h1>
-        <p>Explore the research published by Rajesh Kumar in top-tier scientific journals</p>
-    </header>
-
-    <!-- Main Content Section -->
-    <div class="container">
-        <table>
-            <thead>
-                <tr>
-                    <th>S#</th>
-                    <th>Title</th>
-                    <th>Author Order</th>
-                    <th>Journal Name</th>
-                    <th>Date</th>
-                    <th>Cited</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>MID-LLM: Enhancing Medical Image Diagnostics With LLMs in a Blockchain AI Framework</td>
-                    <td>1</td>
-                    <td>IEEE Internet of Things Journal</td>
-                    <td>06/27/2025</td>
-                    <td>23</td>
-                    <td><a href="https://ieeexplore.ieee.org/abstract/document/11053220/" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Blockchain and homomorphic encryption-based privacy-preserving model aggregation for medical images</td>
-                    <td>1</td>
-                    <td>Computerized Medical Imaging and Graphics</td>
-                    <td>10/20/2022</td>
-                    <td>23</td>
-                    <td><a href="https://www.sciencedirect.com/science/article/abs/pii/S0895611122001094" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Blockchain-federated-learning and deep learning models for covid-19 detection using CT imaging</td>
-                    <td>1</td>
-                    <td>IEEE Sensors Journal</td>
-                    <td>7/15/2021</td>
-                    <td>420</td>
-                    <td><a href="https://ieeexplore.ieee.org/abstract/document/9420107" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>An integration of blockchain and AI for secure data sharing and detection of CT images for hospitals</td>
-                    <td>1</td>
-                    <td>Computerized Medical Imaging and Graphics</td>
-                    <td>1/1/2021</td>
-                    <td>140</td>
-                    <td><a href="https://www.sciencedirect.com/science/article/abs/pii/S0895611120301075" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Privacy-preserving blockchain-based federated learning for brain tumor segmentation</td>
-                    <td>1</td>
-                    <td>Computers in Biology and Medicine</td>
-                    <td>5/21/2024</td>
-                    <td>1</td>
-                    <td><a href="https://www.sciencedirect.com/science/article/pii/S0010482524007315" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>A multimodal malware detection technique for android IoT devices using various features</td>
-                    <td>1</td>
-                    <td>IEEE Access</td>
-                    <td>5/23/2019</td>
-                    <td>156</td>
-                    <td><a href="https://ieeexplore.ieee.org/abstract/document/8721053/" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Research on data mining of permission-induced risk for android IoT devices</td>
-                    <td>1</td>
-                    <td>Applied Sciences-Basel</td>
-                    <td>1/2/2019</td>
-                    <td>39</td>
-                    <td><a href="https://www.mdpi.com/2076-3417/9/2/277" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Secure large-scale E-voting system based on blockchain contract using a hybrid consensus model combined with sharding</td>
-                    <td>2</td>
-                    <td>ETRI Journal</td>
-                    <td>1/4/2021</td>
-                    <td>87</td>
-                    <td><a href="https://onlinelibrary.wiley.com/doi/full/10.4218/etrij.2019-0362" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>A federated learning approach for privacy protection in context-aware recommender systems</td>
-                    <td>2</td>
-                    <td>Computer Journal (Oxford Press)</td>
-                    <td>4/30/2021</td>
-                    <td>38</td>
-                    <td><a href="https://academic.oup.com/comjnl/article-abstract/64/7/1016/6259634?redirectedFrom=fulltext" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>Making assembly line in supply chain robust and secure using UHF RFID</td>
-                    <td>2</td>
-                    <td>Scientific Reports</td>
-                    <td>10/9/2021</td>
-                    <td>25</td>
-                    <td><a href="https://www.nature.com/articles/s41598-021-97598-5" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>An online semantic-enhanced graphical model for evolving short text stream clustering</td>
-                    <td>4</td>
-                    <td>IEEE Transactions on Cybernetics</td>
-                    <td>9/30/2021</td>
-                    <td>8</td>
-                    <td><a href="https://ieeexplore.ieee.org/document/9555489/" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>An efficient and provably secure ECC-based conditional privacy-preserving authentication for vehicle-to-vehicle communication in VANETs</td>
-                    <td>4</td>
-                    <td>IEEE Transactions on Vehicular Technology</td>
-                    <td>1/13/2021</td>
-                    <td>101</td>
-                    <td><a href="https://ieeexplore.ieee.org/abstract/document/9321754" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>Visual features with spatio-temporal-based fusion model for cross-dataset vehicle re-identification</td>
-                    <td>5</td>
-                    <td>Applied Sciences-Basel</td>
-                    <td>1/8/2020</td>
-                    <td>13</td>
-                    <td><a href="https://www.mdpi.com/2079-9292/9/7/1083" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td>Adaptive wavelet based MRI brain image de-noising</td>
-                    <td>3</td>
-                    <td>Frontiers in Neuroscience</td>
-                    <td>8/22/2020</td>
-                    <td>34</td>
-                    <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7388743/" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>15</td>
-                    <td>Efficient hybrid clustering scheme for data delivery using IoT-enabled vehicular ad hoc networks in smart city traffic congestion</td>
-                    <td>6</td>
-                    <td>Journal of Internet Technology</td>
-                    <td>1/12/2020</td>
-                    <td>11</td>
-                    <td><a href="https://jit.ndhu.edu.tw/article/view/2231" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>16</td>
-                    <td>Efficient and deep vehicle re-identification using multi-level feature extraction</td>
-                    <td>6</td>
-                    <td>Applied Sciences-Basel</td>
-                    <td>3/27/2019</td>
-                    <td>29</td>
-                    <td><a href="https://www.mdpi.com/2076-3417/9/7/1291" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>17</td>
-                    <td>An adaptive multi-layer botnet detection technique using machine learning classifiers</td>
-                    <td>3</td>
-                    <td>Applied Sciences-Basel</td>
-                    <td>11/6/2019</td>
-                    <td>161</td>
-                    <td><a href="https://www.mdpi.com/2076-3417/9/11/2375" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>Context-aware bidirectional neural model for Sindhi named entity recognition</td>
-                    <td>4</td>
-                    <td>Applied Sciences-Basel</td>
-                    <td>9/28/2021</td>
-                    <td>1</td>
-                    <td><a href="https://www.mdpi.com/2076-3417/11/19/9038" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>19</td>
-                    <td>Trends in vehicle re-identification past, present, and future: a comprehensive review</td>
-                    <td>5</td>
-                    <td>Mathematics</td>
-                    <td>11/27/2021</td>
-                    <td>28</td>
-                    <td><a href="https://www.mdpi.com/2227-7390/9/24/3162" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>20</td>
-                    <td>Multi-scale and direction target detecting in remote sensing images via modified YOLO-v4</td>
-                    <td>3</td>
-                    <td>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</td>
-                    <td>1/6/2022</td>
-                    <td>39</td>
-                    <td><a href="https://ieeexplore.ieee.org/abstract/document/9672697" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>21</td>
-                    <td>Robust mobile robot navigation in cluttered environments based on hybrid adaptive neuro-fuzzy inference and sensor fusion</td>
-                    <td>6</td>
-                    <td>Journal of King Saud University - Computer and Information Sciences</td>
-                    <td>3/9/2022</td>
-                    <td>9</td>
-                    <td><a href="https://www.sciencedirect.com/science/article/pii/S1319157822003135" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>22</td>
-                    <td>MCNN: A multi-level CNN model for the classification of brain tumors in IoT-healthcare systems</td>
-                    <td>3</td>
-                    <td>Journal of Ambient Intelligence and Humanized Computing</td>
-                    <td>7/30/2022</td>
-                    <td>7</td>
-                    <td><a href="https://link.springer.com/article/10.1007/s12652-022-04373-z" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>23</td>
-                    <td>Probabilistic approach to COVID-19 data analysis and forecasting future outbreaks using a Multi-Layer Perceptron Neural Network</td>
-                    <td>4</td>
-                    <td>Diagnostics</td>
-                    <td>12/10/2022</td>
-                    <td>5</td>
-                    <td><a href="https://www.mdpi.com/2075-4418/12/10/2539" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>24</td>
-                    <td>Addressee Detection Using Facial and Audio Features in Mixed Human–Human and Human–Robot Settings: A Deep Learning Framework</td>
-                    <td>9</td>
-                    <td>IEEE Systems Man and Cybernetics Magazine</td>
-                    <td>12/1/2022</td>
-                    <td>1</td>
-                    <td><a href="https://ieeexplore.ieee.org/document/10104108" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>25</td>
-                    <td>Phased array antenna diagnosis from amplitude-only data using parallel deep learning models</td>
-                    <td>5</td>
-                    <td>Journal of Applied Remote Sensing</td>
-                    <td>9/9/2023</td>
-                    <td>3</td>
-                    <td><a href="https://www.spiedigitallibrary.org/journals/journal-of-applied-remote-sensing/volume-17/issue-1/017502/Phased-array-antenna-diagnosis-from-amplitude-only-data-using-parallel/10.1117/1.JRS.17.017502.short?SSO=1" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>26</td>
-                    <td>Stock market index prediction using machine learning and deep learning techniques</td>
-                    <td>6</td>
-                    <td>Intelligent Automation & Soft Computing</td>
-                    <td>2/24/2023</td>
-                    <td>1</td>
-                    <td><a href="https://www.techscience.com/iasc/v37n2/53230" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>27</td>
-                    <td>View-aware attribute-guided network for vehicle re-identification</td>
-                    <td>3</td>
-                    <td>Multimedia Systems</td>
-                    <td>12/3/2023</td>
-                    <td>6</td>
-                    <td><a href="https://link.springer.com/article/10.1007/s00530-023-01077-y" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>28</td>
-                    <td>Bio-inspired circular polarized UHF RFID tag design using characteristic mode analysis</td>
-                    <td>2</td>
-                    <td>IEEE Sensors Journal</td>
-                    <td>3/26/2023</td>
-                    <td>3</td>
-                    <td><a href="https://ieeexplore.ieee.org/document/10090430" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>29</td>
-                    <td>A Context-enhanced Dirichlet Model for Online Clustering in Short Text Streams</td>
-                    <td>3</td>
-                    <td>Expert Systems with Applications</td>
-                    <td>4/23/2023</td>
-                    <td>1</td>
-                    <td><a href="https://www.sciencedirect.com/science/article/pii/S0957417423007649" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>30</td>
-                    <td>LSS: A locality-based structure system to evaluate the spreader’s importance in social complex networks</td>
-                    <td>6</td>
-                    <td>Expert Systems with Applications</td>
-                    <td>4/29/2023</td>
-                    <td>8</td>
-                    <td><a href="https://www.sciencedirect.com/science/article/pii/S095741742300828X" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>31</td>
-                    <td>Online Semi-supervised Classification on Multi-label Evolving High-Dimensional Text Streams</td>
-                    <td>3</td>
-                    <td>IEEE Transactions on Systems, Man, and Cybernetics</td>
-                    <td>5/6/2023</td>
-                    <td>1</td>
-                    <td><a href="https://ieeexplore.ieee.org/document/10143404/" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>32</td>
-                    <td>Responsible Recommendation Services with Blockchain Empowered Asynchronous Federated Learning</td>
-                    <td>2</td>
-                    <td>Transactions on Intelligent Systems and Technology</td>
-                    <td>11/23/2023</td>
-                    <td>2</td>
-                    <td><a href="https://dl.acm.org/doi/abs/10.1145/3633520" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>33</td>
-                    <td>Application of no-light fault prediction of PON based on deep learning method</td>
-                    <td>4</td>
-                    <td>Computer Communications</td>
-                    <td>9/6/2023</td>
-                    <td>2</td>
-                    <td><a href="https://www.sciencedirect.com/science/article/pii/S0140366423001925" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>34</td>
-                    <td>Nature-Inspired spider web shaped UHF RFID reader antenna for IoT and healthcare</td>
-                    <td>2</td>
-                    <td>Scientific Reports</td>
-                    <td>8/28/2023</td>
-                    <td>Open</td>
-                    <td><a href="https://www.nature.com/articles/s41598-023-39825-9" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>35</td>
-                    <td>Autonomous ship navigation with an enhanced safety collision avoidance technique</td>
-                    <td>4</td>
-                    <td>ISA Transactions</td>
-                    <td>10/16/2023</td>
-                    <td>1</td>
-                    <td><a href="https://www.sciencedirect.com/science/article/pii/S0019057823004718?dgcid=coauthor" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>36</td>
-                    <td>An Assisted Diagnosis of Alzheimer's Disease Incorporating Attention Mechanisms Med-3D Transfer Modeling</td>
-                    <td>6</td>
-                    <td>CMC-Computers, Materials & Continua</td>
-                    <td>1/1/2024</td>
-                    <td>1</td>
-                    <td><a href="https://cdn.techscience.cn/files/cmc/2024/TSP_CMC-78-1/TSP_CMC_46872/TSP_CMC_46872.pdf" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>37</td>
-                    <td>Effective time-series Data Augmentation with Analytic Wavelets for bearing fault diagnosis</td>
-                    <td>5</td>
-                    <td>Expert Systems with Applications</td>
-                    <td>1/9/2024</td>
-                    <td>4</td>
-                    <td><a href="https://www.sciencedirect.com/science/article/pii/S0957417424004019?dgcid=coauthor" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>38</td>
-                    <td>An intelligent neural network model to detect red blood cells for various blood structure classification in microscopic medical images</td>
-                    <td>6</td>
-                    <td>Heliyon</td>
-                    <td>2/13/2024</td>
-                    <td>1</td>
-                    <td><a href="https://www.cell.com/heliyon/pdf/S2405-8440(24)02180-7.pdf" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>39</td>
-                    <td>Blockchain-Based Trusted Tracking Smart Sensing Network to Prevent the Spread of Infectious Diseases</td>
-                    <td>2</td>
-                    <td>IRBM</td>
-                    <td>2/07/2024</td>
-                    <td>4</td>
-                    <td><a href="https://www.sciencedirect.com/science/article/pii/S1959031824000101" class="button">Open</a></td>
-                </tr>
-                <tr>
-                    <td>40</td>
-                    <td>3DFFL: Privacy-preserving Federated Few-Shot Learning for 3D point clouds in autonomous vehicles</td>
-                    <td>5</td>
-                    <td>Scientific Reports</td>
-                    <td>8/28/2024</td>
-                    <td>1</td>
-                    <td><a href="https://www.nature.com/articles/s41598-024-70326-5" class="button">Open</a></td>
-                </tr>
-
-                 <tr>
-                    <td>41</td>
-                    <td>Zero-Trust Medical Image Sharing: A Secure and Decentralized Approach Using Blockchain and the IPFS.</td>
-                    <td>5</td>
-                    <td>Symmetry</td>
-                    <td>4/1/2025</td>
-                    <td>1</td>
-                    <td><a href="https://www.mdpi.com/2073-8994/17/4/551" class="button">Open</a></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <!-- Button for additional actions -->
-        <a href="#" class="button">View More Journals</a>
-    </div>
-
-</body>
-</html>
-
+<div><label for="year">Publication year</label><select id="year"><option value="">All years</option></select></div>
+<div><label for="sort">Sort</label><select id="sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="title">Title A–Z</option></select></div></div>
+<div class="results"><span id="count" aria-live="polite">47 of 47 publications</span><span>Publication year as listed in the CV</span></div>
+<table class="paper-table" id="papers"><thead><tr>
+<th scope="col">#</th><th scope="col">Title &amp; authors</th><th scope="col">Source &amp; details</th><th scope="col">Year</th><th scope="col">Author order</th><th scope="col">Citations*</th><th scope="col">Link</th>
+</tr></thead><tbody><tr data-year="2027" data-category="Journal articles" data-title="ann-guided multi-objective optimization of speek/mxene nanocomposite membranes for microbial fuel cell wastewater treatment and energy recovery" data-initial="0">
+<td class="num">1</td>
+<td class="title-cell"><div class="papertitle">ANN-guided multi-objective optimization of SPEEK/MXene nanocomposite membranes for microbial fuel cell wastewater treatment and energy recovery</div><div class="authors">Mehdi Sedighi, <strong class="self">Rajesh Kumar</strong>, Mostafa Ghasemi</div></td>
+<td class="source" data-label="Source">Biochemical Engineering Journal, 237, 110407, 2027.</td>
+<td class="year" data-label="Year">2027<small>CV lists 2027</small></td>
+<td class="position" data-label="Author order">2 of 3</td>
+<td class="citations" data-label="Legacy citations">—</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1016/j.bej.2026.110407" target="_blank" rel="noopener noreferrer" aria-label="Open publication: ANN-guided multi-objective optimization of SPEEK/MXene nanocomposite membranes for microbial fuel cell wastewater treatment and energy recovery">View paper ↗</a></td>
+</tr><tr data-year="2026" data-category="Journal articles" data-title="a secure, transparent, and decentralised framework for cross-domain healthcare data sharing using blockchain-based ehrs" data-initial="1">
+<td class="num">2</td>
+<td class="title-cell"><div class="papertitle">A secure, transparent, and decentralised framework for cross-domain healthcare data sharing using blockchain-based EHRs</div><div class="authors">Riaz Ullah Khan, <strong class="self">Rajesh Kumar</strong>, Abu Bakar Sharif</div></td>
+<td class="source" data-label="Source">Journal of Cyber Security Technology, 10(1), article 2706567, 2026.</td>
+<td class="year" data-label="Year">2026</td>
+<td class="position" data-label="Author order">2 of 3</td>
+<td class="citations" data-label="Legacy citations">—</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1080/23742917.2026.2706567" target="_blank" rel="noopener noreferrer" aria-label="Open publication: A secure, transparent, and decentralised framework for cross-domain healthcare data sharing using blockchain-based EHRs">View paper ↗</a></td>
+</tr><tr data-year="2026" data-category="Journal articles" data-title="random forest and differential evolution for maximizing microbial fuel cell performance in wastewater remediation" data-initial="2">
+<td class="num">3</td>
+<td class="title-cell"><div class="papertitle">Random Forest and differential evolution for maximizing microbial fuel cell performance in wastewater remediation</div><div class="authors">Kimia Rostami, <strong class="self">Rajesh Kumar</strong>, Abdalla M. Abdalla, Mehdi Sedighi, Mostafa Ghasemi</div></td>
+<td class="source" data-label="Source">Biomass and Bioenergy, 208, 108868, 2026.</td>
+<td class="year" data-label="Year">2026</td>
+<td class="position" data-label="Author order">2 of 5</td>
+<td class="citations" data-label="Legacy citations">—</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1016/j.biombioe.2025.108868" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Random Forest and differential evolution for maximizing microbial fuel cell performance in wastewater remediation">View paper ↗</a></td>
+</tr><tr data-year="2026" data-category="Journal articles" data-title="repfl: lag-resilient personalized federated learning for skin cancer detection under extreme non-iid heterogeneity" data-initial="3">
+<td class="num">4</td>
+<td class="title-cell"><div class="papertitle">RePFL: lag-resilient personalized federated learning for skin cancer detection under extreme non-IID heterogeneity</div><div class="authors">Judith Ayekai Browne, Chen Wenyu, Khalid Odartey Lamptey, Delanyo Kwame Bensah, Edward Mensah Acheampong, <strong class="self">Rajesh Kumar</strong>, Najma Imtiaz Ali, Nurul A. Emran</div></td>
+<td class="source" data-label="Source">Scientific Reports, 2026.</td>
+<td class="year" data-label="Year">2026</td>
+<td class="position" data-label="Author order">6 of 8</td>
+<td class="citations" data-label="Legacy citations">—</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1038/s41598-026-64096-5" target="_blank" rel="noopener noreferrer" aria-label="Open publication: RePFL: lag-resilient personalized federated learning for skin cancer detection under extreme non-IID heterogeneity">View paper ↗</a></td>
+</tr><tr data-year="2025" data-category="Journal articles" data-title="botward: a resilient framework for detecting and mitigating botnets in complex social networks through pseudo-random nickname identification" data-initial="4">
+<td class="num">5</td>
+<td class="title-cell"><div class="papertitle">BotWard: A resilient framework for detecting and mitigating botnets in complex social networks through pseudo-random nickname identification</div><div class="authors">Riaz Ullah Khan, Hanan Aljuaid, Dawar Khan, <strong class="self">Rajesh Kumar</strong></div></td>
+<td class="source" data-label="Source">Peer-to-Peer Networking and Applications, 18(6), article 303, 2025.</td>
+<td class="year" data-label="Year">2025</td>
+<td class="position" data-label="Author order">4 of 4</td>
+<td class="citations" data-label="Legacy citations">—</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1007/s12083-025-02110-9" target="_blank" rel="noopener noreferrer" aria-label="Open publication: BotWard: A resilient framework for detecting and mitigating botnets in complex social networks through pseudo-random nickname identification">View paper ↗</a></td>
+</tr><tr data-year="2025" data-category="Journal articles" data-title="mid-llm: enhancing medical image diagnostics with llms in a blockchain ai framework" data-initial="5">
+<td class="num">6</td>
+<td class="title-cell"><div class="papertitle">MID-LLM: Enhancing Medical Image Diagnostics With LLMs in a Blockchain AI Framework</div><div class="authors"><strong class="self">Rajesh Kumar</strong>, Yunbo Rao, Jay Kumar, Cobbinah B. Mawuli, Waqar Ali, Shaoning Zeng</div></td>
+<td class="source" data-label="Source">IEEE Internet of Things Journal, 12(18), 37160–37174, 2025.</td>
+<td class="year" data-label="Year">2025</td>
+<td class="position" data-label="Author order">1 of 6</td>
+<td class="citations" data-label="Legacy citations">23</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1109/JIOT.2025.3583408" target="_blank" rel="noopener noreferrer" aria-label="Open publication: MID-LLM: Enhancing Medical Image Diagnostics With LLMs in a Blockchain AI Framework">View paper ↗</a></td>
+</tr><tr data-year="2025" data-category="Journal articles" data-title="privacy-preserving federated transfer learning for enhanced liver lesion segmentation in pet-ct imaging" data-initial="6">
+<td class="num">7</td>
+<td class="title-cell"><div class="papertitle">Privacy-preserving federated transfer learning for enhanced liver lesion segmentation in PET-CT imaging</div><div class="authors"><strong class="self">Rajesh Kumar</strong>, Shaoning Zeng, Jay Kumar, Zakria, Xinfeng Mao</div></td>
+<td class="source" data-label="Source">Artificial Intelligence in Medicine, 169, 103245, 2025.</td>
+<td class="year" data-label="Year">2025</td>
+<td class="position" data-label="Author order">1 of 5</td>
+<td class="citations" data-label="Legacy citations">—</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1016/j.artmed.2025.103245" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Privacy-preserving federated transfer learning for enhanced liver lesion segmentation in PET-CT imaging">View paper ↗</a></td>
+</tr><tr data-year="2025" data-category="Journal articles" data-title="zero-trust medical image sharing: a secure and decentralized approach using blockchain and the ipfs" data-initial="7">
+<td class="num">8</td>
+<td class="title-cell"><div class="papertitle">Zero-Trust Medical Image Sharing: A Secure and Decentralized Approach Using Blockchain and the IPFS</div><div class="authors">Ali Shahzad, Wenyu Chen, Yin Zhang, <strong class="self">Rajesh Kumar</strong></div></td>
+<td class="source" data-label="Source">Symmetry, 17(4), 551, 2025.</td>
+<td class="year" data-label="Year">2025</td>
+<td class="position" data-label="Author order">4 of 4</td>
+<td class="citations" data-label="Legacy citations">1</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.3390/sym17040551" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Zero-Trust Medical Image Sharing: A Secure and Decentralized Approach Using Blockchain and the IPFS">View paper ↗</a></td>
+</tr><tr data-year="2024" data-category="Journal articles" data-title="3dffl: privacy-preserving federated few-shot learning for 3d point clouds in autonomous vehicles" data-initial="8">
+<td class="num">9</td>
+<td class="title-cell"><div class="papertitle">3DFFL: Privacy-Preserving Federated Few-Shot Learning for 3D Point Clouds in Autonomous Vehicles</div><div class="authors">Abdullah Aman Khan, Khwaja Mutahir Ahmad, Sidra Shafiq, Waqas Amin, <strong class="self">Rajesh Kumar</strong></div></td>
+<td class="source" data-label="Source">Scientific Reports, 14, 2024.</td>
+<td class="year" data-label="Year">2024</td>
+<td class="position" data-label="Author order">5 of 5</td>
+<td class="citations" data-label="Legacy citations">1</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1038/s41598-024-70326-5" target="_blank" rel="noopener noreferrer" aria-label="Open publication: 3DFFL: Privacy-Preserving Federated Few-Shot Learning for 3D Point Clouds in Autonomous Vehicles">View paper ↗</a></td>
+</tr><tr data-year="2024" data-category="Journal articles" data-title="an assisted diagnosis of alzheimer&#x27;s disease incorporating attention mechanisms med-3d transfer modeling" data-initial="9">
+<td class="num">10</td>
+<td class="title-cell"><div class="papertitle">An Assisted Diagnosis of Alzheimer&#x27;s Disease Incorporating Attention Mechanisms Med-3D Transfer Modeling</div><div class="authors">Yanmei Li, Jinghong Tang, Weiwu Ding, Jian Luo, Naveed Ahmad, <strong class="self">Rajesh Kumar</strong></div></td>
+<td class="source" data-label="Source">Computers, Materials &amp; Continua, 78(1), 713–733, 2024.</td>
+<td class="year" data-label="Year">2024</td>
+<td class="position" data-label="Author order">6 of 6</td>
+<td class="citations" data-label="Legacy citations">1</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.32604/cmc.2023.046872" target="_blank" rel="noopener noreferrer" aria-label="Open publication: An Assisted Diagnosis of Alzheimer&#x27;s Disease Incorporating Attention Mechanisms Med-3D Transfer Modeling">View paper ↗</a></td>
+</tr><tr data-year="2024" data-category="Journal articles" data-title="an intelligent neural network model to detect red blood cells for various blood structure classification in microscopic medical images" data-initial="10">
+<td class="num">11</td>
+<td class="title-cell"><div class="papertitle">An Intelligent Neural Network Model to Detect Red Blood Cells for Various Blood Structure Classification in Microscopic Medical Images</div><div class="authors">Riaz Ullah Khan, Sultan Almakdi, Mohammed Alshehri, Amin Ul Haq, Aman Ullah, <strong class="self">Rajesh Kumar</strong></div></td>
+<td class="source" data-label="Source">Heliyon, 10(4), e26149, 2024.</td>
+<td class="year" data-label="Year">2024</td>
+<td class="position" data-label="Author order">6 of 6</td>
+<td class="citations" data-label="Legacy citations">1</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1016/j.heliyon.2024.e26149" target="_blank" rel="noopener noreferrer" aria-label="Open publication: An Intelligent Neural Network Model to Detect Red Blood Cells for Various Blood Structure Classification in Microscopic Medical Images">View paper ↗</a></td>
+</tr><tr data-year="2024" data-category="Journal articles" data-title="autonomous ship navigation with an enhanced safety collision avoidance technique" data-initial="11">
+<td class="num">12</td>
+<td class="title-cell"><div class="papertitle">Autonomous Ship Navigation with an Enhanced Safety Collision Avoidance Technique</div><div class="authors">Hub Ali, Gang Xiong, Qu Tianci, <strong class="self">Rajesh Kumar</strong>, Xisong Dong, Zhen Shen</div></td>
+<td class="source" data-label="Source">ISA Transactions, 144, 271–281, 2024.</td>
+<td class="year" data-label="Year">2024</td>
+<td class="position" data-label="Author order">4 of 6</td>
+<td class="citations" data-label="Legacy citations">1</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1016/j.isatra.2023.10.019" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Autonomous Ship Navigation with an Enhanced Safety Collision Avoidance Technique">View paper ↗</a></td>
+</tr><tr data-year="2024" data-category="Journal articles" data-title="blockchain-based trusted tracking smart sensing network to prevent the spread of infectious diseases" data-initial="12">
+<td class="num">13</td>
+<td class="title-cell"><div class="papertitle">Blockchain-Based Trusted Tracking Smart Sensing Network to Prevent the Spread of Infectious Diseases</div><div class="authors">Riaz Ullah Khan, <strong class="self">Rajesh Kumar</strong>, Amin Ul Haq, Inayat Khan, Mohammad Shabaz, Faheem Khan</div></td>
+<td class="source" data-label="Source">IRBM, 2024.</td>
+<td class="year" data-label="Year">2024</td>
+<td class="position" data-label="Author order">2 of 6</td>
+<td class="citations" data-label="Legacy citations">4</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://www.sciencedirect.com/science/article/pii/S1959031824000101" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Blockchain-Based Trusted Tracking Smart Sensing Network to Prevent the Spread of Infectious Diseases">View paper ↗</a></td>
+</tr><tr data-year="2024" data-category="Journal articles" data-title="effective time-series data augmentation with analytic wavelets for bearing fault diagnosis" data-initial="13">
+<td class="num">14</td>
+<td class="title-cell"><div class="papertitle">Effective Time-Series Data Augmentation with Analytic Wavelets for Bearing Fault Diagnosis</div><div class="authors">Delanyo Kwame Bensah Kulevome, Hong Wang, Bernard Mawuli Cobbinah, Ernest Smith Mawuli, <strong class="self">Rajesh Kumar</strong></div></td>
+<td class="source" data-label="Source">Expert Systems with Applications, 249, 123536, 2024.</td>
+<td class="year" data-label="Year">2024</td>
+<td class="position" data-label="Author order">5 of 5</td>
+<td class="citations" data-label="Legacy citations">4</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1016/j.eswa.2024.123536" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Effective Time-Series Data Augmentation with Analytic Wavelets for Bearing Fault Diagnosis">View paper ↗</a></td>
+</tr><tr data-year="2024" data-category="Journal articles" data-title="privacy-preserving blockchain-based federated learning for brain tumor segmentation" data-initial="14">
+<td class="num">15</td>
+<td class="title-cell"><div class="papertitle">Privacy-preserving blockchain-based federated learning for brain tumor segmentation</div><div class="authors"><strong class="self">Rajesh Kumar</strong>, Cobbinah M. Bernard, Aman Ullah, Riaz Ullah Khan, Jay Kumar, Delanyo K. B. Kulevome, Rao Yunbo, Shaoning Zeng</div></td>
+<td class="source" data-label="Source">Computers in Biology and Medicine, 177, 108646, 2024.</td>
+<td class="year" data-label="Year">2024</td>
+<td class="position" data-label="Author order">1 of 8</td>
+<td class="citations" data-label="Legacy citations">1</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1016/j.compbiomed.2024.108646" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Privacy-preserving blockchain-based federated learning for brain tumor segmentation">View paper ↗</a></td>
+</tr><tr data-year="2024" data-category="Journal articles" data-title="responsible recommendation services with blockchain empowered asynchronous federated learning" data-initial="15">
+<td class="num">16</td>
+<td class="title-cell"><div class="papertitle">Responsible Recommendation Services with Blockchain Empowered Asynchronous Federated Learning</div><div class="authors">Waqar Ali, <strong class="self">Rajesh Kumar</strong>, Xiangmin Zhou, Jie Shao</div></td>
+<td class="source" data-label="Source">ACM Transactions on Intelligent Systems and Technology, 15(4), Article 78, 2024.</td>
+<td class="year" data-label="Year">2024</td>
+<td class="position" data-label="Author order">2 of 4</td>
+<td class="citations" data-label="Legacy citations">2</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1145/3633520" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Responsible Recommendation Services with Blockchain Empowered Asynchronous Federated Learning">View paper ↗</a></td>
+</tr><tr data-year="2023" data-category="Journal articles" data-title="a context-enhanced dirichlet model for online clustering in short text streams" data-initial="16">
+<td class="num">17</td>
+<td class="title-cell"><div class="papertitle">A Context-Enhanced Dirichlet Model for Online Clustering in Short Text Streams</div><div class="authors">Jay Kumar, Junming Shao, <strong class="self">Rajesh Kumar</strong>, Salah Ud Din, Cobbinah B. Mawuli, Qinli Yang</div></td>
+<td class="source" data-label="Source">Expert Systems with Applications, 228, 120262, 2023.</td>
+<td class="year" data-label="Year">2023</td>
+<td class="position" data-label="Author order">3 of 6</td>
+<td class="citations" data-label="Legacy citations">1</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1016/j.eswa.2023.120262" target="_blank" rel="noopener noreferrer" aria-label="Open publication: A Context-Enhanced Dirichlet Model for Online Clustering in Short Text Streams">View paper ↗</a></td>
+</tr><tr data-year="2023" data-category="Journal articles" data-title="application of no-light fault prediction of pon based on deep learning method" data-initial="17">
+<td class="num">18</td>
+<td class="title-cell"><div class="papertitle">Application of No-Light Fault Prediction of PON Based on Deep Learning Method</div><div class="authors">Wei Jiang, Qiulin Qian, Wangwen Yong, <strong class="self">Rajesh Kumar</strong>, Junrui Wu, Hanwen Zhang</div></td>
+<td class="source" data-label="Source">Computer Communications, 208, 210–219, 2023.</td>
+<td class="year" data-label="Year">2023</td>
+<td class="position" data-label="Author order">4 of 6</td>
+<td class="citations" data-label="Legacy citations">2</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1016/j.comcom.2023.06.002" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Application of No-Light Fault Prediction of PON Based on Deep Learning Method">View paper ↗</a></td>
+</tr><tr data-year="2023" data-category="Journal articles" data-title="bio-inspired circular polarized uhf rfid tag design using characteristic mode analysis" data-initial="18">
+<td class="num">19</td>
+<td class="title-cell"><div class="papertitle">Bio-Inspired Circular Polarized UHF RFID Tag Design Using Characteristic Mode Analysis</div><div class="authors">Abubakar Sharif, <strong class="self">Rajesh Kumar</strong>, Turke Althobaiti, Abdullah Alhumaidi Alotaibi, Lubna Safi, Naeem Ramzan, Muhammad Ali Imran, Qammer H. Abbasi</div></td>
+<td class="source" data-label="Source">IEEE Sensors Journal, 2023.</td>
+<td class="year" data-label="Year">2023</td>
+<td class="position" data-label="Author order">2 of 8</td>
+<td class="citations" data-label="Legacy citations">3</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://ieeexplore.ieee.org/document/10090430" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Bio-Inspired Circular Polarized UHF RFID Tag Design Using Characteristic Mode Analysis">View paper ↗</a></td>
+</tr><tr data-year="2023" data-category="Journal articles" data-title="lss: a locality-based structure system to evaluate the spreader’s importance in social complex networks" data-initial="19">
+<td class="num">20</td>
+<td class="title-cell"><div class="papertitle">LSS: A Locality-Based Structure System to Evaluate the Spreader’s Importance in Social Complex Networks</div><div class="authors">Aman Ullah, Junming Shao, Qinli Yang, Nasrullah Khan, Cobbinah M. Bernard, <strong class="self">Rajesh Kumar</strong></div></td>
+<td class="source" data-label="Source">Expert Systems with Applications, 228, 120326, 2023.</td>
+<td class="year" data-label="Year">2023</td>
+<td class="position" data-label="Author order">6 of 6</td>
+<td class="citations" data-label="Legacy citations">8</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1016/j.eswa.2023.120326" target="_blank" rel="noopener noreferrer" aria-label="Open publication: LSS: A Locality-Based Structure System to Evaluate the Spreader’s Importance in Social Complex Networks">View paper ↗</a></td>
+</tr><tr data-year="2023" data-category="Journal articles" data-title="mcnn: a multi-level cnn model for the classification of brain tumors in iot-healthcare system" data-initial="20">
+<td class="num">21</td>
+<td class="title-cell"><div class="papertitle">MCNN: A Multi-Level CNN Model for the Classification of Brain Tumors in IoT-Healthcare System</div><div class="authors">Amin Ul Haq, Jian Ping Li, <strong class="self">Rajesh Kumar</strong>, Zafar Ali, Inayat Khan, M. Irfan Uddin, Bless Lord Y. Agbley</div></td>
+<td class="source" data-label="Source">Journal of Ambient Intelligence and Humanized Computing, 14(5), 4695–4706, 2023.</td>
+<td class="year" data-label="Year">2023</td>
+<td class="position" data-label="Author order">3 of 7</td>
+<td class="citations" data-label="Legacy citations">7</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1007/s12652-022-04373-z" target="_blank" rel="noopener noreferrer" aria-label="Open publication: MCNN: A Multi-Level CNN Model for the Classification of Brain Tumors in IoT-Healthcare System">View paper ↗</a></td>
+</tr><tr data-year="2023" data-category="Journal articles" data-title="nature-inspired spider web shaped uhf rfid reader antenna for iot and healthcare" data-initial="21">
+<td class="num">22</td>
+<td class="title-cell"><div class="papertitle">Nature-Inspired Spider Web Shaped UHF RFID Reader Antenna for IoT and Healthcare</div><div class="authors">Abubakar Sharif, <strong class="self">Rajesh Kumar</strong>, Kamran Arshad, Khaled Assaleh, Hassan Tariq Chattha, Muhammad Ali Imran, Qammer H. Abbasi</div></td>
+<td class="source" data-label="Source">Scientific Reports, 13, 2023.</td>
+<td class="year" data-label="Year">2023</td>
+<td class="position" data-label="Author order">2 of 7</td>
+<td class="citations" data-label="Legacy citations">—</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1038/s41598-023-39825-9" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Nature-Inspired Spider Web Shaped UHF RFID Reader Antenna for IoT and Healthcare">View paper ↗</a></td>
+</tr><tr data-year="2023" data-category="Journal articles" data-title="online semi-supervised classification on multi-label evolving high-dimensional text streams" data-initial="22">
+<td class="num">23</td>
+<td class="title-cell"><div class="papertitle">Online Semi-Supervised Classification on Multi-Label Evolving High-Dimensional Text Streams</div><div class="authors">Jay Kumar, Junming Shao, <strong class="self">Rajesh Kumar</strong>, Salah Ud Din, Cobbinah B. Mawuli, Qinli Yang</div></td>
+<td class="source" data-label="Source">IEEE Transactions on Systems, Man, and Cybernetics, 2023.</td>
+<td class="year" data-label="Year">2023</td>
+<td class="position" data-label="Author order">3 of 6</td>
+<td class="citations" data-label="Legacy citations">1</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://ieeexplore.ieee.org/document/10143404" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Online Semi-Supervised Classification on Multi-Label Evolving High-Dimensional Text Streams">View paper ↗</a></td>
+</tr><tr data-year="2023" data-category="Journal articles" data-title="phased array antenna diagnosis from amplitude-only data using parallel deep learning models" data-initial="23">
+<td class="num">24</td>
+<td class="title-cell"><div class="papertitle">Phased Array Antenna Diagnosis from Amplitude-Only Data Using Parallel Deep Learning Models</div><div class="authors">Delanyo Kwame Bensah Kulevome, Hong Wang, Xuegang Wang, <strong class="self">Rajesh Kumar</strong>, Bernard Cobbinah</div></td>
+<td class="source" data-label="Source">Journal of Applied Remote Sensing, 17(1), 017502, 2023.</td>
+<td class="year" data-label="Year">2023</td>
+<td class="position" data-label="Author order">4 of 5</td>
+<td class="citations" data-label="Legacy citations">3</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1117/1.JRS.17.017502" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Phased Array Antenna Diagnosis from Amplitude-Only Data Using Parallel Deep Learning Models">View paper ↗</a></td>
+</tr><tr data-year="2023" data-category="Journal articles" data-title="stock market index prediction using machine learning and deep learning techniques" data-initial="24">
+<td class="num">25</td>
+<td class="title-cell"><div class="papertitle">Stock Market Index Prediction Using Machine Learning and Deep Learning Techniques</div><div class="authors">Abdus Saboor, Arif Hussain, Bless Lord Y. Agbley, Amin ul Haq, Jian Ping Li, <strong class="self">Rajesh Kumar</strong></div></td>
+<td class="source" data-label="Source">Intelligent Automation &amp; Soft Computing, 37(2), 2023.</td>
+<td class="year" data-label="Year">2023</td>
+<td class="position" data-label="Author order">6 of 6</td>
+<td class="citations" data-label="Legacy citations">1</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://www.techscience.com/iasc/v37n2/53230" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Stock Market Index Prediction Using Machine Learning and Deep Learning Techniques">View paper ↗</a></td>
+</tr><tr data-year="2023" data-category="Journal articles" data-title="view-aware attribute-guided network for vehicle re-identification" data-initial="25">
+<td class="num">26</td>
+<td class="title-cell"><div class="papertitle">View-Aware Attribute-Guided Network for Vehicle Re-Identification</div><div class="authors">Saifullah Tumrani, Wazir Ali, <strong class="self">Rajesh Kumar</strong>, Abdullah Aman Khan, Fayaz Ali Dharejo</div></td>
+<td class="source" data-label="Source">Multimedia Systems, 2023.</td>
+<td class="year" data-label="Year">2023</td>
+<td class="position" data-label="Author order">3 of 5</td>
+<td class="citations" data-label="Legacy citations">6</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1007/s00530-023-01077-y" target="_blank" rel="noopener noreferrer" aria-label="Open publication: View-Aware Attribute-Guided Network for Vehicle Re-Identification">View paper ↗</a></td>
+</tr><tr data-year="2022" data-category="Journal articles" data-title="addressee detection using facial and audio features in mixed human-human and human-robot settings: a deep learning framework" data-initial="26">
+<td class="num">27</td>
+<td class="title-cell"><div class="papertitle">Addressee Detection Using Facial and Audio Features in Mixed Human-Human and Human-Robot Settings: A Deep Learning Framework</div><div class="authors">Fiseha B. Tesema, Jason Gu, Wei Song, Hong Wu, Shiqiang Zhu, Zheyuan Lin, Min Huang, Wen Wang, <strong class="self">Rajesh Kumar</strong></div></td>
+<td class="source" data-label="Source">IEEE Systems, Man, and Cybernetics Magazine, 2022.</td>
+<td class="year" data-label="Year">2022</td>
+<td class="position" data-label="Author order">9 of 9</td>
+<td class="citations" data-label="Legacy citations">1</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://ieeexplore.ieee.org/document/10104108" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Addressee Detection Using Facial and Audio Features in Mixed Human-Human and Human-Robot Settings: A Deep Learning Framework">View paper ↗</a></td>
+</tr><tr data-year="2022" data-category="Journal articles" data-title="an online semantic-enhanced graphical model for evolving short text stream clustering" data-initial="27">
+<td class="num">28</td>
+<td class="title-cell"><div class="papertitle">An Online Semantic-Enhanced Graphical Model for Evolving Short Text Stream Clustering</div><div class="authors">Jay Kumar, Salah Ud Din, Qinli Yang, <strong class="self">Rajesh Kumar</strong>, Junming Shao</div></td>
+<td class="source" data-label="Source">IEEE Transactions on Cybernetics, 52(12), 13809–13820, 2022.</td>
+<td class="year" data-label="Year">2022</td>
+<td class="position" data-label="Author order">4 of 5</td>
+<td class="citations" data-label="Legacy citations">8</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1109/TCYB.2021.3108897" target="_blank" rel="noopener noreferrer" aria-label="Open publication: An Online Semantic-Enhanced Graphical Model for Evolving Short Text Stream Clustering">View paper ↗</a></td>
+</tr><tr data-year="2022" data-category="Journal articles" data-title="blockchain and homomorphic encryption based privacy-preserving model aggregation for medical images" data-initial="28">
+<td class="num">29</td>
+<td class="title-cell"><div class="papertitle">Blockchain and homomorphic encryption based privacy-preserving model aggregation for medical images</div><div class="authors"><strong class="self">Rajesh Kumar</strong>, Jay Kumar, Abdullah Aman Khan, Zakria, Hub Ali, Cobbinah M. Bernard, Riaz Ullah Khan, Shaoning Zeng</div></td>
+<td class="source" data-label="Source">Computerized Medical Imaging and Graphics, 102, 102139, 2022.</td>
+<td class="year" data-label="Year">2022</td>
+<td class="position" data-label="Author order">1 of 8</td>
+<td class="citations" data-label="Legacy citations">23</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1016/j.compmedimag.2022.102139" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Blockchain and homomorphic encryption based privacy-preserving model aggregation for medical images">View paper ↗</a></td>
+</tr><tr data-year="2022" data-category="Journal articles" data-title="multi scale and direction target detecting in remote sensing images via modified yolo-v4" data-initial="29">
+<td class="num">30</td>
+<td class="title-cell"><div class="papertitle">Multi Scale and Direction Target Detecting in Remote Sensing Images via Modified YOLO-v4</div><div class="authors">Zakria, Jianhua Deng, <strong class="self">Rajesh Kumar</strong>, Muhammad Saddam Khokhar, Jingye Cai, Jay Kumar</div></td>
+<td class="source" data-label="Source">IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2022.</td>
+<td class="year" data-label="Year">2022</td>
+<td class="position" data-label="Author order">3 of 6</td>
+<td class="citations" data-label="Legacy citations">39</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://ieeexplore.ieee.org/document/9672697" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Multi Scale and Direction Target Detecting in Remote Sensing Images via Modified YOLO-v4">View paper ↗</a></td>
+</tr><tr data-year="2022" data-category="Journal articles" data-title="probabilistic approach to covid-19 data analysis and forecasting future outbreaks using a multi-layer perceptron neural network" data-initial="30">
+<td class="num">31</td>
+<td class="title-cell"><div class="papertitle">Probabilistic Approach to COVID-19 Data Analysis and Forecasting Future Outbreaks Using a Multi-Layer Perceptron Neural Network</div><div class="authors">Riaz Ullah Khan, Sultan Almakdi, Mohammed Alshehri, <strong class="self">Rajesh Kumar</strong>, Ikram Ali, Sardar Muhammad Hussain, Amin Ul Haq, Inayat Khan, Aman Ullah, Muhammad Irfan Uddin</div></td>
+<td class="source" data-label="Source">Diagnostics, 12(10), 2539, 2022.</td>
+<td class="year" data-label="Year">2022</td>
+<td class="position" data-label="Author order">4 of 10</td>
+<td class="citations" data-label="Legacy citations">5</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.3390/diagnostics12102539" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Probabilistic Approach to COVID-19 Data Analysis and Forecasting Future Outbreaks Using a Multi-Layer Perceptron Neural Network">View paper ↗</a></td>
+</tr><tr data-year="2022" data-category="Journal articles" data-title="robust mobile robot navigation in cluttered environments based on hybrid adaptive neuro-fuzzy inference and sensor fusion" data-initial="31">
+<td class="num">32</td>
+<td class="title-cell"><div class="papertitle">Robust Mobile Robot Navigation in Cluttered Environments Based on Hybrid Adaptive Neuro-Fuzzy Inference and Sensor Fusion</div><div class="authors">Muhammad Husnain Haider, Zhonglai Wang, Abdullah Aman Khan, Hub Ali, Hao Zheng, Shaban Usman, <strong class="self">Rajesh Kumar</strong>, M. Usman Maqbool Bhutta, Pengpeng Zhi</div></td>
+<td class="source" data-label="Source">Journal of King Saud University - Computer and Information Sciences, 2022.</td>
+<td class="year" data-label="Year">2022</td>
+<td class="position" data-label="Author order">7 of 9</td>
+<td class="citations" data-label="Legacy citations">9</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://www.sciencedirect.com/science/article/pii/S1319157822003135" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Robust Mobile Robot Navigation in Cluttered Environments Based on Hybrid Adaptive Neuro-Fuzzy Inference and Sensor Fusion">View paper ↗</a></td>
+</tr><tr data-year="2021" data-category="Journal articles" data-title="a federated learning approach for privacy protection in context-aware recommender systems" data-initial="32">
+<td class="num">33</td>
+<td class="title-cell"><div class="papertitle">A Federated Learning Approach for Privacy Protection in Context-Aware Recommender Systems</div><div class="authors">Waqar Ali, <strong class="self">Rajesh Kumar</strong>, Zhiyi Deng, Yansong Wang, Jie Shao</div></td>
+<td class="source" data-label="Source">The Computer Journal, 64(7), 2021.</td>
+<td class="year" data-label="Year">2021</td>
+<td class="position" data-label="Author order">2 of 5</td>
+<td class="citations" data-label="Legacy citations">38</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://academic.oup.com/comjnl/article/64/7/1016/6259634" target="_blank" rel="noopener noreferrer" aria-label="Open publication: A Federated Learning Approach for Privacy Protection in Context-Aware Recommender Systems">View paper ↗</a></td>
+</tr><tr data-year="2021" data-category="Journal articles" data-title="an efficient and provably secure ecc-based conditional privacy-preserving authentication for vehicle-to-vehicle communication in vanets" data-initial="33">
+<td class="num">34</td>
+<td class="title-cell"><div class="papertitle">An Efficient and Provably Secure ECC-Based Conditional Privacy-Preserving Authentication for Vehicle-to-Vehicle Communication in VANETs</div><div class="authors">Ikram Ali, Yong Chen, Niamat Ullah, <strong class="self">Rajesh Kumar</strong>, Wen He</div></td>
+<td class="source" data-label="Source">IEEE Transactions on Vehicular Technology, 2021.</td>
+<td class="year" data-label="Year">2021</td>
+<td class="position" data-label="Author order">4 of 5</td>
+<td class="citations" data-label="Legacy citations">101</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://ieeexplore.ieee.org/document/9321754" target="_blank" rel="noopener noreferrer" aria-label="Open publication: An Efficient and Provably Secure ECC-Based Conditional Privacy-Preserving Authentication for Vehicle-to-Vehicle Communication in VANETs">View paper ↗</a></td>
+</tr><tr data-year="2021" data-category="Journal articles" data-title="an integration of blockchain and ai for secure data sharing and detection of ct images for the hospitals" data-initial="34">
+<td class="num">35</td>
+<td class="title-cell"><div class="papertitle">An Integration of blockchain and AI for secure data sharing and detection of CT images for the hospitals</div><div class="authors"><strong class="self">Rajesh Kumar</strong>, WenYong Wang, Jay Kumar, Ting Yang, Abdullah Khan, Wazir Ali, Ikram Ali</div></td>
+<td class="source" data-label="Source">Computerized Medical Imaging and Graphics, 87, 101812, 2021.</td>
+<td class="year" data-label="Year">2021</td>
+<td class="position" data-label="Author order">1 of 7</td>
+<td class="citations" data-label="Legacy citations">140</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1016/j.compmedimag.2020.101812" target="_blank" rel="noopener noreferrer" aria-label="Open publication: An Integration of blockchain and AI for secure data sharing and detection of CT images for the hospitals">View paper ↗</a></td>
+</tr><tr data-year="2021" data-category="Journal articles" data-title="blockchain-federated-learning and deep learning models for covid-19 detection using ct imaging" data-initial="35">
+<td class="num">36</td>
+<td class="title-cell"><div class="papertitle">Blockchain-Federated-Learning and Deep Learning Models for COVID-19 Detection Using CT Imaging</div><div class="authors"><strong class="self">Rajesh Kumar</strong>, Abdullah Aman Khan, Jay Kumar, Zakria, Noorbakhsh Amiri Golilarz, Simin Zhang, Yang Ting, Chengyu Zheng, Wenyong Wang</div></td>
+<td class="source" data-label="Source">IEEE Sensors Journal, 21(14), 16301–16314, 2021.</td>
+<td class="year" data-label="Year">2021</td>
+<td class="position" data-label="Author order">1 of 9</td>
+<td class="citations" data-label="Legacy citations">420</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1109/JSEN.2021.3076767" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Blockchain-Federated-Learning and Deep Learning Models for COVID-19 Detection Using CT Imaging">View paper ↗</a></td>
+</tr><tr data-year="2021" data-category="Journal articles" data-title="context-aware bidirectional neural model for sindhi named entity recognition" data-initial="36">
+<td class="num">37</td>
+<td class="title-cell"><div class="papertitle">Context-Aware Bidirectional Neural Model for Sindhi Named Entity Recognition</div><div class="authors">Wazir Ali, Jay Kumar, Zenglin Xu, <strong class="self">Rajesh Kumar</strong>, Yazhou Ren</div></td>
+<td class="source" data-label="Source">Applied Sciences, 11(19), 9038, 2021.</td>
+<td class="year" data-label="Year">2021</td>
+<td class="position" data-label="Author order">4 of 5</td>
+<td class="citations" data-label="Legacy citations">1</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.3390/app11199038" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Context-Aware Bidirectional Neural Model for Sindhi Named Entity Recognition">View paper ↗</a></td>
+</tr><tr data-year="2021" data-category="Journal articles" data-title="making assembly line in supply chain robust and secure using uhf rfid" data-initial="37">
+<td class="num">38</td>
+<td class="title-cell"><div class="papertitle">Making Assembly Line in Supply Chain Robust and Secure Using UHF RFID</div><div class="authors">Abubakar Sharif, <strong class="self">Rajesh Kumar</strong>, Jun Ouyang, Hasan T. Abbas, Akram Alomainy, Kamran Arshad, Khaled Assaleh, Ayman Althuwayb, Muhammad Ali Imran, Qammer H. Abbasi</div></td>
+<td class="source" data-label="Source">Scientific Reports, 11, 2021.</td>
+<td class="year" data-label="Year">2021</td>
+<td class="position" data-label="Author order">2 of 10</td>
+<td class="citations" data-label="Legacy citations">25</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1038/s41598-021-97598-5" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Making Assembly Line in Supply Chain Robust and Secure Using UHF RFID">View paper ↗</a></td>
+</tr><tr data-year="2021" data-category="Journal articles" data-title="secure large-scale e-voting system based on blockchain contract using a hybrid consensus model combined with sharding" data-initial="38">
+<td class="num">39</td>
+<td class="title-cell"><div class="papertitle">Secure Large-Scale E-Voting System Based on Blockchain Contract Using a Hybrid Consensus Model Combined with Sharding</div><div class="authors">Yousif Abuidris, <strong class="self">Rajesh Kumar</strong>, Ting Yang, Joseph Onginjo</div></td>
+<td class="source" data-label="Source">ETRI Journal, 43(2), 357–370, 2021.</td>
+<td class="year" data-label="Year">2021</td>
+<td class="position" data-label="Author order">2 of 4</td>
+<td class="citations" data-label="Legacy citations">87</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.4218/etrij.2019-0362" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Secure Large-Scale E-Voting System Based on Blockchain Contract Using a Hybrid Consensus Model Combined with Sharding">View paper ↗</a></td>
+</tr><tr data-year="2021" data-category="Journal articles" data-title="trends in vehicle re-identification past, present, and future: a comprehensive review" data-initial="39">
+<td class="num">40</td>
+<td class="title-cell"><div class="papertitle">Trends in Vehicle Re-Identification Past, Present, and Future: A Comprehensive Review</div><div class="authors">Zakria, Jianhua Deng, Yang Hao, Muhammad Saddam Khokhar, <strong class="self">Rajesh Kumar</strong>, Jingye Cai, Jay Kumar, Muhammad Umar Aftab</div></td>
+<td class="source" data-label="Source">Mathematics, 9(24), 3162, 2021.</td>
+<td class="year" data-label="Year">2021</td>
+<td class="position" data-label="Author order">5 of 8</td>
+<td class="citations" data-label="Legacy citations">28</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.3390/math9243162" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Trends in Vehicle Re-Identification Past, Present, and Future: A Comprehensive Review">View paper ↗</a></td>
+</tr><tr data-year="2020" data-category="Journal articles" data-title="adaptive wavelet based mri brain image de-noising" data-initial="40">
+<td class="num">41</td>
+<td class="title-cell"><div class="papertitle">Adaptive Wavelet Based MRI Brain Image De-Noising</div><div class="authors">Noorbakhsh Amiri Golilarz, Hui Gao, <strong class="self">Rajesh Kumar</strong>, Liaqat Ali, Yan Fu, Chun Li</div></td>
+<td class="source" data-label="Source">Frontiers in Neuroscience, 2020.</td>
+<td class="year" data-label="Year">2020</td>
+<td class="position" data-label="Author order">3 of 6</td>
+<td class="citations" data-label="Legacy citations">34</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7388743/" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Adaptive Wavelet Based MRI Brain Image De-Noising">View paper ↗</a></td>
+</tr><tr data-year="2020" data-category="Journal articles" data-title="efficient hybrid clustering scheme for data delivery using internet of things enabled vehicular ad hoc networks in smart city traffic congestion" data-initial="41">
+<td class="num">42</td>
+<td class="title-cell"><div class="papertitle">Efficient Hybrid Clustering Scheme for Data Delivery Using Internet of Things Enabled Vehicular Ad Hoc Networks in Smart City Traffic Congestion</div><div class="authors">Abida Sharif, Jian Ping Li, Muhammad Asim Saleem, Tanzila Saba, <strong class="self">Rajesh Kumar</strong></div></td>
+<td class="source" data-label="Source">Journal of Internet Technology, 2020.</td>
+<td class="year" data-label="Year">2020</td>
+<td class="position" data-label="Author order">5 of 5</td>
+<td class="citations" data-label="Legacy citations">11</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://jit.ndhu.edu.tw/article/view/2231" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Efficient Hybrid Clustering Scheme for Data Delivery Using Internet of Things Enabled Vehicular Ad Hoc Networks in Smart City Traffic Congestion">View paper ↗</a></td>
+</tr><tr data-year="2020" data-category="Journal articles" data-title="visual features with spatio-temporal-based fusion model for cross-dataset vehicle re-identification" data-initial="42">
+<td class="num">43</td>
+<td class="title-cell"><div class="papertitle">Visual Features with Spatio-Temporal-Based Fusion Model for Cross-Dataset Vehicle Re-Identification</div><div class="authors">Zakria, Jianhua Deng, Jingye Cai, Muhammad Umar Aftab, Muhammad Saddam Khokhar, <strong class="self">Rajesh Kumar</strong></div></td>
+<td class="source" data-label="Source">Electronics, 9(7), 1083, 2020.</td>
+<td class="year" data-label="Year">2020</td>
+<td class="position" data-label="Author order">6 of 6</td>
+<td class="citations" data-label="Legacy citations">13</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.3390/electronics9071083" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Visual Features with Spatio-Temporal-Based Fusion Model for Cross-Dataset Vehicle Re-Identification">View paper ↗</a></td>
+</tr><tr data-year="2019" data-category="Journal articles" data-title="a multimodal malware detection technique for android iot devices using various features" data-initial="43">
+<td class="num">44</td>
+<td class="title-cell"><div class="papertitle">A Multimodal Malware Detection Technique for Android IoT Devices Using Various Features</div><div class="authors"><strong class="self">Rajesh Kumar</strong>, Xiaosong Zhang, Wenyong Wang, Riaz Ullah Khan, Jay Kumar, Abubaker Sharif</div></td>
+<td class="source" data-label="Source">IEEE Access, 7, 64411–64430, 2019.</td>
+<td class="year" data-label="Year">2019</td>
+<td class="position" data-label="Author order">1 of 6</td>
+<td class="citations" data-label="Legacy citations">156</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.1109/ACCESS.2019.2916886" target="_blank" rel="noopener noreferrer" aria-label="Open publication: A Multimodal Malware Detection Technique for Android IoT Devices Using Various Features">View paper ↗</a></td>
+</tr><tr data-year="2019" data-category="Journal articles" data-title="an adaptive multi-layer botnet detection technique using machine learning classifiers" data-initial="44">
+<td class="num">45</td>
+<td class="title-cell"><div class="papertitle">An Adaptive Multi-Layer Botnet Detection Technique Using Machine Learning Classifiers</div><div class="authors">Riaz Ullah Khan, Xiaosong Zhang, <strong class="self">Rajesh Kumar</strong>, Abubakar Sharif, Noorbakhsh Amiri Golilarz, Mamoun Alazab</div></td>
+<td class="source" data-label="Source">Applied Sciences, 9(11), 2375, 2019.</td>
+<td class="year" data-label="Year">2019</td>
+<td class="position" data-label="Author order">3 of 6</td>
+<td class="citations" data-label="Legacy citations">161</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.3390/app9112375" target="_blank" rel="noopener noreferrer" aria-label="Open publication: An Adaptive Multi-Layer Botnet Detection Technique Using Machine Learning Classifiers">View paper ↗</a></td>
+</tr><tr data-year="2019" data-category="Journal articles" data-title="efficient and deep vehicle re-identification using multi-level feature extraction" data-initial="45">
+<td class="num">46</td>
+<td class="title-cell"><div class="papertitle">Efficient and Deep Vehicle Re-Identification Using Multi-Level Feature Extraction</div><div class="authors">Zakria, Jingye Cai, Jianhua Deng, Muhammad Umar Aftab, Muhammad Saddam Khokhar, <strong class="self">Rajesh Kumar</strong></div></td>
+<td class="source" data-label="Source">Applied Sciences, 9(7), 1291, 2019.</td>
+<td class="year" data-label="Year">2019</td>
+<td class="position" data-label="Author order">6 of 6</td>
+<td class="citations" data-label="Legacy citations">29</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.3390/app9071291" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Efficient and Deep Vehicle Re-Identification Using Multi-Level Feature Extraction">View paper ↗</a></td>
+</tr><tr data-year="2019" data-category="Journal articles" data-title="research on data mining of permission-induced risk for android iot devices" data-initial="46">
+<td class="num">47</td>
+<td class="title-cell"><div class="papertitle">Research on Data Mining of Permission-Induced Risk for Android IoT Devices</div><div class="authors"><strong class="self">Rajesh Kumar</strong>, Xiaosong Zhang, Riaz Ullah Khan, Abubakar Sharif</div></td>
+<td class="source" data-label="Source">Applied Sciences, 9(2), 277, 2019.</td>
+<td class="year" data-label="Year">2019</td>
+<td class="position" data-label="Author order">1 of 4</td>
+<td class="citations" data-label="Legacy citations">39</td>
+<td class="link-cell" data-label="Publication link"><a class="outlink" href="https://doi.org/10.3390/app9020277" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Research on Data Mining of Permission-Induced Risk for Android IoT Devices">View paper ↗</a></td>
+</tr></tbody></table>
+<p id="empty" class="empty" hidden>No papers matched these filters.</p>
+<section class="notes" aria-label="Source notes"><p><strong>* Citation notes:</strong> Publication details and author sequence are sourced from the supplied CV.tex. Original citation counts are retained only as a historical snapshot from the uploaded HTML and have not been verified or refreshed. A dash means no citation count was available.</p><p><strong>Future-year listing:</strong> The Biochemical Engineering Journal entry carries publication year 2027 in CV.tex, although this list was updated in October 2026. That year is reproduced from the CV, not independently verified.</p><p><strong>Classification:</strong> "Evaluating the Performance of Deep Neural Networks for Health Decision Making" is included under Other peer-reviewed articles, in line with CV.tex, rather than Conferences.</p></section>
+</main><footer class="wrap">Rajesh Kumar · Publications · Source: supplied CV.tex</footer>
+<script>
+(function () {
+  const table=document.querySelector('#papers');
+  const body=table&&table.tBodies[0];
+  if (!body) return;
+  const rows=Array.from(body.querySelectorAll('tr[data-year]'));
+  const search=document.querySelector('#search');
+  const year=document.querySelector('#year');
+  const sorter=document.querySelector('#sort');
+  const category=document.querySelector('#category');
+  const summary=document.querySelector('#count');
+  const empty=document.querySelector('#empty');
+  const years=[...new Set(rows.map(r=>r.dataset.year))].sort((a,b)=>Number(b)-Number(a));
+  for (const y of years) {let opt=document.createElement('option');opt.value=y;opt.textContent=y;year.appendChild(opt);}
+  const text=s=>(s||'').toLocaleLowerCase();
+  function update() {
+    const q=text(search.value.trim());const y=year.value;const cat=category?category.value:'';const sort=sorter.value;
+    let n=0;
+    for (const r of rows) {
+      const visible=(!q||text(r.textContent).includes(q))&&(!y||r.dataset.year===y)&&(!cat||r.dataset.category===cat);
+      r.hidden=!visible;
+      r.style.display=visible?'':'none';
+      n+=Number(visible);
+    }
+    const sorted=rows.slice().sort((a,b)=>{
+      if(sort==='oldest')return Number(a.dataset.year)-Number(b.dataset.year)||Number(a.dataset.initial)-Number(b.dataset.initial);
+      if(sort==='title')return a.dataset.title.localeCompare(b.dataset.title);
+      return Number(b.dataset.year)-Number(a.dataset.year)||Number(a.dataset.initial)-Number(b.dataset.initial);
+    });
+    let rank=0;
+    for(const r of sorted){body.appendChild(r);if(!r.hidden)r.querySelector('.num').textContent=String(++rank);}
+    summary.textContent=n+' of '+rows.length+' publications';
+    empty.hidden=n!==0;
+  }
+  [search,year,sorter,category].filter(Boolean).forEach(el=>el.addEventListener(el===search?'input':'change',update));
+  if(category && location.hash){const desired=decodeURIComponent(location.hash.substring(1));if(Array.from(category.options).some(x=>x.value===desired))category.value=desired;}
+  update();
+})();
+</script>
+</body></html>
