@@ -9,8 +9,63 @@
   <link rel="alternate" hreflang="en" href="https://raja21068.github.io/raja/"/>
   <link rel="alternate" hreflang="zh-CN" href="https://raja21068.github.io/raja/cn.html"/>
   <link rel="alternate" hreflang="x-default" href="https://raja21068.github.io/raja/"/>
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Rajesh Kumar 博士 - 学术主页" />
+  <meta property="og:description" content="人工智能、计算机视觉、区块链与网络安全研究，论文、研究实验室与教学。" />
+  <meta property="og:url" content="https://raja21068.github.io/raja/cn.html" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:image" content="https://raja21068.github.io/raja/pic2.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Rajesh Kumar 博士 - 学术主页" />
+  <meta name="twitter:description" content="人工智能、计算机视觉、区块链与网络安全研究，论文、研究实验室与教学。" />
+  <meta name="twitter:image" content="https://raja21068.github.io/raja/pic2.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://raja21068.github.io/raja/#person",
+    "name": "Dr. Rajesh Kumar",
+    "url": "https://raja21068.github.io/raja/",
+    "image": "https://raja21068.github.io/raja/pic2.jpg",
+    "email": "mailto:raja@uestc.edu.cn",
+    "jobTitle": "Associate Researcher & Teaching Fellow",
+    "description": "Associate Researcher and Teaching Fellow at the Yangtze Delta Region Institute (Huzhou), UESTC, working on blockchain, federated learning, medical imaging AI, cybersecurity and agentic AI.",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "ORCID",
+      "value": "0000-0003-0813-7485"
+    },
+    "worksFor": {
+      "@type": "ResearchOrganization",
+      "name": "Yangtze Delta Region Institute (Huzhou), University of Electronic Science and Technology of China",
+      "parentOrganization": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Electronic Science and Technology of China",
+        "alternateName": "UESTC"
+      }
+    },
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Electronic Science and Technology of China",
+      "alternateName": "UESTC"
+    },
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "University of Electronic Science and Technology of China"},
+      {"@type": "CollegeOrUniversity", "name": "University of Sindh"}
+    ],
+    "knowsAbout": ["Blockchain", "Federated Learning", "Medical Imaging AI", "Cybersecurity", "Malware Detection", "Agentic AI", "Large Language Models", "Computer Vision", "Machine Learning"],
+    "sameAs": [
+      "https://orcid.org/0000-0003-0813-7485",
+      "https://scholar.google.com/citations?user=2_F5e_YAAAAJ",
+      "https://www.linkedin.com/in/rajesh-kumar-28abba358",
+      "https://github.com/raja21068",
+      "https://www.youtube.com/@RajaKumarraja21068"
+    ]
+  }
+  </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <style>
     .gradient-text {
       background: linear-gradient(90deg, #4e73df, #224abe);
@@ -184,7 +239,6 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
 
 /* Base styles */
 :root {
@@ -542,35 +596,51 @@
             color: var(--warning);
         }
         
+  /* Keep anchor targets clear of the sticky nav */
+  html { scroll-padding-top: 80px; }
+  /* Research dropdown in the desktop nav */
+  .nav-dropdown-menu { display: none; z-index: 60; }
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
 </style>
-  
+
 </head>
 <body class="font-sans bg-gray-100 text-gray-800">
-  <!-- 导航 -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-blue-700 focus:rounded focus:shadow">跳到主要内容</a>
+  <!-- Navigation -->
   <nav class="bg-white shadow sticky top-0 z-50">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="text-2xl font-bold gradient-text">Rajesh Kumar 博士</a>
+      <a href="#main" class="text-2xl font-bold gradient-text">Rajesh Kumar 博士</a>
       <div class="hidden md:flex space-x-6">
         <a href="#about" class="hover:text-blue-600">关于</a>
-        <a href="#research" class="hover:text-blue-600">研究</a>
+        <div class="nav-dropdown relative">
+          <a href="#flagship" class="hover:text-blue-600">研究 <i class="fas fa-chevron-down text-xs"></i></a>
+          <div class="nav-dropdown-menu absolute left-0 pt-2 w-48">
+            <div class="bg-white rounded-lg shadow-lg py-2">
+              <a href="#flagship" class="block px-4 py-2 hover:bg-gray-100 hover:text-blue-600">研究概览</a>
+              <a href="Research_Lab/index.html" class="block px-4 py-2 hover:bg-gray-100 hover:text-blue-600">研究实验室</a>
+            </div>
+          </div>
+        </div>
         <a href="#education" class="hover:text-blue-600">教育</a>
         <a href="#experience" class="hover:text-blue-600">经历</a>
         <a href="#projects" class="hover:text-blue-600">项目</a>
         <a href="#publications" class="hover:text-blue-600">出版物</a>
         <a href="#teaching" class="hover:text-blue-600">教学</a>
-        <a href="#health" class="hover:text-blue-600">健康与美丽</a>
         <a href="#contact" class="hover:text-blue-600">联系</a>
         <a href="./" hreflang="en" lang="en" class="hover:text-blue-600">English</a>
       </div>
-      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+      <button id="menu-toggle" type="button" class="md:hidden text-gray-800" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
         <i class="fas fa-bars text-2xl"></i>
       </button>
     </div>
-    <!-- 移动菜单 -->
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden hidden">
       <div class="px-4 pt-2 pb-4 bg-white">
         <a href="#about" class="block py-2 hover:text-blue-600">关于</a>
-        <a href="#research" class="block py-2 hover:text-blue-600">研究</a>
+        <span class="block py-2">研究</span>
+        <a href="#flagship" class="block py-2 pl-4 hover:text-blue-600">研究概览</a>
+        <a href="Research_Lab/index.html" class="block py-2 pl-4 hover:text-blue-600">研究实验室</a>
         <a href="#education" class="block py-2 hover:text-blue-600">教育</a>
         <a href="#experience" class="block py-2 hover:text-blue-600">经历</a>
         <a href="#projects" class="block py-2 hover:text-blue-600">项目</a>
@@ -582,1248 +652,1403 @@
     </div>
   </nav>
 
-  <header class="relative bg-gradient-to-r from-blue-800 to-indigo-900 text-white">
-    <!-- 背景层 -->
-    <div class="absolute inset-0">
-      <div class="absolute inset-0 bg-blue-900 opacity-70"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-blue-800 to-indigo-900 opacity-90"></div>
-      <div class="absolute w-full h-full bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center mix-blend-overlay opacity-20"></div>
-    </div>
-    <!-- 主体内容 -->
-    <div class="container mx-auto px-6 py-16 md:py-24 relative z-10 flex flex-col md:flex-row items-center">
-      <!-- 左侧内容 -->
-      <div class="md:w-1/2 text-center md:text-left">
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4 animate-pulse-slow">
-          Rajesh Kumar 博士
-        </h1>
-        <div class="text-2xl md:text-3xl font-semibold mb-4">
-          副研究员 &amp; 教学员
-        </div>
-        <p class="text-base md:text-xl mb-8">
-          网络安全、大型语言模型、深度学习与区块链领域专家
-        </p>
+<main id="main" tabindex="-1">
 
-        <!-- 可选内容/号召 -->
-        <div class="contact-links flex flex-wrap gap-4 justify-center md:justify-start mb-8">
-          <a href="mailto:rajakumarlohano@gmail.com" class="contact-link bg-white text-blue-800 font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-gray-100 hover:shadow-xl transition">
-            <i class="fas fa-envelope me-2"></i> 电子邮件
-          </a>
-          <a href="tel:+923332836705" class="contact-link bg-transparent border-2 bg-white text-blue-800 font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-white hover:text-blue-800 transition">
-            <i class="fas fa-phone me-2"></i> 联系方式
-          </a>
-          <a href="https://scholar.google.com/citations?user=2_F5e_YAAAAJ&hl=en" target="_blank" class="contact-link bg-white text-blue-800 font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-gray-100 hover:shadow-xl transition">
-            <i class="fas fa-graduation-cap me-2"></i> 谷歌学者
-          </a>
-          <a href="https://github.com/raja21068" target="_blank" class="contact-link bg-transparent border-2 bg-white text-blue-800 font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-white hover:text-blue-800 transition">
-            <i class="fab fa-github me-2"></i> GitHub
-          </a>
-          <a href="http://faculty.uestc.edu.cn/KUMARRAJESH/" target="_blank" class="contact-link bg-white text-blue-800 font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-gray-100 hover:shadow-xl transition">
-            <i class="fas fa-globe me-2"></i> 个人网站
-          </a>
-          <!-- 下载简历按钮 -->
-          <a href="images/CN-CV.pdf" download class="contact-link bg-white text-blue-800 font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-gray-100 hover:shadow-xl transition">
-            <i class="fas fa-download me-2"></i> 下载简历
-          </a>
-        </div>
+
+
+<header id="about" class="relative bg-gradient-to-r from-blue-800 to-indigo-900 text-white">
+  <!-- Background Layers -->
+  <div class="absolute inset-0">
+    <div class="absolute inset-0 bg-blue-900 opacity-70"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-800 to-indigo-900 opacity-90"></div>
+    <div class="absolute w-full h-full bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center mix-blend-overlay opacity-20"></div>
+  </div>
+  <!-- Main Content -->
+  <div class="container mx-auto px-6 py-16 md:py-24 relative z-10 flex flex-col md:flex-row items-center">
+    <!-- Left Column: Content -->
+    <div class="md:w-1/2 text-center md:text-left">
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4 animate-pulse-slow">
+        Rajesh Kumar 博士
+      </h1>
+      <div class="text-2xl md:text-3xl font-semibold mb-4">
+        副研究员 &amp; 教学员
       </div>
-      <!-- 右侧：视频与照片 -->
-      <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
-        <div class="relative">
-          <!-- 个人照片覆盖 -->
-          <div class="bg-white p-2 rounded-full shadow-xl absolute -top-4 -left-4 z-10">
-            <img src="pic2.jpg" alt="My Picture" class="rounded-full w-24 h-24 object-cover" />
-          </div>
-          <!-- 视频卡片 -->
-          <div class="bg-blue-100 p-6 rounded-lg shadow-2xl transform transition duration-300 hover:rotate-1">
-            <div class="aspect-w-16 aspect-h-9 mb-4">
-              <iframe class="w-full h-64 rounded-lg shadow-md" src="https://www.youtube.com/embed/VLNk4l4ge4c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <h3 class="text-blue-800 font-bold text-xl">
-              观看我的风格
-            </h3>
-            <p class="text-gray-700">
-              湖州历史
-            </p>
-          </div>
-        </div>
+      <p class="text-base md:text-xl mb-8">
+        网络安全、大型语言模型、深度学习与区块链领域专家
+      </p>
+      <p class="text-sm md:text-base text-blue-100 mb-8 max-w-2xl">
+        Rajesh Kumar 博士现任电子科技大学长三角研究院（湖州）副研究员、教学员，2019 年获电子科技大学计算机科学与技术博士学位。研究方向：区块链、联邦学习、医学影像人工智能、网络安全与智能体人工智能（Agentic AI）。
+        <a href="https://orcid.org/0000-0003-0813-7485" target="_blank" rel="noopener me" class="underline hover:text-white whitespace-nowrap"><i class="fab fa-orcid" aria-hidden="true"></i> ORCID 0000-0003-0813-7485</a>
+      </p>
+	  
+
+      <!-- (Optional) You can add more content or a call-to-action here -->
+      <div class="contact-links flex flex-wrap gap-4 justify-center md:justify-start mb-8">
+        <a href="mailto:rajakumarlohano@gmail.com" class="contact-link bg-white text-blue-800 font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-gray-100 hover:shadow-xl transition">
+        <i class="fas fa-envelope me-2"></i> 电子邮件
+      </a>
+      <a href="#contact" class="contact-link bg-transparent border-2 bg-white text-blue-800 font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-white hover:text-blue-800 transition">
+        <i class="fas fa-address-card me-2" aria-hidden="true"></i> 联系
+      </a>
+      <a href="https://scholar.google.com/citations?user=2_F5e_YAAAAJ&hl=en" target="_blank" class="contact-link bg-white text-blue-800 font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-gray-100 hover:shadow-xl transition">
+        <i class="fas fa-graduation-cap me-2"></i> 谷歌学者
+      </a>
+      <a href="https://github.com/raja21068" target="_blank" class="contact-link bg-transparent border-2 bg-white text-blue-800 font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-white hover:text-blue-800 transition">
+        <i class="fab fa-github me-2"></i> GitHub
+      </a>
+      <a href="http://faculty.uestc.edu.cn/KUMARRAJESH/" target="_blank" class="contact-link bg-white text-blue-800 font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-gray-100 hover:shadow-xl transition">
+        <i class="fas fa-globe me-2"></i> 个人网站
+      </a>
+      <!-- Download CV Button -->
+      <a href="images/CV.pdf" download class="contact-link bg-white text-blue-800 font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-gray-100 hover:shadow-xl transition">
+        <i class="fas fa-download me-2"></i> 下载简历
+      </a>
       </div>
     </div>
-    <!-- 底部波浪 SVG -->
-    <div class="absolute bottom-0 left-0 w-full overflow-hidden">
-      <svg preserveAspectRatio="none" width="100%" height="70" viewBox="0 0 1440 74" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 24L60 34C120 44 240 64 360 64C480 64 600 44 720 32C840 20 960 16 1080 24C1200 32 1320 52 1380 62L1440 74V74H1380C1320 74 1200 74 1080 74C960 74 840 74 720 74C600 74 480 74 360 74C240 74 120 74 60 74H0V24Z" fill="white"/>
-      </svg>
-    </div>
-  </header>
-
-  <section id="about" class="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
-    <!-- 统计数据部分 -->
-    <section id="stats" class="py-12 bg-gray-50">
-      <div class="max-w-5xl mx-auto px-4">
-        <h3 class="text-xl font-semibold mb-8 text-center">研究影响</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div class="stat-item bg-white p-6 md:p-8 rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
-            <div class="stat-number text-4xl lg:text-5xl font-bold text-blue-600 mb-2">70+</div>
-            <div class="stat-label text-gray-700 text-sm lg:text-base">已发表论文</div>
-          </div>
-          <div class="stat-item bg-white p-6 md:p-8 rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
-            <div class="stat-number text-4xl lg:text-5xl font-bold text-blue-600 mb-2">18</div>
-            <div class="stat-label text-gray-700 text-sm lg:text-base">已申请专利</div>
-          </div>
-          <div class="stat-item bg-white p-6 md:p-8 rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
-            <div class="stat-number text-4xl lg:text-5xl font-bold text-blue-600 mb-2">6</div>
-            <div class="stat-label text-gray-700 text-sm lg:text-base">重大研究项目</div>
-          </div>
-          <div class="stat-item bg-white p-6 md:p-8 rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
-            <div class="stat-number text-4xl lg:text-5xl font-bold text-blue-600 mb-2">6+</div>
-            <div class="stat-label text-gray-700 text-sm lg:text-base">工作经验年数</div>
-          </div>
+    <!-- Right Column: Video & Profile Picture -->
+    <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
+      <div class="relative">
+        <!-- Profile Picture Overlay -->
+        <div class="bg-white p-2 rounded-full shadow-xl absolute -top-4 -left-4 z-10">
+          <img src="pic2.webp" alt="Dr. Rajesh Kumar" width="96" height="96" class="rounded-full w-24 h-24 object-cover" />
         </div>
-      </div>
-    </section>
-
-    <!-- 研究类别 -->
-    <section id="publications" class="py-12 bg-gray-50">
-      <div class="max-w-5xl mx-auto px-4">
-        <h3 class="text-2xl font-bold mb-8 text-center">研究类别</h3>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <!-- 期刊论文卡片 -->
-          <a href="journal-papers.html" class="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-blue-600 hover:shadow-lg transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-blue-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
-            <h4 class="font-semibold text-lg mb-2">期刊论文</h4>
-            <p class="text-gray-600 text-sm mb-4">顶级期刊的同行评审成果</p>
-            <div class="inline-flex items-center text-blue-600 font-medium">
-              查看论文
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </div>
-          </a>
-          <!-- 书籍章节卡片 -->
-          <a href="book-chapter.html" class="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-green-600 hover:shadow-lg transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-green-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
-            </svg>
-            <h4 class="font-semibold text-lg mb-2">书籍章节</h4>
-            <p class="text-gray-600 text-sm mb-4">为网络安全权威著作做出贡献</p>
-            <div class="inline-flex items-center text-green-600 font-medium">
-              查看章节
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </div>
-          </a>
-          <!-- 会议论文卡片 -->
-          <a href="conference-papers.html" class="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-purple-600 hover:shadow-lg transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-purple-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-            <h4 class="font-semibold text-lg mb-2">会议论文</h4>
-            <p class="text-gray-600 text-sm mb-4">在顶级国际会议上发表的报告</p>
-            <div class="inline-flex items-center text-purple-600 font-medium">
-              查看会议
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </div>
-          </a>
-          <!-- 专利卡片 -->
-          <a href="patents.html" class="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-amber-600 hover:shadow-lg transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-amber-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-            </svg>
-            <h4 class="font-semibold text-lg mb-2">专利</h4>
-            <p class="text-gray-600 text-sm mb-4">具有实际应用的创新技术</p>
-            <div class="inline-flex items-center text-amber-600 font-medium">
-              查看专利
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 技能与贡献 -->
-    <section id="skills" class="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
-      <div class="container mx-auto px-6">
-        <!-- 分区标题及装饰 -->
-        <div class="text-center mb-16">
-          <span class="inline-block px-4 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium tracking-wider mb-3">专业能力</span>
-          <h2 class="text-4xl font-bold text-gray-800 mb-4">技能与贡献</h2>
-          <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-          <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-            通过技术专长、创意编程与高效领导推动创新
+        <!-- Video Card -->
+        <div class="bg-blue-100 p-6 rounded-lg shadow-2xl transform transition duration-300 hover:rotate-1">
+          <div class="aspect-w-16 aspect-h-9 mb-4">
+            <iframe title="Introduction video: Dr. Rajesh Kumar" loading="lazy" class="w-full h-64 rounded-lg shadow-md" src="https://www.youtube.com/embed/VLNk4l4ge4c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3 class="text-blue-800 font-bold text-xl">
+            观看我的风格
+          </h3>
+          <p class="text-gray-700">
+            湖州历史
           </p>
         </div>
-        
-        <!-- 技能网格 -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- 技术专长卡片 -->
-          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-blue-600">
-            <div class="flex items-center mb-6">
-              <div class="p-3 bg-blue-100 rounded-lg mr-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-                </svg>
-              </div>
-              <h3 class="text-2xl font-semibold text-gray-800">技术专长</h3>
-            </div>
-            
-            <div class="space-y-3">
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-gray-700">区块链技术</span>
-                <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">专家</span>
-              </div>
-              
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-gray-700">深度学习</span>
-                <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">专家</span>
-              </div>
-              
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-gray-700">机器学习</span>
-                <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">专家</span>
-              </div>
-              
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-gray-700">网络安全</span>
-                <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">专家</span>
-              </div>
-              
-              <div class="flex justify-between items-center py-2">
-                <span class="text-gray-700">联邦学习</span>
-                <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">专家</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- 编程语言卡片 -->
-          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-purple-600">
-            <div class="flex items-center mb-6">
-              <div class="p-3 bg-purple-100 rounded-lg mr-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              </div>
-              <h3 class="text-2xl font-semibold text-gray-800">编程语言</h3>
-            </div>
-            
-            <div class="space-y-3">
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-gray-700">Python</span>
-                <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">高级</span>
-              </div>
-              
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-gray-700">Java</span>
-                <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">高级</span>
-              </div>
-              
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-gray-700">C/C++</span>
-                <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">高级</span>
-              </div>
-              
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-gray-700">PHP</span>
-                <span class="font-bold text-yellow-600 px-3 py-1 bg-yellow-50 rounded-full text-sm">中级</span>
-              </div>
-              
-              <div class="flex justify-between items-center py-2">
-                <span class="text-gray-700">Android</span>
-                <span class="font-bold text-yellow-600 px-3 py-1 bg-yellow-50 rounded-full text-sm">中级</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- 领导与管理卡片 -->
-          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-indigo-600">
-            <div class="flex items-center mb-6">
-              <div class="p-3 bg-indigo-100 rounded-lg mr-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 class="text-2xl font-semibold text-gray-800">领导与管理</h3>
-            </div>
-            
-            <div class="space-y-3">
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-gray-700">研究指导</span>
-                <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">高级</span>
-              </div>
-              
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-gray-700">项目管理</span>
-                <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">高级</span>
-              </div>
-              
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-gray-700">团队领导</span>
-                <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">高级</span>
-              </div>
-              
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-gray-700">学术教学</span>
-                <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">高级</span>
-              </div>
-              
-              <div class="flex justify-between items-center py-2">
-                <span class="text-gray-700">项目申请撰写</span>
-                <span class="font-bold text-yellow-600 px-3 py-1 bg-yellow-50 rounded-full text-sm">中级</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </section>
-
-  <!-- 专业经历（带时间轴设计） -->
-  <section id="experience" class="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
-    <div class="container mx-auto px-4 max-w-5xl">
-      <h2 class="section-title text-3xl font-bold text-center mb-16 relative">
-        <span class="relative z-10">专业经历</span>
-        <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-600"></span>
-      </h2>
-      
-      <div class="timeline-container relative">
-        <!-- 中心线 -->
-        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-600 rounded"></div>
-        
-        <!-- 时间轴项目 -->
-        <div class="timeline-item mb-16 relative flex">
-          <div class="timeline-content bg-white w-5/12 p-6 rounded-lg shadow-lg border-t-4 border-blue-600 relative">
-            <div class="absolute top-6 -right-12 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center shadow-md z-10">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <div class="arrow absolute top-6 -right-4 w-4 h-4 bg-white transform rotate-45"></div>
-            <h3 class="text-xl font-bold text-gray-800 mb-2">副研究员/教学员</h3>
-            <div class="date text-sm font-medium text-blue-600 mb-3 flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              2021年7月 - 至今
-            </div>
-            <p class="font-medium text-gray-700 mb-2">中国电子科技大学湖州长江三角洲研究院</p>
-            <p class="text-gray-600">在教授本科与研究生课程的同时，领导区块链、深度学习与计算机视觉的研究项目。</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">区块链</span>
-              <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">深度学习</span>
-              <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">计算机视觉</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline-item mb-16 relative flex justify-end">
-          <div class="timeline-content bg-white w-5/12 p-6 rounded-lg shadow-lg border-t-4 border-green-600 relative">
-            <div class="absolute top-6 -left-12 w-12 h-12 bg-green-600 rounded-full flex items-center justify-center shadow-md z-10">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <div class="arrow absolute top-6 -left-4 w-4 h-4 bg-white transform rotate-45"></div>
-            <h3 class="text-xl font-bold text-gray-800 mb-2">博士后研究员</h3>
-            <div class="date text-sm font-medium text-green-600 mb-3 flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              2019年6月 - 2021年6月
-            </div>
-            <p class="font-medium text-gray-700 mb-2">中国电子科技大学</p>
-            <p class="text-gray-600">参与国家级项目，包括物联网恶意软件检测和基于区块链的安全数据共享。</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">物联网安全</span>
-              <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">恶意软件检测</span>
-              <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">数据共享</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline-item mb-16 relative flex">
-          <div class="timeline-content bg-white w-5/12 p-6 rounded-lg shadow-lg border-t-4 border-purple-600 relative">
-            <div class="absolute top-6 -right-12 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center shadow-md z-10">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
-            </div>
-            <div class="arrow absolute top-6 -right-4 w-4 h-4 bg-white transform rotate-45"></div>
-            <h3 class="text-xl font-bold text-gray-800 mb-2">IT学院讲师</h3>
-            <div class="date text-sm font-medium text-purple-600 mb-3 flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              2014 - 2016
-            </div>
-            <p class="font-medium text-gray-700 mb-2">AIMS IT学院</p>
-            <p class="text-gray-600">讲授了Java编程、PHP网页编程、Android开发、数据库设计和数据结构课程。</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">Java</span>
-              <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">PHP</span>
-              <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">Android</span>
-              <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">数据库</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline-item relative flex justify-end">
-          <div class="timeline-content bg-white w-5/12 p-6 rounded-lg shadow-lg border-t-4 border-amber-600 relative">
-            <div class="absolute top-6 -left-12 w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center shadow-md z-10">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-              </svg>
-            </div>
-            <div class="arrow absolute top-6 -left-4 w-4 h-4 bg-white transform rotate-45"></div>
-            <h3 class="text-xl font-bold text-gray-800 mb-2">软件开发实习生</h3>
-            <div class="date text-sm font-medium text-amber-600 mb-3 flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              2014年6月 - 2015年6月
-            </div>
-            <p class="font-medium text-gray-700 mb-2">巴基斯坦信德大学，贾姆肖罗</p>
-            <p class="text-gray-600">开发了用于大学管理的网页应用和内部软件解决方案。</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">网页开发</span>
-              <span class="px-2 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">UI/UX</span>
-              <span class="px-2 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">软件工程</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-  </section>
+  </div>
+  <!-- SVG Wave at Bottom -->
+  <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+    <svg preserveAspectRatio="none" width="100%" height="70" viewBox="0 0 1440 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 24L60 34C120 44 240 64 360 64C480 64 600 44 720 32C840 20 960 16 1080 24C1200 32 1320 52 1380 62L1440 74V74H1380C1320 74 1200 74 1080 74C960 74 840 74 720 74C600 74 480 74 360 74C240 74 120 74 60 74H0V24Z" fill="white"/>
+    </svg>
+  </div>
+</header>
 
-  <!-- 教育经历 -->
-  <section id="education" class="section">
-    <div class="container">
-      <h2 class="section-title">教育经历</h2>
-      <div class="timeline">
-        <div class="education-card">
-          <div class="education-header">
-            <h3>计算机科学与技术博士</h3>
-            <span class="education-year">2016-2019</span>
-          </div>
-          <div class="education-body">
-            <div class="institution">
-              <i class="fas fa-university"></i>
-              <span>中国电子科技大学</span>
-            </div>
-            <p class="thesis"><strong>论文：</strong>基于机器学习的安卓恶意软件检测</p>
-            <ul class="achievements">
-              <li>开发了一种新颖的机器学习框架，以提高检测和分类安卓恶意软件的准确性</li>
-              <li>与行业合作伙伴合作，为物联网设备创建安全数据共享协议</li>
-              <li>参与了以网络安全和基于人工智能的恶意软件检测为重点的国家研究项目</li>
-            </ul>
-          </div>
-        </div>
 
-        <div class="education-card">
-          <div class="education-header">
-            <h3>计算机科学硕士</h3>
-            <span class="education-year">2014-2016</span>
-          </div>
-          <div class="education-body">
-            <div class="institution">
-              <i class="fas fa-university"></i>
-              <span>贾姆肖罗信德大学</span>
-            </div>
-            <p>对网络安全和数据库管理系统进行了研究，并完成了一篇关于分布式环境下安全收费系统的论文。</p>
-          </div>
-        </div>
 
-        <div class="education-card">
-          <div class="education-header">
-            <h3>计算机科学学士</h3>
-            <span class="education-year">2010-2013</span>
-          </div>
-          <div class="education-body">
-            <div class="institution">
-              <i class="fas fa-university"></i>
-              <span>贾姆肖罗信德大学</span>
-            </div>
-            <p>专注于软件工程和数据库系统，完成了基于安卓技术的自动考勤系统的毕业设计。</p>
-          </div>
-        </div>
+
+
+
+
+
+
+
+ 
+<!-- Stats Section -->
+<section id="stats" class="py-12 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <h3 class="text-xl font-semibold mb-8 text-center">研究影响</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="stat-item bg-white p-6 md:p-8 rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
+        <div class="stat-number text-4xl lg:text-5xl font-bold text-blue-600 mb-2">70+</div>
+        <div class="stat-label text-gray-700 text-sm lg:text-base">已发表论文</div>
+      </div>
+      <div class="stat-item bg-white p-6 md:p-8 rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
+        <div class="stat-number text-4xl lg:text-5xl font-bold text-blue-600 mb-2">18</div>
+        <div class="stat-label text-gray-700 text-sm lg:text-base">已申请专利</div>
+      </div>
+      <div class="stat-item bg-white p-6 md:p-8 rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
+        <div class="stat-number text-4xl lg:text-5xl font-bold text-blue-600 mb-2">6</div>
+        <div class="stat-label text-gray-700 text-sm lg:text-base">重大研究项目</div>
+      </div>
+      <div class="stat-item bg-white p-6 md:p-8 rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
+        <div class="stat-number text-4xl lg:text-5xl font-bold text-blue-600 mb-2">6+</div>
+        <div class="stat-label text-gray-700 text-sm lg:text-base">工作经验年数</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 当前研究项目 -->
-  <main class="container projects-section">
-    <div class="section-header">
-      <h2 class="section-title">当前研究项目</h2>
+<!-- Latest News -->
+<section id="news" class="py-12 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">最新动态</h2>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <li class="flex gap-4 bg-white rounded-lg shadow-sm p-4">
+        <time datetime="2026-07" class="shrink-0 w-20 text-sm font-semibold text-purple-700">2026年7月</time>
+        <p class="text-sm text-gray-700"><span class="font-semibold">预印本：</span> <a href="https://doi.org/10.48550/arXiv.2607.02520" target="_blank" rel="noopener" class="text-blue-700 hover:underline">AutoResearch</a>：基于执行验证的多智能体科研工作流自动化框架。</p>
+      </li>
+      <li class="flex gap-4 bg-white rounded-lg shadow-sm p-4">
+        <time datetime="2026" class="shrink-0 w-20 text-sm font-semibold text-purple-700">2026</time>
+        <p class="text-sm text-gray-700"><span class="font-semibold">软件：</span> <a href="https://github.com/raja21068/ResearchLedger" target="_blank" rel="noopener" class="text-blue-700 hover:underline">ResearchLedger v2.0.1</a>：以证据为先的科研自动化原型系统，已在 GitHub 公开。</p>
+      </li>
+      <li class="flex gap-4 bg-white rounded-lg shadow-sm p-4">
+        <time datetime="2026" class="shrink-0 w-20 text-sm font-semibold text-purple-700">2026</time>
+        <p class="text-sm text-gray-700"><span class="font-semibold">论文：</span> <a href="https://doi.org/10.1038/s41598-026-64096-5" target="_blank" rel="noopener" class="text-blue-700 hover:underline">RePFL</a>：面向皮肤癌检测的抗延迟个性化联邦学习，发表于 <em>Scientific Reports</em>.</p>
+      </li>
+      <li class="flex gap-4 bg-white rounded-lg shadow-sm p-4">
+        <time datetime="2026-04" class="shrink-0 w-20 text-sm font-semibold text-purple-700">2026年4月</time>
+        <p class="text-sm text-gray-700"><span class="font-semibold">预印本：</span> <a href="https://doi.org/10.48550/arXiv.2604.13120" target="_blank" rel="noopener" class="text-blue-700 hover:underline">AgentForge</a>：面向自主软件工程的多智能体大语言模型框架。</p>
+      </li>
+      <li class="flex gap-4 bg-white rounded-lg shadow-sm p-4">
+        <time datetime="2025" class="shrink-0 w-20 text-sm font-semibold text-purple-700">2025</time>
+        <p class="text-sm text-gray-700"><span class="font-semibold">论文：</span> <a href="https://doi.org/10.1109/JIOT.2025.3583408" target="_blank" rel="noopener" class="text-blue-700 hover:underline">MID-LLM</a>：区块链人工智能框架下基于大语言模型的医学影像诊断，发表于 <em>IEEE Internet of Things Journal</em>.</p>
+      </li>
+      <li class="flex gap-4 bg-white rounded-lg shadow-sm p-4">
+        <time datetime="2025" class="shrink-0 w-20 text-sm font-semibold text-purple-700">2025</time>
+        <p class="text-sm text-gray-700"><span class="font-semibold">论文：</span> <a href="https://doi.org/10.1016/j.artmed.2025.103245" target="_blank" rel="noopener" class="text-blue-700 hover:underline">肝脏病灶分割的联邦迁移学习</a> （PET-CT 影像），发表于 <em>Artificial Intelligence in Medicine</em>.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Flagship Research -->
+<section id="flagship" class="py-12 bg-white scroll-mt-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-10">
+      <span class="inline-block px-4 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium tracking-wider mb-3">代表性研究</span>
+      <h2 class="text-3xl font-bold text-gray-800 mb-2">研究原型与演示</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">精选研究原型，均有论文、预印本或公开代码支撑，并附演示或文档。</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Flagship: ResearchLedger -->
+      <article class="flex flex-col bg-white rounded-xl shadow-md border-t-4 border-pink-600 p-5 hover:shadow-xl transition-shadow">
+        <div class="flex items-center justify-between mb-3">
+          <i class="fas fa-clipboard-check text-3xl text-pink-600" aria-hidden="true"></i>
+          <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-pink-100 text-pink-700">新 · 2026</span>
+        </div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-pink-700">智能体 AI · 科研基础设施</span>
+        <h3 class="text-lg font-bold text-gray-800 mt-1 mb-2">ResearchLedger</h3>
+        <p class="text-sm text-gray-600 mb-4 flex-grow">以证据为先的科研自动化，关联研究假设、实验运行、证据记录与论文结论。软件原型。</p>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <a href="https://github.com/raja21068/ResearchLedger" target="_blank" rel="noopener" class="px-3 py-1 bg-pink-600 text-white rounded hover:bg-pink-700"><i class="fab fa-github mr-1" aria-hidden="true"></i>代码</a>
+          <a href="Research_Lab/index.html#pipeline" class="px-3 py-1 border border-pink-600 text-pink-700 rounded hover:bg-pink-50"><i class="fas fa-sitemap mr-1" aria-hidden="true"></i>工作流程</a>
+        </div>
+      </article>
+      <!-- Flagship: AutoResearch -->
+      <article class="flex flex-col bg-white rounded-xl shadow-md border-t-4 border-yellow-600 p-5 hover:shadow-xl transition-shadow">
+        <div class="flex items-center justify-between mb-3">
+          <i class="fas fa-project-diagram text-3xl text-yellow-600" aria-hidden="true"></i>
+          <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800">预印本 · 2026</span>
+        </div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-yellow-800">智能体 AI · 多智能体系统</span>
+        <h3 class="text-lg font-bold text-gray-800 mt-1 mb-2">AutoResearch</h3>
+        <p class="text-sm text-gray-600 mb-4 flex-grow">基于执行验证的多智能体框架，用于可靠的科研工作流自动化。</p>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <a href="https://arxiv.org/abs/2607.02520" target="_blank" rel="noopener" class="px-3 py-1 bg-yellow-600 text-white rounded hover:bg-yellow-700"><i class="fas fa-file-alt mr-1" aria-hidden="true"></i>预印本</a>
+          <a href="https://github.com/raja21068/AutoResearch" target="_blank" rel="noopener" class="px-3 py-1 border border-yellow-600 text-yellow-800 rounded hover:bg-yellow-50"><i class="fab fa-github mr-1" aria-hidden="true"></i>代码</a>
+        </div>
+      </article>
+      <!-- Flagship 1: The Fridge Has Eyes -->
+      <article class="flex flex-col bg-white rounded-xl shadow-md border-t-4 border-purple-600 p-5 hover:shadow-xl transition-shadow">
+        <i class="fas fa-camera text-3xl text-purple-600 mb-3" aria-hidden="true"></i>
+        <span class="text-xs font-semibold uppercase tracking-wider text-purple-700">计算机视觉</span>
+        <h3 class="text-lg font-bold text-gray-800 mt-1 mb-2">冰箱也有眼睛</h3>
+        <p class="text-sm text-gray-600 mb-4 flex-grow">商用冰箱内置 AI 摄像头，实时跟踪库存并分析消费者行为。</p>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <a href="https://www.nature.com/articles/s41598-021-97598-5" target="_blank" rel="noopener" class="px-3 py-1 bg-purple-600 text-white rounded hover:bg-purple-700"><i class="fas fa-file-alt mr-1" aria-hidden="true"></i>论文</a>
+          <a href="https://www.youtube.com/shorts/o-FAfs4jgMQ" target="_blank" rel="noopener" class="px-3 py-1 border border-purple-600 text-purple-700 rounded hover:bg-purple-50"><i class="fas fa-play mr-1" aria-hidden="true"></i>演示</a>
+          <a href="#demo-fridge" class="px-3 py-1 text-purple-700 hover:underline">详情 <i class="fas fa-arrow-down text-xs" aria-hidden="true"></i></a>
+        </div>
+      </article>
+      <!-- Flagship 2: AI-assisted CT scan analysis -->
+      <article class="flex flex-col bg-white rounded-xl shadow-md border-t-4 border-blue-600 p-5 hover:shadow-xl transition-shadow">
+        <i class="fas fa-x-ray text-3xl text-blue-600 mb-3" aria-hidden="true"></i>
+        <span class="text-xs font-semibold uppercase tracking-wider text-blue-700">医疗人工智能</span>
+        <h3 class="text-lg font-bold text-gray-800 mt-1 mb-2">AI 辅助 CT 影像分析</h3>
+        <p class="text-sm text-gray-600 mb-4 flex-grow">实时 CT 影像分析，以区块链增强患者数据的隐私与安全。</p>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <a href="https://www.sciencedirect.com/science/article/pii/S0895611122001094" target="_blank" rel="noopener" class="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"><i class="fas fa-file-alt mr-1" aria-hidden="true"></i>论文</a>
+          <a href="https://youtu.be/qHgiQj3YGL0" target="_blank" rel="noopener" class="px-3 py-1 border border-blue-600 text-blue-700 rounded hover:bg-blue-50"><i class="fas fa-play mr-1" aria-hidden="true"></i>演示</a>
+          <a href="#demo-ct" class="px-3 py-1 text-blue-700 hover:underline">详情 <i class="fas fa-arrow-down text-xs" aria-hidden="true"></i></a>
+        </div>
+      </article>
+      <!-- Flagship 3: Smart traffic management -->
+      <article class="flex flex-col bg-white rounded-xl shadow-md border-t-4 border-indigo-600 p-5 hover:shadow-xl transition-shadow">
+        <i class="fas fa-traffic-light text-3xl text-indigo-600 mb-3" aria-hidden="true"></i>
+        <span class="text-xs font-semibold uppercase tracking-wider text-indigo-700">智慧城市</span>
+        <h3 class="text-lg font-bold text-gray-800 mt-1 mb-2">智能交通管理</h3>
+        <p class="text-sm text-gray-600 mb-4 flex-grow">基于摄像头的交通控制，借助 AI 车辆识别优化城市交通流。</p>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <a href="https://www.mdpi.com/2227-7390/9/24/3162" target="_blank" rel="noopener" class="px-3 py-1 bg-indigo-600 text-white rounded hover:bg-indigo-700"><i class="fas fa-file-alt mr-1" aria-hidden="true"></i>论文</a>
+          <a href="https://youtu.be/EdNh4LCyOBo" target="_blank" rel="noopener" class="px-3 py-1 border border-indigo-600 text-indigo-700 rounded hover:bg-indigo-50"><i class="fas fa-play mr-1" aria-hidden="true"></i>演示</a>
+          <a href="#demo-traffic" class="px-3 py-1 text-indigo-700 hover:underline">详情 <i class="fas fa-arrow-down text-xs" aria-hidden="true"></i></a>
+        </div>
+      </article>
+      <!-- Flagship 4: Wire-free robotic lawn mower -->
+      <article class="flex flex-col bg-white rounded-xl shadow-md border-t-4 border-green-600 p-5 hover:shadow-xl transition-shadow">
+        <i class="fas fa-robot text-3xl text-green-600 mb-3" aria-hidden="true"></i>
+        <span class="text-xs font-semibold uppercase tracking-wider text-green-700">机器人</span>
+        <h3 class="text-lg font-bold text-gray-800 mt-1 mb-2">无边界线机器人割草机</h3>
+        <p class="text-sm text-gray-600 mb-4 flex-grow">基于摄像头的 AI 视觉取代边界线，实现自主、轻松的草坪养护。</p>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <a href="https://github.com/raja21068/-Wire-Free-Robotic-Lawn-Mowers-" target="_blank" rel="noopener" class="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700"><i class="fab fa-github mr-1" aria-hidden="true"></i>代码</a>
+          <a href="https://youtu.be/SehJvYrDLaw" target="_blank" rel="noopener" class="px-3 py-1 border border-green-600 text-green-700 rounded hover:bg-green-50"><i class="fas fa-play mr-1" aria-hidden="true"></i>演示</a>
+          <a href="#demo-lawn" class="px-3 py-1 text-green-700 hover:underline">详情 <i class="fas fa-arrow-down text-xs" aria-hidden="true"></i></a>
+        </div>
+      </article>
+    </div>
+    <p class="text-center mt-8 space-x-6">
+      <a href="Research_Lab/index.html" class="text-purple-700 font-medium hover:underline">探索研究实验室 <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i></a>
+      <a href="#research" class="text-purple-700 font-medium hover:underline">查看全部 AI 项目演示 <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i></a>
+    </p>
+  </div>
+</section>
+
+<!-- Research Categories -->
+<section id="publications" class="py-12 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-2 text-center">代表性论文</h2>
+    <p class="text-center text-gray-600 mb-8">精选代表作。 <a href="publications.html" class="text-blue-700 font-medium hover:underline">查看完整论文列表（英文） <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i></a></p>
+    <ol class="space-y-4 mb-12">
+      <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-yellow-500">
+        <a href="https://doi.org/10.48550/arXiv.2607.02520" target="_blank" rel="noopener" class="font-semibold text-gray-900 hover:text-blue-700">AutoResearch: An Execution-Grounded Multi-Agent Framework for Reliable Research Workflow Automation</a>
+        <p class="text-sm text-gray-600 mt-1"><strong>R. Kumar</strong>, W. Ali, J. Ahmed, A. A. Khan, S. Zeng. <em>arXiv 预印本</em> arXiv:2607.02520, 2026.</p>
+      </li>
+      <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-600">
+        <a href="https://doi.org/10.1109/JSEN.2021.3076767" target="_blank" rel="noopener" class="font-semibold text-gray-900 hover:text-blue-700">Blockchain-Federated-Learning and Deep Learning Models for COVID-19 Detection Using CT Imaging</a>
+        <p class="text-sm text-gray-600 mt-1"><strong>R. Kumar</strong>, A. A. Khan, J. Kumar, et al. <em>IEEE Sensors Journal</em>, 21(14), 16301&ndash;16314, 2021.</p>
+      </li>
+      <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-600">
+        <a href="https://doi.org/10.1016/j.compmedimag.2020.101812" target="_blank" rel="noopener" class="font-semibold text-gray-900 hover:text-blue-700">An Integration of Blockchain and AI for Secure Data Sharing and Detection of CT Images for the Hospitals</a>
+        <p class="text-sm text-gray-600 mt-1"><strong>R. Kumar</strong>, W. Wang, J. Kumar, et al. <em>Computerized Medical Imaging and Graphics</em>, 87, 101812, 2021.</p>
+      </li>
+      <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-600">
+        <a href="https://ieeexplore.ieee.org/document/9321754" target="_blank" rel="noopener" class="font-semibold text-gray-900 hover:text-blue-700">An Efficient and Provably Secure ECC-Based Conditional Privacy-Preserving Authentication for Vehicle-to-Vehicle Communication in VANETs</a>
+        <p class="text-sm text-gray-600 mt-1">I. Ali, Y. Chen, N. Ullah, <strong>R. Kumar</strong>, W. He. <em>IEEE Transactions on Vehicular Technology</em>, 2021.</p>
+      </li>
+      <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-600">
+        <a href="https://doi.org/10.4218/etrij.2019-0362" target="_blank" rel="noopener" class="font-semibold text-gray-900 hover:text-blue-700">Secure Large-Scale E-Voting System Based on Blockchain Contract Using a Hybrid Consensus Model Combined with Sharding</a>
+        <p class="text-sm text-gray-600 mt-1">Y. Abuidris, <strong>R. Kumar</strong>, T. Yang, J. Onginjo. <em>ETRI Journal</em>, 43(2), 357&ndash;370, 2021.</p>
+      </li>
+      <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-600">
+        <a href="https://doi.org/10.1109/ACCESS.2019.2916886" target="_blank" rel="noopener" class="font-semibold text-gray-900 hover:text-blue-700">A Multimodal Malware Detection Technique for Android IoT Devices Using Various Features</a>
+        <p class="text-sm text-gray-600 mt-1"><strong>R. Kumar</strong>, X. Zhang, W. Wang, et al. <em>IEEE Access</em>, 7, 64411&ndash;64430, 2019.</p>
+      </li>
+    </ol>
+    <h3 class="text-2xl font-bold mb-8 text-center">研究类别</h3>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <!-- Journal Papers Card -->
+      <a href="journal-papers.html" class="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-blue-600 hover:shadow-lg transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-blue-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+        <h4 class="font-semibold text-lg mb-2">期刊论文</h4>
+        <p class="text-gray-600 text-sm mb-4">顶级期刊的同行评审成果</p>
+        <div class="inline-flex items-center text-blue-600 font-medium">
+          查看论文
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </a>
+      <!-- Book Chapters Card -->
+      <a href="book-chapter.html" class="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-green-600 hover:shadow-lg transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-green-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
+        </svg>
+        <h4 class="font-semibold text-lg mb-2">书籍章节</h4>
+        <p class="text-gray-600 text-sm mb-4">为网络安全权威著作做出贡献</p>
+        <div class="inline-flex items-center text-green-600 font-medium">
+          查看章节
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </a>
+      <!-- Conference Papers Card -->
+      <a href="conference-papers.html" class="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-purple-600 hover:shadow-lg transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-purple-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+        <h4 class="font-semibold text-lg mb-2">会议论文</h4>
+        <p class="text-gray-600 text-sm mb-4">在顶级国际会议上发表的报告</p>
+        <div class="inline-flex items-center text-purple-600 font-medium">
+          查看会议
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </a>
+      <!-- Patents Card -->
+      <a href="patents.html" class="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-amber-600 hover:shadow-lg transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-amber-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+        <h4 class="font-semibold text-lg mb-2">专利</h4>
+        <p class="text-gray-600 text-sm mb-4">具有实际应用的创新技术</p>
+        <div class="inline-flex items-center text-amber-600 font-medium">
+          查看专利
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
+  <div class="container mx-auto px-6">
+    <!-- Section Header with Accent Elements -->
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium tracking-wider mb-3">专业能力</span>
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">技能与贡献</h2>
+      <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+        通过技术专长、创意编程与高效领导推动创新
+      </p>
     </div>
     
-    <div class="project-grid">
-      <div class="project-card">
-        <div class="card-banner"></div>
-        <div class="card-content">
-          <h3 class="project-name">基于联邦区块链的PET-CT影像分析协作学习</h3>
-          
-          <div class="project-meta">
-            <div class="meta-item">
-              <span class="meta-label">项目编号</span>
-              <span class="meta-value">U0723003</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">结束日期</span>
-              <span class="meta-value">2025年6月</span>
-            </div>
+    <!-- Skills Grid with Enhanced Visual Design (No Progress Bars) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Technical Expertise Card -->
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-blue-600">
+        <div class="flex items-center mb-6">
+          <div class="p-3 bg-blue-100 rounded-lg mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800">技术专长</h3>
+        </div>
+        
+        <div class="space-y-3">
+          <div class="flex justify-between items-center py-2 border-b border-gray-100">
+            <span class="text-gray-700">区块链技术</span>
+            <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">专家</span>
           </div>
           
-          <div class="funding-badge">
-            5,000人民币
+          <div class="flex justify-between items-center py-2 border-b border-gray-100">
+            <span class="text-gray-700">深度学习</span>
+            <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">专家</span>
+          </div>
+          
+          <div class="flex justify-between items-center py-2 border-b border-gray-100">
+            <span class="text-gray-700">机器学习</span>
+            <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">专家</span>
+          </div>
+          
+          <div class="flex justify-between items-center py-2 border-b border-gray-100">
+            <span class="text-gray-700">网络安全</span>
+            <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">专家</span>
+          </div>
+          
+          <div class="flex justify-between items-center py-2">
+            <span class="text-gray-700">联邦学习</span>
+            <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">专家</span>
           </div>
         </div>
       </div>
       
-      <div class="project-card">
-        <div class="card-banner"></div>
-        <div class="card-content">
-          <h3 class="project-name">基于私有大型语言模型的智能图像生成软件</h3>
-          
-          <div class="project-meta">
-            <div class="meta-item">
-              <span class="meta-label">项目编号</span>
-              <span class="meta-value">H01240121</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">结束日期</span>
-              <span class="meta-value">2026年12月31日</span>
-            </div>
+      <!-- Programming Languages Card -->
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-purple-600">
+        <div class="flex items-center mb-6">
+          <div class="p-3 bg-purple-100 rounded-lg mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800">编程语言</h3>
+        </div>
+        
+        <div class="space-y-3">
+          <div class="flex justify-between items-center py-2 border-b border-gray-100">
+            <span class="text-gray-700">Python</span>
+            <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">高级</span>
           </div>
           
-          <div class="funding-badge">
-            500,000人民币
+          <div class="flex justify-between items-center py-2 border-b border-gray-100">
+            <span class="text-gray-700">Java</span>
+            <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">高级</span>
+          </div>
+          
+          <div class="flex justify-between items-center py-2 border-b border-gray-100">
+            <span class="text-gray-700">C/C++</span>
+            <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">高级</span>
+          </div>
+          
+          <div class="flex justify-between items-center py-2 border-b border-gray-100">
+            <span class="text-gray-700">PHP</span>
+            <span class="font-bold text-yellow-600 px-3 py-1 bg-yellow-50 rounded-full text-sm">中级</span>
+          </div>
+          
+          <div class="flex justify-between items-center py-2">
+            <span class="text-gray-700">Android</span>
+            <span class="font-bold text-yellow-600 px-3 py-1 bg-yellow-50 rounded-full text-sm">中级</span>
           </div>
         </div>
       </div>
       
-      <div class="project-card">
-        <div class="card-banner"></div>
-        <div class="card-content">
-          <h3 class="project-name">高性能轻量化工业区块链技术及应用</h3>
-          
-          <div class="project-meta">
-            <div class="meta-item">
-              <span class="meta-label">项目编号</span>
-              <span class="meta-value">U03210049</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">结束日期</span>
-              <span class="meta-value">2026年8月3日</span>
-            </div>
+      <!-- Leadership & Management Card -->
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-indigo-600">
+        <div class="flex items-center mb-6">
+          <div class="p-3 bg-indigo-100 rounded-lg mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
           </div>
-          
-          <div class="funding-badge">
-            400,000人民币
-          </div>
+          <h3 class="text-2xl font-semibold text-gray-800">领导与管理</h3>
         </div>
-      </div>
-      
-      <div class="project-card">
-        <div class="card-banner"></div>
-        <div class="card-content">
-          <h3 class="project-name">区块链分片共识研究</h3>
-          
-          <div class="project-meta">
-            <div class="meta-item">
-              <span class="meta-label">项目编号</span>
-              <span class="meta-value">Y03019023601016201</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">结束日期</span>
-              <span class="meta-value">2021年7月</span>
-            </div>
+        
+        <div class="space-y-3">
+          <div class="flex justify-between items-center py-2 border-b border-gray-100">
+            <span class="text-gray-700">研究指导</span>
+            <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">高级</span>
           </div>
           
-          <div class="funding-badge completed-badge">
-            50,000人民币
+          <div class="flex justify-between items-center py-2 border-b border-gray-100">
+            <span class="text-gray-700">项目管理</span>
+            <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">高级</span>
+          </div>
+          
+          <div class="flex justify-between items-center py-2 border-b border-gray-100">
+            <span class="text-gray-700">团队领导</span>
+            <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">高级</span>
+          </div>
+          
+          <div class="flex justify-between items-center py-2 border-b border-gray-100">
+            <span class="text-gray-700">学术教学</span>
+            <span class="font-bold text-green-600 px-3 py-1 bg-green-50 rounded-full text-sm">高级</span>
+          </div>
+          
+          <div class="flex justify-between items-center py-2">
+            <span class="text-gray-700">项目申请撰写</span>
+            <span class="font-bold text-yellow-600 px-3 py-1 bg-yellow-50 rounded-full text-sm">中级</span>
           </div>
         </div>
       </div>
     </div>
-  </main>
+  </div>
+</section>
 
-  <!-- 精选项目 -->
-  <section id="projects" class="py-12 bg-gray-50">
-    <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">精选项目</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- 项目卡片 1 -->
-        <div class="bg-white rounded-lg shadow hover:shadow-xl transition">
-          <div class="p-4 rounded-t-lg flex items-center justify-center" style="background-color: #3949ab;">
-            <i class="fas fa-shield-alt text-white text-3xl"></i>
-          </div>
-          <div class="p-4">
-            <h3 class="text-xl font-bold mb-2">基于区块链的联邦学习</h3>
-            <p class="text-gray-600 mb-4">
-              开发了一种联邦学习模型，在分布式环境中安全共享敏感数据，提高数据隐私保护。
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">区块链</span>
-              <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">联邦学习</span>
-              <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">Python</span>
+	<!-- Professional Experience Section with Timeline Design -->
+<section id="experience" class="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <h2 class="section-title text-3xl font-bold text-center mb-16 relative">
+            <span class="relative z-10">专业经历</span>
+            <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-600"></span>
+        </h2>
+        
+        <div class="timeline-container relative">
+            <!-- Center line -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-600 rounded"></div>
+            
+            <!-- Timeline items -->
+            <div class="timeline-item mb-16 relative flex">
+                <div class="timeline-content bg-white w-5/12 p-6 rounded-lg shadow-lg border-t-4 border-blue-600 relative">
+                    <div class="absolute top-6 -right-12 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center shadow-md z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="arrow absolute top-6 -right-4 w-4 h-4 bg-white transform rotate-45"></div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">副研究员/教学员</h3>
+                    <div class="date text-sm font-medium text-blue-600 mb-3 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        2021年7月 - 至今
+                    </div>
+                    <p class="font-medium text-gray-700 mb-2">中国电子科技大学湖州长江三角洲研究院</p>
+                    <p class="text-gray-600">在教授本科与研究生课程的同时，领导区块链、深度学习与计算机视觉的研究项目。</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">区块链</span>
+                        <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">深度学习</span>
+                        <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">计算机视觉</span>
+                    </div>
+                </div>
             </div>
+            
+            <div class="timeline-item mb-16 relative flex justify-end">
+                <div class="timeline-content bg-white w-5/12 p-6 rounded-lg shadow-lg border-t-4 border-green-600 relative">
+                    <div class="absolute top-6 -left-12 w-12 h-12 bg-green-600 rounded-full flex items-center justify-center shadow-md z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="arrow absolute top-6 -left-4 w-4 h-4 bg-white transform rotate-45"></div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">博士后研究员</h3>
+                    <div class="date text-sm font-medium text-green-600 mb-3 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        2019年6月 - 2021年6月
+                    </div>
+                    <p class="font-medium text-gray-700 mb-2">中国电子科技大学</p>
+                    <p class="text-gray-600">参与国家级项目，包括物联网恶意软件检测和基于区块链的安全数据共享。</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">物联网安全</span>
+                        <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">恶意软件检测</span>
+                        <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">数据共享</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-item mb-16 relative flex">
+                <div class="timeline-content bg-white w-5/12 p-6 rounded-lg shadow-lg border-t-4 border-purple-600 relative">
+                    <div class="absolute top-6 -right-12 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center shadow-md z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <div class="arrow absolute top-6 -right-4 w-4 h-4 bg-white transform rotate-45"></div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">IT学院讲师</h3>
+                    <div class="date text-sm font-medium text-purple-600 mb-3 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        2014 - 2016
+                    </div>
+                    <p class="font-medium text-gray-700 mb-2">AIMS IT学院</p>
+                    <p class="text-gray-600">讲授了Java编程、PHP网页编程、Android开发、数据库设计和数据结构课程。</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">Java</span>
+                        <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">PHP</span>
+                        <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">Android</span>
+                        <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">数据库</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-item relative flex justify-end">
+                <div class="timeline-content bg-white w-5/12 p-6 rounded-lg shadow-lg border-t-4 border-amber-600 relative">
+                    <div class="absolute top-6 -left-12 w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center shadow-md z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <div class="arrow absolute top-6 -left-4 w-4 h-4 bg-white transform rotate-45"></div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">软件开发实习生</h3>
+                    <div class="date text-sm font-medium text-amber-600 mb-3 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        2014年6月 - 2015年6月
+                    </div>
+                    <p class="font-medium text-gray-700 mb-2">巴基斯坦信德大学，贾姆肖罗</p>
+                    <p class="text-gray-600">开发了用于大学管理的网页应用和内部软件解决方案。</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">网页开发</span>
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">UI/UX</span>
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">软件工程</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+	
+	
+	
+	
+	
+ <section id="education" class="section">
+    <div class="container">
+        <h2 class="section-title">教育</h2>
+        <div class="timeline">
+            <div class="education-card">
+                <div class="education-header">
+                    <h3>计算机科学与技术博士</h3>
+                    <span class="education-year">2016-2019</span>
+                </div>
+                <div class="education-body">
+                    <div class="institution">
+                        <i class="fas fa-university"></i>
+                        <span>中国电子科技大学</span>
+                    </div>
+                    <p class="thesis"><strong>论文：</strong> 基于机器学习的安卓恶意软件检测</p>
+                    <ul class="achievements">
+                        <li>开发了一种新颖的机器学习框架，以提高检测和分类安卓恶意软件的准确性</li>
+                        <li>与行业合作伙伴合作，为物联网设备创建安全数据共享协议</li>
+                        <li>参与了以网络安全和基于人工智能的恶意软件检测为重点的国家研究项目</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="education-card">
+                <div class="education-header">
+                    <h3>计算机科学硕士</h3>
+                    <span class="education-year">2014-2016</span>
+                </div>
+                <div class="education-body">
+                    <div class="institution">
+                        <i class="fas fa-university"></i>
+                        <span>贾姆肖罗信德大学</span>
+                    </div>
+                    <p>对网络安全和数据库管理系统进行了研究，并完成了一篇关于分布式环境下安全收费系统的论文。</p>
+                </div>
+            </div>
+
+            <div class="education-card">
+                <div class="education-header">
+                    <h3>计算机科学学士</h3>
+                    <span class="education-year">2010-2013</span>
+                </div>
+                <div class="education-body">
+                    <div class="institution">
+                        <i class="fas fa-university"></i>
+                        <span>贾姆肖罗信德大学</span>
+                    </div>
+                    <p>专注于软件工程和数据库系统，完成了基于安卓技术的自动考勤系统的毕业设计。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="funded-projects">
+<div class="max-w-5xl mx-auto px-4">
+  <h2 class="text-3xl font-bold text-center mb-2">科研基金项目</h2>
+  <p class="text-center text-gray-600 mb-8">在研项目在前，其后为已结题和历史项目。</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- Active -->
+    <div class="relative bg-white rounded-lg shadow hover:shadow-xl transition">
+      <div class="p-4 rounded-t-lg flex items-center justify-center" style="background-color: #5c6bc0;">
+        <i class="fas fa-robot text-white text-3xl"></i>
+        <span class="absolute top-2 right-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-green-100 text-green-800">在研</span>
+      </div>
+      <div class="p-4">
+        <h3 class="text-xl font-bold mb-2">基于私有大型语言模型的智能图像生成软件</h3>
+        <div class="flex flex-col gap-2 mb-4">
+          <div class="flex justify-between text-sm">
+            <span class="text-gray-600">项目编号：</span>
+            <span class="font-medium">H01240121</span>
+          </div>
+          <div class="flex justify-between text-sm">
+            <span class="text-gray-600">结题日期：</span>
+            <span class="font-medium">2026年12月31日</span>
           </div>
         </div>
-        
-        <!-- 项目卡片 2 (基于LLM的医疗可视化) -->
-        <div class="bg-white rounded-lg shadow hover:shadow-xl transition">
-          <div class="p-4 rounded-t-lg flex items-center justify-center" style="background-color: #5c6bc0;">
-            <i class="fas fa-stethoscope text-white text-3xl"></i>
-          </div>
-          <div class="p-4">
-            <h3 class="text-xl font-bold mb-2">基于大型语言模型的医疗可视化</h3>
-            <p class="text-gray-600 mb-4">
-              利用大型语言模型生成并解析医疗视觉数据，架起临床洞见与有影响力的视觉分析之间的桥梁。
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">医疗人工智能</span>
-              <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">自然语言处理</span>
-              <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">计算机视觉</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- 项目卡片 3 -->
-        <div class="bg-white rounded-lg shadow hover:shadow-xl transition">
-          <div class="p-4 rounded-t-lg flex items-center justify-center" style="background-color: #7986cb;">
-            <i class="fas fa-brain text-white text-3xl"></i>
-          </div>
-          <div class="p-4">
-            <h3 class="text-xl font-bold mb-2">基于联邦学习的医疗影像分析</h3>
-            <p class="text-gray-600 mb-4">
-              采用联邦学习技术改进医疗影像分析，为医疗机构提供更准确的诊断结果。
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">医疗保健</span>
-              <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">深度学习</span>
-              <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">计算机视觉</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- 项目卡片 4 -->
-        <div class="bg-white rounded-lg shadow hover:shadow-xl transition">
-          <div class="p-4 rounded-t-lg flex items-center justify-center" style="background-color: #9fa8da;">
-            <i class="fas fa-university text-white text-3xl"></i>
-          </div>
-          <div class="p-4">
-            <h3 class="text-xl font-bold mb-2">大学管理系统</h3>
-            <p class="text-gray-600 mb-4">
-              构建并优化了大学的考试成绩和招生门户，提高用户体验并高效处理大量数据。
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">网页开发</span>
-              <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">数据库</span>
-              <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">PHP</span>
-            </div>
-          </div>
+        <div class="bg-blue-100 text-blue-600 text-sm font-medium px-3 py-1 rounded text-center">
+          500,000人民币
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- 实时人工智能项目 -->
-  <section id="research" class="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
-    <div class="max-w-6xl mx-auto px-6">
-      <!-- 分区标题 -->
-      <div class="text-center mb-16">
-        <span class="inline-block px-4 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium tracking-wider mb-3">创新中心</span>
-        <h2 class="text-4xl font-bold mb-4 text-gray-800">实时人工智能项目</h2>
-        <div class="w-24 h-1 bg-purple-600 mx-auto mb-6"></div>
-        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-          将人工智能、计算机视觉和区块链技术相结合，解决现实世界挑战的前沿研究。
-        </p>
+    <!-- Completed · Aug 2026 -->
+    <div class="relative bg-white rounded-lg shadow hover:shadow-xl transition">
+      <div class="p-4 rounded-t-lg flex items-center justify-center" style="background-color: #7986cb;">
+        <i class="fas fa-link text-white text-3xl"></i>
+        <span class="absolute top-2 right-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">已结题</span>
       </div>
-      
-      <div class="space-y-16">
-        <!-- 项目 1：冰箱也有眼睛 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-          <div class="md:flex">
-            <div class="md:w-2/5 bg-purple-900 relative">
-              <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-700 opacity-90"></div>
-              <div class="relative p-8 text-white h-full flex flex-col justify-center">
-                <span class="text-xs font-semibold tracking-wider uppercase mb-2 inline-block bg-white bg-opacity-20 px-2 py-1 rounded">计算机视觉</span>
-                <h3 class="text-3xl font-bold mb-4">冰箱也有眼睛</h3>
-                <p class="mb-6 text-white text-opacity-90">商业冰箱内的AI摄像系统，用于库存管理和消费者行为分析</p>
-                <div class="flex space-x-4 mt-auto">
-                  <a href="https://www.youtube.com/shorts/o-FAfs4jgMQ" target="_blank" class="flex items-center px-4 py-2 bg-white text-purple-900 rounded-lg hover:bg-opacity-90 transition-colors font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                      <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
-                    </svg>
-                    观看演示
-                  </a>
-                  <a href="https://www.nature.com/articles/s41598-021-97598-5" target="_blank" class="flex items-center px-4 py-2 bg-transparent border border-white text-white rounded-lg hover:bg-white hover:text-purple-900 transition-colors font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z" clip-rule="evenodd" />
-                    </svg>
-                    阅读论文
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="md:w-3/5 p-0">
-              <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 h-full">
-                <div class="h-64 md:h-auto overflow-hidden">
-                  <img src="refigitor.jpg" alt="The Fridge Has Eyes" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"/>
-                </div>
-                <div class="h-64 md:h-auto">
-                  <iframe src="https://www.youtube.com/embed/o-FAfs4jgMQ" allowfullscreen class="w-full h-full"></iframe>
-                </div>
-              </div>
-            </div>
+      <div class="p-4">
+        <h3 class="text-xl font-bold mb-2">高性能轻量化工业区块链技术及应用</h3>
+        <div class="flex flex-col gap-2 mb-4">
+          <div class="flex justify-between text-sm">
+            <span class="text-gray-600">项目编号：</span>
+            <span class="font-medium">U03210049</span>
           </div>
-          <div class="p-6 bg-gray-50">
-            <h4 class="font-semibold text-gray-700 mb-2">研究影响</h4>
-            <p class="text-gray-600">该项目利用AI驱动的计算机视觉技术跟踪商业冰箱中的物品，提高供应链安全性和库存管理，从而减少浪费并改善补货效率。</p>
+          <div class="flex justify-between text-sm">
+            <span class="text-gray-600">结题日期：</span>
+            <span class="font-medium">2026年8月3日</span>
           </div>
         </div>
-
-        <!-- 项目 2：一探究竟 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-          <div class="md:flex">
-            <div class="md:w-2/5 bg-blue-900 relative">
-              <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-teal-700 opacity-90"></div>
-              <div class="relative p-8 text-white h-full flex flex-col justify-center">
-                <span class="text-xs font-semibold tracking-wider uppercase mb-2 inline-block bg-white bg-opacity-20 px-2 py-1 rounded">医疗人工智能</span>
-                <h3 class="text-3xl font-bold mb-4">一探究竟</h3>
-                <p class="mb-6 text-white text-opacity-90">借助区块链增强隐私和安全的AI辅助实时CT扫描分析</p>
-                <div class="flex space-x-4 mt-auto">
-                  <a href="https://youtu.be/qHgiQj3YGL0" target="_blank" class="flex items-center px-4 py-2 bg-white text-blue-900 rounded-lg hover:bg-opacity-90 transition-colors font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                      <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
-                    </svg>
-                    观看演示
-                  </a>
-                  <a href="https://www.sciencedirect.com/science/article/pii/S0895611122001094" target="_blank" class="flex items-center px-4 py-2 bg-transparent border border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z" clip-rule="evenodd" />
-                    </svg>
-                    查看研究
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="md:w-3/5 p-0">
-              <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 h-full">
-                <div class="h-64 md:h-auto overflow-hidden">
-                  <img src="ct.jpg" alt="AI Assists Real-Time CT Scan Analysis" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"/>
-                </div>
-                <div class="h-64 md:h-auto">
-                  <iframe src="https://www.youtube.com/embed/qHgiQj3YGL0" allowfullscreen class="w-full h-full"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="p-6 bg-gray-50">
-            <h4 class="font-semibold text-gray-700 mb-2">已发表研究</h4>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
-              <a href="https://www.sciencedirect.com/science/article/pii/S0895611122001094" target="_blank" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200 transition-colors">
-                <span class="text-blue-800 font-medium text-sm mb-2">区块链与加密</span>
-                <span class="text-gray-600 text-sm">针对医疗影像的隐私保护模型聚合</span>
-              </a>
-              <a href="https://www.sciencedirect.com/science/article/abs/pii/S0895611120301075" target="_blank" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200 transition-colors">
-                <span class="text-blue-800 font-medium text-sm mb-2">去中心化分析</span>
-                <span class="text-gray-600 text-sm">将区块链与AI结合用于CT扫描分析</span>
-              </a>
-              <a href="https://ieeexplore.ieee.org/abstract/document/9420107" target="_blank" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200 transition-colors">
-                <span class="text-blue-800 font-medium text-sm mb-2">联邦学习</span>
-                <span class="text-gray-600 text-sm">隐私保护的协作模型</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- 项目 3：城市流量可视化 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-          <div class="md:flex">
-            <div class="md:w-1/3 bg-green-900 relative">
-              <div class="absolute inset-0 bg-gradient-to-br from-green-600 to-blue-700 opacity-90"></div>
-              <div class="relative p-6 text-white h-full flex flex-col justify-center">
-                <span class="text-xs font-semibold tracking-wider uppercase mb-2 inline-block bg-white bg-opacity-20 px-2 py-1 rounded">智慧城市</span>
-                <h3 class="text-2xl font-bold mb-4">城市流量可视化</h3>
-                <p class="mb-6 text-white text-opacity-90 text-sm">基于摄像头的智慧交通管理系统，结合AI增强车辆识别</p>
-                <div class="flex space-x-4 mt-auto">
-                  <a href="https://youtu.be/EdNh4LCyOBo" target="_blank" class="flex items-center px-3 py-1 bg-white text-green-900 rounded-lg hover:bg-opacity-90 transition-colors font-medium text-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                      <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
-                    </svg>
-                    观看演示
-                  </a>
-                  <a href="https://www.mdpi.com/2227-7390/9/24/3162" target="_blank" class="flex items-center px-4 py-2 bg-transparent border border-white text-white rounded-lg hover:bg-white hover:text-green-900 transition-colors font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z" clip-rule="evenodd" />
-                    </svg>
-                    查看研究
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="md:w-2/3 p-0">
-              <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 h-full">
-                <div class="h-64 md:h-auto overflow-hidden">
-                  <img src="car.jpg" alt="Traffic Management Project" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"/>
-                </div>
-                <div class="h-64 md:h-auto">
-                  <iframe src="https://www.youtube.com/embed/EdNh4LCyOBo" allowfullscreen class="w-full h-full"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="p-6 bg-gray-50">
-            <h4 class="font-semibold text-gray-700 mb-2">已发表研究</h4>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
-              <a href="https://www.mdpi.com/2227-7390/9/24/3162" target="_blank" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-200 transition-colors">
-                <span class="text-green-800 font-medium text-sm mb-2">车辆再识别</span>
-                <span class="text-gray-600 text-sm">车辆再识别的趋势：过去、现在与未来</span>
-              </a>
-              <a href="https://www.mdpi.com/2076-3417/9/7/1291" target="_blank" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-200 transition-colors">
-                <span class="text-green-800 font-medium text-sm mb-2">多层次特征提取</span>
-                <span class="text-gray-600 text-sm">高效且深入的车辆再识别技术</span>
-              </a>
-              <a href="https://ieeexplore.ieee.org/abstract/document/9321754" target="_blank" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-200 transition-colors">
-                <span class="text-green-800 font-medium text-sm mb-2">安全通信</span>
-                <span class="text-gray-600 text-sm">基于ECC的车与车通信认证</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- 项目 4：无线机器人割草机 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl mt-8">
-          <div class="md:flex">
-            <div class="md:w-1/3 bg-green-900 relative">
-              <div class="absolute inset-0 bg-gradient-to-br from-green-800 to-blue-700 opacity-90"></div>
-              <div class="relative p-6 text-white h-full flex flex-col justify-center">
-                <span class="text-xs font-semibold tracking-wider uppercase mb-2 inline-block bg-green-500 bg-opacity-20 px-2 py-1 rounded">自动化园林绿化</span>
-                <h3 class="text-2xl font-bold mb-3">无线机器人割草机</h3>
-                <p class="mb-4 text-white text-opacity-90 text-sm">基于摄像头的创新，实现轻松草坪护理，结合AI视觉系统</p>
-                <div class="flex space-x-3 mt-auto">
-                  <a href="https://youtu.be/SehJvYrDLaw" target="_blank" class="flex items-center px-3 py-1 bg-white text-green-900 rounded-lg hover:bg-opacity-90 transition-colors font-medium text-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                      <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
-                    </svg>
-                    观看演示
-                  </a>
-                  <a href="https://github.com/raja21068/-Wire-Free-Robotic-Lawn-Mowers-" target="_blank" class="flex items-center px-3 py-1 bg-transparent border border-white text-white rounded-lg hover:bg-white hover:text-green-900 transition-colors font-medium text-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                    查看代码
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="md:w-2/3 p-0">
-              <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 h-full">
-                <div class="h-64 md:h-auto overflow-hidden">
-                  <img src="lawn.jpg" alt="Lawn Mower Project" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"/>
-                </div>
-                <div class="h-64 md:h-auto">
-                  <iframe src="https://www.youtube.com/embed/SehJvYrDLaw" allowfullscreen class="w-full h-full"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="p-6 bg-gray-50">
-            <h4 class="font-semibold text-gray-700 mb-2">项目资源</h4>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
-              <a href="https://github.com/raja21068/-Wire-Free-Robotic-Lawn-Mowers-" target="_blank" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-200 transition-colors">
-                <span class="text-green-800 font-medium text-sm mb-2">源代码</span>
-                <span class="text-gray-600 text-sm">包含实现细节的完整GitHub仓库</span>
-              </a>
-              <a href="https://youtu.be/SehJvYrDLaw" target="_blank" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-200 transition-colors">
-                <span class="text-green-800 font-medium text-sm mb-2">视频演示</span>
-                <span class="text-gray-600 text-sm">完整展示机器人割草机的实际操作</span>
-              </a>
-              <a href="#" target="_blank" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-200 transition-colors">
-                <span class="text-green-800 font-medium text-sm mb-2">计算机视觉</span>
-                <span class="text-gray-600 text-sm">基于AI的视觉导航与边界检测</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- 项目 5：自主叉车 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-          <div class="md:flex">
-            <div class="md:w-1/3 bg-gray-800 relative">
-              <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-gray-700 opacity-90"></div>
-              <div class="relative p-6 text-white h-full flex flex-col justify-center">
-                <span class="text-xs font-semibold tracking-wider uppercase mb-2 inline-block bg-yellow-500 bg-opacity-90 px-2 py-1 rounded text-gray-900">工业自动化</span>
-                <h3 class="text-2xl font-bold mb-3">超越人手</h3>
-                <p class="mb-4 text-white text-opacity-90 text-sm">利用摄像头驱动的自主叉车AI引领仓储未来</p>
-                <div class="flex space-x-3 mt-auto">
-                  <a href="https://www.youtube.com/embed/TZf-dan9Mco" target="_blank" class="flex items-center px-3 py-1 bg-yellow-500 text-gray-900 rounded-lg hover:bg-opacity-90 transition-colors font-medium text-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                      <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
-                    </svg>
-                    观看演示
-                  </a>
-                  <a href="#" target="_blank" class="flex items-center px-3 py-1 bg-transparent border border-yellow-500 text-yellow-500 rounded-lg hover:bg-yellow-500 hover:text-gray-900 transition-colors font-medium text-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z" clip-rule="evenodd" />
-                    </svg>
-                    了解更多
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="md:w-2/3 p-0">
-              <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 h-full">
-                <div class="h-64 md:h-auto overflow-hidden">
-                  <img src="forllift.jpg" alt="Forklift Project" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"/>
-                </div>
-                <div class="h-64 md:h-auto">
-                  <iframe src="https://www.youtube.com/embed/TZf-dan9Mco" allowfullscreen class="w-full h-full"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="p-6 bg-gray-50">
-            <h4 class="font-semibold text-gray-700 mb-2">关键技术</h4>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
-              <a href="#" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200 transition-colors">
-                <span class="text-blue-800 font-medium text-sm mb-2">计算机视觉</span>
-                <span class="text-gray-600 text-sm">针对复杂环境导航的先进目标检测与空间感知</span>
-              </a>
-              <a href="#" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200 transition-colors">
-                <span class="text-blue-800 font-medium text-sm mb-2">实时决策</span>
-                <span class="text-gray-600 text-sm">基于AI的算法实现高效路径规划和障碍物避让</span>
-              </a>
-              <a href="#" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200 transition-colors">
-                <span class="text-blue-800 font-medium text-sm mb-2">安全协议</span>
-                <span class="text-gray-600 text-sm">多重冗余系统确保在人工作业环境中的安全运行</span>
-              </a>
-            </div>
-          </div>
+        <div class="bg-gray-100 text-gray-600 text-sm font-medium px-3 py-1 rounded text-center">
+          400,000 人民币（已结题）
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- 课堂视频库 -->
-  <section id="teaching" class="py-16 bg-gradient-to-b from-gray-50 to-gray-100">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-3">课堂视频 <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">库</span></h2>
-      <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">探索我们精心策划的教育内容，助您提升学习之旅</p>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- 卡片 1 -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 hover:scale-102">
-          <div class="aspect-w-16 aspect-h-9">
-            <iframe src="https://www.youtube.com/embed/xVx29hk7R-k" allowfullscreen class="w-full h-full"></iframe>
+    <!-- Completed · Jun 2025 -->
+    <div class="relative bg-white rounded-lg shadow hover:shadow-xl transition">
+      <div class="p-4 rounded-t-lg flex items-center justify-center" style="background-color: #3949ab;">
+        <i class="fas fa-dna text-white text-3xl"></i>
+        <span class="absolute top-2 right-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">已结题</span>
+      </div>
+      <div class="p-4">
+        <h3 class="text-xl font-bold mb-2">基于联邦区块链的PET-CT影像分析协作学习</h3>
+        <div class="flex flex-col gap-2 mb-4">
+          <div class="flex justify-between text-sm">
+            <span class="text-gray-600">项目编号：</span>
+            <span class="font-medium">U0723003</span>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-3 text-gray-800">5分钟掌握机器学习基本概念</h3>
-            <div class="mb-4 text-sm text-gray-600 space-y-2">
-              <div class="flex items-center">
-                <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                </svg>
-                <a href="https://github.com/raja21068/Machine-Learning-For-Beginerrs-Course-PPT" target="_blank" class="hover:text-blue-600 transition-colors">完整课程PPT</a>
-              </div>
-              <div class="flex items-center">
-                <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                </svg>
-                <a href="https://github.com/raja21068/Machine-Learning-Toturials" target="_blank" class="hover:text-blue-600 transition-colors">Python代码示例</a>
-              </div>
-            </div>
-            <a href="https://www.youtube.com/embed/xVx29hk7R-k" class="inline-block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors text-sm font-medium">立即观看</a>
+          <div class="flex justify-between text-sm">
+            <span class="text-gray-600">结题日期：</span>
+            <span class="font-medium">2025年6月</span>
           </div>
         </div>
-        
-        <!-- 卡片 2 -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 hover:scale-102">
-          <div class="aspect-w-16 aspect-h-9">
-            <iframe src="https://www.youtube.com/embed/31f5S1YJzPI" allowfullscreen class="w-full h-full"></iframe>
+        <div class="bg-gray-100 text-gray-600 text-sm font-medium px-3 py-1 rounded text-center">
+          5,000 人民币（已结题）
+        </div>
+      </div>
+    </div>
+
+    <!-- Historical · 2021 -->
+    <div class="relative bg-white rounded-lg shadow hover:shadow-xl transition">
+      <div class="p-4 rounded-t-lg flex items-center justify-center" style="background-color: #9fa8da;">
+        <i class="fas fa-cubes text-white text-3xl"></i>
+        <span class="absolute top-2 right-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800">历史项目</span>
+      </div>
+      <div class="p-4">
+        <h3 class="text-xl font-bold mb-2">区块链分片共识研究</h3>
+        <div class="flex flex-col gap-2 mb-4">
+          <div class="flex justify-between text-sm">
+            <span class="text-gray-600">项目编号：</span>
+            <span class="font-medium">Y03019023601016201</span>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-3 text-gray-800">精通Java面向对象编程</h3>
-            <div class="mb-4 text-sm text-gray-600 space-y-2">
-              <div class="flex items-center">
-                <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                </svg>
-                <a href="https://github.com/raja21068/JAVA-Basic-Level-SLIDES-ppt-" target="_blank" class="hover:text-blue-600 transition-colors">完整课程PPT</a>
-              </div>
-              <div class="flex items-center">
-                <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                </svg>
-                <a href="https://github.com/raja21068/Java-Programs" target="_blank" class="hover:text-blue-600 transition-colors">Java代码示例</a>
-              </div>
-            </div>
-            <a href="https://www.youtube.com/embed/31f5S1YJzPI" class="inline-block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors text-sm font-medium">立即观看</a>
+          <div class="flex justify-between text-sm">
+            <span class="text-gray-600">结题日期：</span>
+            <span class="font-medium">2021年7月</span>
+          </div>
+        </div>
+        <div class="bg-gray-100 text-gray-600 text-sm font-medium px-3 py-1 rounded text-center">
+          50,000 人民币（已结题）
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div id="projects" class="max-w-5xl mx-auto px-4 scroll-mt-24">
+    <h2 class="text-3xl font-bold text-center mb-8">其他研究项目</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Project Card 1 -->
+      <div class="bg-white rounded-lg shadow hover:shadow-xl transition">
+        <div class="p-4 rounded-t-lg flex items-center justify-center" style="background-color: #3949ab;">
+          <i class="fas fa-shield-alt text-white text-3xl"></i>
+        </div>
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-2">基于区块链的联邦学习</h3>
+          <p class="text-gray-600 mb-4">
+            开发了一种联邦学习模型，在分布式环境中安全共享敏感数据，提高数据隐私保护。
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">区块链</span>
+            <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">联邦学习</span>
+            <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">Python</span>
           </div>
         </div>
       </div>
       
-      <div class="text-center mt-10">
-        <a href="https://www.youtube.com/@RajaKumarraja21068" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:opacity-90 transition-opacity">
-          浏览所有视频
-          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-          </svg>
-        </a>
-      </div>
+    <!-- Project Card 2 (LLM-based Medical Visualizations) -->
+<div class="bg-white rounded-lg shadow hover:shadow-xl transition">
+  <div class="p-4 rounded-t-lg flex items-center justify-center" style="background-color: #5c6bc0;">
+    <i class="fas fa-stethoscope text-white text-3xl"></i>
+  </div>
+  <div class="p-4">
+    <h3 class="text-xl font-bold mb-2">基于大型语言模型的医疗可视化</h3>
+    <p class="text-gray-600 mb-4">
+      利用大型语言模型生成并解析医疗视觉数据，架起临床洞见与有影响力的视觉分析之间的桥梁。
+    </p>
+    <div class="flex flex-wrap gap-2">
+      <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">医疗人工智能</span>
+      <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">自然语言处理</span>
+      <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">计算机视觉</span>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- 主题演讲者 -->
-  <section id="keynote-speaker" class="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
-    <div class="max-w-6xl mx-auto px-6">
-      <!-- 分区标题 -->
-      <div class="text-center mb-16">
-        <span class="inline-block px-4 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium tracking-wider mb-3">国际认可</span>
-        <h2 class="text-4xl font-bold mb-4 text-gray-800">杰出主题演讲者</h2>
-        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+      
+      <!-- Project Card 3 -->
+      <div class="bg-white rounded-lg shadow hover:shadow-xl transition">
+        <div class="p-4 rounded-t-lg flex items-center justify-center" style="background-color: #7986cb;">
+          <i class="fas fa-brain text-white text-3xl"></i>
+        </div>
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-2">基于联邦学习的医疗影像分析</h3>
+          <p class="text-gray-600 mb-4">
+            采用联邦学习技术改进医疗影像分析，为医疗机构提供更准确的诊断结果。
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">医疗保健</span>
+            <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">深度学习</span>
+            <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">计算机视觉</span>
+          </div>
+        </div>
       </div>
+      
+      <!-- Project Card 4 -->
+      <div class="bg-white rounded-lg shadow hover:shadow-xl transition">
+        <div class="p-4 rounded-t-lg flex items-center justify-center" style="background-color: #9fa8da;">
+          <i class="fas fa-university text-white text-3xl"></i>
+        </div>
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-2">大学管理系统</h3>
+          <p class="text-gray-600 mb-4">
+            构建并优化了大学的考试成绩和招生门户，提高用户体验并高效处理大量数据。
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">网页开发</span>
+            <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">数据库</span>
+            <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded">PHP</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
 
-      <!-- 2021会议 -->
-      <div class="mb-20">
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-          <div class="flex flex-col lg:flex-row">
-            <div class="lg:w-1/2">
-              <div class="p-8">
-                <div class="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded text-sm font-medium mb-4">中国湖州 • 2021</div>
-                <h3 class="text-2xl font-bold mb-4">人工智能与环境</h3>
-                <p class="text-gray-700 mb-6 leading-relaxed">
-                  <strong>Kumar Rajesh 博士</strong>，来自中国电子科技大学湖州长江三角洲研究院的巴基斯坦专家，介绍了研究院的发展目标、发展路径及区位优势，并以“人工智能与环境”为主题向青年学者展示了该院当前的研究成果。
-                </p>
-                <a href="https://mp.weixin.qq.com/s/zgqWzAGQl5PqgIA-8Qitcg" target="_blank" class="inline-flex items-center px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
-                  <span>会议详情</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V8a2 2 0 00-2-2h-4M14 4h6m0 0v6m0-6L10 14" />
+
+    <!-- Projects Section -->
+<!-- Projects Section -->
+<section id="research" class="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium tracking-wider mb-3">视频演示</span>
+      <h2 class="text-4xl font-bold mb-4 text-gray-800">项目演示</h2>
+      <div class="w-24 h-1 bg-purple-600 mx-auto mb-6"></div>
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+        研究原型的完整介绍与视频演示，并附相关论文和代码链接。
+      </p>
+    </div>
+
+    <div class="space-y-16">
+      <!-- Project 1: The Fridge Has Eyes -->
+      <div id="demo-fridge" class="scroll-mt-24 bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <div class="md:flex">
+          <div class="md:w-2/5 bg-purple-900 relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-700 opacity-90"></div>
+            <div class="relative p-8 text-white h-full flex flex-col justify-center">
+              <span class="text-xs font-semibold tracking-wider uppercase mb-2 inline-block bg-white bg-opacity-20 px-2 py-1 rounded">计算机视觉</span>
+              <h3 class="text-3xl font-bold mb-4">冰箱也有眼睛</h3>
+              <p class="mb-6 text-white text-opacity-90">商业冰箱内的AI摄像系统，用于库存管理和消费者行为分析</p>
+              <div class="flex space-x-4 mt-auto">
+                <a href="https://www.youtube.com/shorts/o-FAfs4jgMQ" target="_blank" class="flex items-center px-4 py-2 bg-white text-purple-900 rounded-lg hover:bg-opacity-90 transition-colors font-medium">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
                   </svg>
+                  观看演示
+                </a>
+                <a href="https://www.nature.com/articles/s41598-021-97598-5" target="_blank" class="flex items-center px-4 py-2 bg-transparent border border-white text-white rounded-lg hover:bg-white hover:text-purple-900 transition-colors font-medium">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z" clip-rule="evenodd" />
+                  </svg>
+                  阅读论文
                 </a>
               </div>
             </div>
-            <div class="lg:w-1/2 flex flex-col sm:flex-row">
-              <div class="sm:w-1/2 h-64 overflow-hidden">
-                <img src="r1.jpg" alt="Huzhou Conference 2021" class="w-full h-full object-cover">
+          </div>
+          <div class="md:w-3/5 p-0">
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 h-full">
+              <div class="h-64 md:h-auto overflow-hidden">
+                <img src="refigitor.webp" loading="lazy" alt="The Fridge Has Eyes" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"/>
               </div>
-              <div class="sm:w-1/2 h-64 overflow-hidden">
-                <img src="r2.jpg" alt="Dr. Kumar presenting at Huzhou Conference" class="w-full h-full object-cover">
+              <div class="h-64 md:h-auto">
+                <iframe title="The Fridge Has Eyes: demo video" loading="lazy" src="https://www.youtube.com/embed/o-FAfs4jgMQ" allowfullscreen class="w-full h-full"></iframe>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- 2019会议 -->
-      <div>
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-          <div class="flex flex-col lg:flex-row-reverse">
-            <div class="lg:w-1/2">
-              <div class="p-8">
-                <div class="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded text-sm font-medium mb-4">中国广东 • 2019</div>
-                <h3 class="text-2xl font-bold mb-4">人工智能与区块链的未来</h3>
-                <p class="text-gray-700 mb-6 leading-relaxed">
-                  <strong>Kumar Rajesh 博士</strong>，在人工智能和区块链领域享有盛誉的专家，以主题演讲者身份登台，阐述了“人工智能与区块链的未来”。凭借多年经验和对前沿技术的深刻理解，他以富有洞察力的愿景吸引了听众对这些技术变革潜力的关注。
-                </p>
-                <p class="text-gray-700 mb-6 leading-relaxed">
-                  他对广东智能终端工业设计研究所的访问，体现了其探索新前沿、推动技术进步的决心。
-                </p>
-              </div>
-            </div>
-            <div class="lg:w-1/2">
-              <div class="grid grid-cols-2 h-full">
-                <div class="h-48 overflow-hidden">
-                  <img src="r3.jpg" alt="Guangdong Conference 2019" class="w-full h-full object-cover">
-                </div>
-                <div class="h-48 overflow-hidden">
-                  <img src="r6.jpg" alt="Dr. Kumar with Conference Attendees" class="w-full h-full object-cover">
-                </div>
-                <div class="h-48 overflow-hidden">
-                  <img src="r4.jpg" alt="Dr. Kumar Presenting Research" class="w-full h-full object-cover">
-                </div>
-                <div class="h-48 overflow-hidden">
-                  <img src="r5.jpg" alt="Guangdong Institute Visit" class="w-full h-full object-cover">
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="p-6 bg-gray-50">
+          <h4 class="font-semibold text-gray-700 mb-2">研究影响</h4>
+          <p class="text-gray-600">该项目利用AI驱动的计算机视觉技术跟踪商业冰箱中的物品，提高供应链安全性和库存管理，从而减少浪费并改善补货效率。</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- 奖项与成就 -->
-  <section id="achievements" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <!-- 分区标题 -->
-      <div class="text-center mb-16">
-        <span class="inline-block px-4 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium tracking-wider mb-3">专业卓越</span>
-        <h2 class="text-4xl font-bold mb-4 text-gray-800">奖项与成就</h2>
-        <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
-      </div>
 
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-12">
-        <div class="p-8">
-          <div class="mb-8">
-            <h3 class="text-2xl font-bold mb-6 text-gray-800">备受赞誉的认可</h3>
-            <ul class="space-y-4">
-              <li class="flex items-start">
-                <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+    <!-- Project 2: AI Assists Real-Time CT Scan Analysis -->
+      <div id="demo-ct" class="scroll-mt-24 bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <div class="md:flex">
+          <div class="md:w-2/5 bg-blue-900 relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-teal-700 opacity-90"></div>
+            <div class="relative p-8 text-white h-full flex flex-col justify-center">
+              <span class="text-xs font-semibold tracking-wider uppercase mb-2 inline-block bg-white bg-opacity-20 px-2 py-1 rounded">医疗人工智能</span>
+              <h3 class="text-3xl font-bold mb-4">一探究竟</h3>
+              <p class="mb-6 text-white text-opacity-90">借助区块链增强隐私和安全的AI辅助实时CT扫描分析</p>
+              <div class="flex space-x-4 mt-auto">
+                <a href="https://youtu.be/qHgiQj3YGL0" target="_blank" class="flex items-center px-4 py-2 bg-white text-blue-900 rounded-lg hover:bg-opacity-90 transition-colors font-medium">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
                   </svg>
-                </div>
-                <span class="ml-3 text-gray-700"><strong>最佳亚军</strong> - IEEE传感器期刊</span>
-              </li>
-              <li class="flex items-start">
-                <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  观看演示
+                </a>
+                <a href="https://www.sciencedirect.com/science/article/pii/S0895611122001094" target="_blank" class="flex items-center px-4 py-2 bg-transparent border border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-medium">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z" clip-rule="evenodd" />
                   </svg>
-                </div>
-                <span class="ml-3 text-gray-700"><strong>优秀表现奖</strong> - 博士研究</span>
-              </li>
-              <li class="flex items-start">
-                <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span class="ml-3 text-gray-700"><strong>最佳口头报告</strong> - 国际计算与人工智能会议</span>
-              </li>
-            </ul>
+                  查看研究
+                </a>
+              </div>
+            </div>
           </div>
-        
-          <div>
-            <h3 class="text-2xl font-bold mb-6 text-gray-800">技术认证</h3>
-            <div class="flex flex-wrap gap-3">
-              <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg font-medium">Java</span>
-              <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg font-medium">PHP</span>
-              <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg font-medium">Android</span>
-              <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg font-medium">.Net</span>
+          <div class="md:w-3/5 p-0">
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 h-full">
+              <div class="h-64 md:h-auto overflow-hidden">
+                <img src="ct.webp" loading="lazy" alt="AI Assists Real-Time CT Scan Analysis" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"/>
+              </div>
+              <div class="h-64 md:h-auto">
+                <iframe title="The Fridge Has Eyes: a look inside" loading="lazy" src="https://www.youtube.com/embed/qHgiQj3YGL0" allowfullscreen class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 bg-gray-50">
+          <h4 class="font-semibold text-gray-700 mb-2">已发表研究</h4>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
+            <a href="https://www.sciencedirect.com/science/article/pii/S0895611122001094" target="_blank" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200 transition-colors">
+              <span class="text-blue-800 font-medium text-sm mb-2">区块链与加密</span>
+              <span class="text-gray-600 text-sm">针对医疗影像的隐私保护模型聚合</span>
+            </a>
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0895611120301075" target="_blank" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200 transition-colors">
+              <span class="text-blue-800 font-medium text-sm mb-2">去中心化分析</span>
+              <span class="text-gray-600 text-sm">将区块链与AI结合用于CT扫描分析</span>
+            </a>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9420107" target="_blank" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200 transition-colors">
+              <span class="text-blue-800 font-medium text-sm mb-2">联邦学习</span>
+              <span class="text-gray-600 text-sm">隐私保护的协作模型</span>
+            </a>
+          </div>
+        </div>
+      </div>
+	  
+	  
+   
+   <!-- Project 3: Visualizing Urban Flow - Improved Version -->
+<div id="demo-traffic" class="scroll-mt-24 bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+  <div class="md:flex">
+    <div class="md:w-1/3 bg-green-900 relative">
+      <div class="absolute inset-0 bg-gradient-to-br from-green-600 to-blue-700 opacity-90"></div>
+      <div class="relative p-6 text-white h-full flex flex-col justify-center">
+        <span class="text-xs font-semibold tracking-wider uppercase mb-2 inline-block bg-white bg-opacity-20 px-2 py-1 rounded">智慧城市</span>
+        <h3 class="text-2xl font-bold mb-4">城市流量可视化</h3>
+        <p class="mb-6 text-white text-opacity-90 text-sm">基于摄像头的智慧交通管理系统，结合AI增强车辆识别</p>
+        <div class="flex space-x-4 mt-auto">
+          <a href="https://youtu.be/EdNh4LCyOBo" target="_blank" class="flex items-center px-3 py-1 bg-white text-green-900 rounded-lg hover:bg-opacity-90 transition-colors font-medium text-sm"">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+              <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+            </svg>
+            观看演示
+          </a>
+          <a href="https://www.mdpi.com/2227-7390/9/24/3162" target="_blank" class="flex items-center px-4 py-2 bg-transparent border border-white text-white rounded-lg hover:bg-white hover:text-green-900 transition-colors font-medium">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z" clip-rule="evenodd" />
+            </svg>
+            查看研究
+          </a>
+        </div>
+      </div>
+    </div>
+     <div class="md:w-2/3 p-0">
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 h-full">
+        <div class="h-64 md:h-auto overflow-hidden">
+          <img src="car.webp" loading="lazy" alt="Traffic Management Project" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"/>
+        </div>
+        <div class="h-64 md:h-auto">
+          <iframe title="Visualizing Urban Flow: traffic management demo" loading="lazy" src="https://www.youtube.com/embed/EdNh4LCyOBo" allowfullscreen class="w-full h-full"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-6 bg-gray-50">
+    <h4 class="font-semibold text-gray-700 mb-2">已发表研究</h4>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
+      <a href="https://www.mdpi.com/2227-7390/9/24/3162" target="_blank" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-200 transition-colors">
+        <span class="text-green-800 font-medium text-sm mb-2">车辆再识别</span>
+        <span class="text-gray-600 text-sm">车辆再识别的趋势：过去、现在与未来</span>
+      </a>
+      <a href="https://www.mdpi.com/2076-3417/9/7/1291" target="_blank" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-200 transition-colors">
+        <span class="text-green-800 font-medium text-sm mb-2">多层次特征提取</span>
+        <span class="text-gray-600 text-sm">高效且深入的车辆再识别技术</span>
+      </a>
+      <a href="https://ieeexplore.ieee.org/abstract/document/9321754" target="_blank" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-200 transition-colors">
+        <span class="text-green-800 font-medium text-sm mb-2">安全通信</span>
+        <span class="text-gray-600 text-sm">基于ECC的车与车通信认证</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Project 4: Wire-Free Robotic Lawn Mowers - Improved Version -->
+<div id="demo-lawn" class="scroll-mt-24 bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl mt-8">
+  <div class="md:flex">
+    <div class="md:w-1/3 bg-green-900 relative">
+      <!-- Changed from md:w-2/5 to md:w-1/3 to reduce width -->
+      <div class="absolute inset-0 bg-gradient-to-br from-green-800 to-blue-700 opacity-90"></div>
+      <div class="relative p-6 text-white h-full flex flex-col justify-center">
+        <!-- Reduced padding from p-8 to p-6 -->
+        <span class="text-xs font-semibold tracking-wider uppercase mb-2 inline-block bg-green-500 bg-opacity-20 px-2 py-1 rounded">自动化园林绿化</span>
+        <h3 class="text-2xl font-bold mb-3">无线机器人割草机</h3>
+        <!-- Reduced font size from text-3xl to text-2xl and margin from mb-4 to mb-3 -->
+        <p class="mb-4 text-white text-opacity-90 text-sm">基于摄像头的创新，实现轻松草坪护理，结合AI视觉系统</p>
+        <!-- Reduced margin from mb-6 to mb-4 and added text-sm -->
+        <div class="flex space-x-3 mt-auto">
+          <!-- Reduced space-x-4 to space-x-3 -->
+          <a href="https://youtu.be/SehJvYrDLaw" target="_blank" class="flex items-center px-3 py-1 bg-white text-green-900 rounded-lg hover:bg-opacity-90 transition-colors font-medium text-sm">
+            <!-- Reduced padding and added text-sm -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
+              <!-- Reduced icon size and margin -->
+              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+              <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+            </svg>
+            观看演示
+          </a>
+          <a href="https://github.com/raja21068/-Wire-Free-Robotic-Lawn-Mowers-" target="_blank" class="flex items-center px-3 py-1 bg-transparent border border-white text-white rounded-lg hover:bg-white hover:text-green-900 transition-colors font-medium text-sm">
+            <!-- Reduced padding and added text-sm -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
+              <!-- Reduced icon size and margin -->
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+            查看代码
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="md:w-2/3 p-0">
+      <!-- Changed from md:w-3/5 to md:w-2/3 to increase right section width -->
+      <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 h-full">
+        <div class="h-64 md:h-auto overflow-hidden">
+          <img src="lawn.webp" loading="lazy" alt="Lawn Mower Project" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"/>
+        </div>
+        <div class="h-64 md:h-auto">
+          <iframe title="Wire-Free Robotic Lawn Mower: demo video" loading="lazy" src="https://www.youtube.com/embed/SehJvYrDLaw" allowfullscreen class="w-full h-full"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-6 bg-gray-50">
+    <h4 class="font-semibold text-gray-700 mb-2">项目资源</h4>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
+      <a href="https://github.com/raja21068/-Wire-Free-Robotic-Lawn-Mowers-" target="_blank" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-200 transition-colors">
+        <span class="text-green-800 font-medium text-sm mb-2">源代码</span>
+        <span class="text-gray-600 text-sm">包含实现细节的完整GitHub仓库</span>
+      </a>
+      <a href="https://youtu.be/SehJvYrDLaw" target="_blank" class="flex flex-col p-4 border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-200 transition-colors">
+        <span class="text-green-800 font-medium text-sm mb-2">视频演示</span>
+        <span class="text-gray-600 text-sm">完整展示机器人割草机的实际操作</span>
+      </a>
+      <div class="flex flex-col p-4 border border-gray-200 rounded-lg">
+        <span class="text-green-800 font-medium text-sm mb-2">计算机视觉</span>
+        <span class="text-gray-600 text-sm">基于AI的视觉导航与边界检测</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 5: Autonomous Forklifts - Improved Version with Smaller Left Section -->
+<div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+  <div class="md:flex">
+    <div class="md:w-1/3 bg-gray-800 relative">
+      <!-- Changed from md:w-2/5 to md:w-1/3 to reduce width -->
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-gray-700 opacity-90"></div>
+      <div class="relative p-6 text-white h-full flex flex-col justify-center">
+        <!-- Reduced padding from p-8 to p-6 -->
+        <span class="text-xs font-semibold tracking-wider uppercase mb-2 inline-block bg-yellow-500 bg-opacity-90 px-2 py-1 rounded text-gray-900">工业自动化</span>
+        <h3 class="text-2xl font-bold mb-3">超越人手</h3>
+        <!-- Reduced font size from text-3xl to text-2xl and margin from mb-4 to mb-3 -->
+        <p class="mb-4 text-white text-opacity-90 text-sm">利用摄像头驱动的自主叉车AI引领仓储未来</p>
+        <!-- Reduced margin from mb-6 to mb-4 and added text-sm -->
+        <div class="flex space-x-3 mt-auto">
+          <!-- Reduced space-x-4 to space-x-3 -->
+          <a href="https://www.youtube.com/embed/TZf-dan9Mco" target="_blank" class="flex items-center px-3 py-1 bg-yellow-500 text-gray-900 rounded-lg hover:bg-opacity-90 transition-colors font-medium text-sm">
+            <!-- Reduced padding and added text-sm -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
+              <!-- Reduced icon size and margin -->
+              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+              <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+            </svg>
+            观看演示
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="md:w-2/3 p-0">
+      <!-- Changed from md:w-3/5 to md:w-2/3 to increase right section width -->
+      <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 h-full">
+        <div class="h-64 md:h-auto overflow-hidden">
+          <img src="forllift.webp" loading="lazy" alt="Forklift Project" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"/>
+        </div>
+        <div class="h-64 md:h-auto">
+          <iframe title="Beyond Human Hands: project video" loading="lazy" src="https://www.youtube.com/embed/TZf-dan9Mco" allowfullscreen class="w-full h-full"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-6 bg-gray-50">
+    <h4 class="font-semibold text-gray-700 mb-2">关键技术</h4>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
+      <div class="flex flex-col p-4 border border-gray-200 rounded-lg">
+        <span class="text-blue-800 font-medium text-sm mb-2">计算机视觉</span>
+        <span class="text-gray-600 text-sm">针对复杂环境导航的先进目标检测与空间感知</span>
+      </div>
+      <div class="flex flex-col p-4 border border-gray-200 rounded-lg">
+        <span class="text-blue-800 font-medium text-sm mb-2">实时决策</span>
+        <span class="text-gray-600 text-sm">基于AI的算法实现高效路径规划和障碍物避让</span>
+      </div>
+      <div class="flex flex-col p-4 border border-gray-200 rounded-lg">
+        <span class="text-blue-800 font-medium text-sm mb-2">安全协议</span>
+        <span class="text-gray-600 text-sm">多重冗余系统确保在人工作业环境中的安全运行</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Teaching Resources -->
+<section id="teaching" class="py-16 bg-gradient-to-b from-gray-50 to-gray-100">
+  <div class="max-w-5xl mx-auto px-6">
+    <!-- Featured educational platform: Learn.AI -->
+    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-16 flex flex-col md:flex-row">
+      <div class="md:w-1/3 h-40 md:h-auto bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
+        <i class="fas fa-brain text-white text-6xl"></i>
+      </div>
+      <div class="p-6 md:w-2/3">
+        <span class="inline-block px-3 py-1 mb-2 text-xs font-semibold text-purple-700 bg-purple-100 rounded-full">精选教育平台</span>
+        <h2 class="text-3xl font-bold text-gray-800 mb-2">Learn<span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">.AI</span></h2>
+        <p class="text-gray-600 mb-4">我的教学主页：循序渐进学习人工智能，从基础到前沿模型，并配合下方的视频课程与课程资源。</p>
+        <a href="https://raja21068.github.io/learn.ai/" target="_blank" class="inline-block px-5 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:opacity-90 transition-opacity font-medium">开始学习</a>
+      </div>
+    </div>
+
+    <h2 class="text-4xl font-bold text-center mb-3">课堂视频 <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">库</span></h2>
+    <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">探索我们精心策划的教育内容，助您提升学习之旅</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 hover:scale-102">
+        <div class="aspect-w-16 aspect-h-9">
+          <iframe title="Essential Machine Learning Concepts in 5 Minutes" loading="lazy" src="https://www.youtube.com/embed/xVx29hk7R-k" allowfullscreen class="w-full h-full"></iframe>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 text-gray-800">5分钟掌握机器学习基本概念</h3>
+          <div class="mb-4 text-sm text-gray-600 space-y-2">
+            <div class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              <a href="https://github.com/raja21068/Machine-Learning-For-Beginerrs-Course-PPT" target="_blank" class="hover:text-blue-600 transition-colors">完整课程PPT</a>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+              <a href="https://github.com/raja21068/Machine-Learning-Toturials" target="_blank" class="hover:text-blue-600 transition-colors">Python代码示例</a>
+            </div>
+          </div>
+          <a href="https://www.youtube.com/embed/xVx29hk7R-k" class="inline-block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors text-sm font-medium">立即观看</a>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 hover:scale-102">
+        <div class="aspect-w-16 aspect-h-9">
+          <iframe title="Mastering Object-Oriented Programming (OOP) in Java" loading="lazy" src="https://www.youtube.com/embed/31f5S1YJzPI" allowfullscreen class="w-full h-full"></iframe>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 text-gray-800">精通Java面向对象编程</h3>
+          <div class="mb-4 text-sm text-gray-600 space-y-2">
+            <div class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              <a href="https://github.com/raja21068/JAVA-Basic-Level-SLIDES-ppt-" target="_blank" class="hover:text-blue-600 transition-colors">完整课程PPT</a>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+              <a href="https://github.com/raja21068/Java-Programs" target="_blank" class="hover:text-blue-600 transition-colors">Java代码示例</a>
+            </div>
+          </div>
+          <a href="https://www.youtube.com/embed/31f5S1YJzPI" class="inline-block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors text-sm font-medium">立即观看</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-10">
+      <a href="https://www.youtube.com/@RajaKumarraja21068" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:opacity-90 transition-opacity">
+        浏览所有视频
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Keynote Speaker Section -->
+<section id="keynote-speaker" class="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium tracking-wider mb-3">国际认可</span>
+      <h2 class="text-4xl font-bold mb-4 text-gray-800">杰出主题演讲者</h2>
+      <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+    </div>
+
+    <!-- 2021 Conference -->
+    <div class="mb-20">
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="flex flex-col lg:flex-row">
+          <div class="lg:w-1/2">
+            <div class="p-8">
+              <div class="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded text-sm font-medium mb-4">中国湖州 • 2021</div>
+              <h3 class="text-2xl font-bold mb-4">人工智能与环境</h3>
+              <p class="text-gray-700 mb-6 leading-relaxed">
+                <strong>Kumar Rajesh 博士</strong>，来自中国电子科技大学湖州长江三角洲研究院的巴基斯坦专家，介绍了研究院的发展目标、发展路径及区位优势，并以“人工智能与环境”为主题向青年学者展示了该院当前的研究成果。
+              </p>
+              <a href="https://mp.weixin.qq.com/s/zgqWzAGQl5PqgIA-8Qitcg" target="_blank" class="inline-flex items-center px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                <span>会议详情</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="lg:w-1/2 flex flex-col sm:flex-row">
+            <div class="sm:w-1/2 h-64 overflow-hidden">
+              <img src="r1.webp" loading="lazy" alt="Huzhou Conference 2021" class="w-full h-full object-cover">
+            </div>
+            <div class="sm:w-1/2 h-64 overflow-hidden">
+              <img src="r2.webp" loading="lazy" alt="Dr. Kumar presenting at Huzhou Conference" class="w-full h-full object-cover">
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="h-56 overflow-hidden rounded-lg shadow">
-          <img src="a1.jpg" alt="成就认可" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-        </div>
-        <div class="h-56 overflow-hidden rounded-lg shadow">
-          <img src="a2.jpg" alt="颁奖典礼" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-        </div>
-        <div class="h-56 overflow-hidden rounded-lg shadow">
-          <img src="a3.jpg" alt="专业认可" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-        </div>
-        <div class="h-56 overflow-hidden rounded-lg shadow">
-          <img src="a4.jpg" alt="证书颁发" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+    <!-- 2019 Conference -->
+    <div>
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="flex flex-col lg:flex-row-reverse">
+          <div class="lg:w-1/2">
+            <div class="p-8">
+              <div class="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded text-sm font-medium mb-4">中国广东 • 2019</div>
+              <h3 class="text-2xl font-bold mb-4">人工智能与区块链的未来</h3>
+              <p class="text-gray-700 mb-6 leading-relaxed">
+                <strong>Kumar Rajesh 博士</strong>，在人工智能和区块链领域享有盛誉的专家，以主题演讲者身份登台，阐述了“人工智能与区块链的未来”。凭借多年经验和对前沿技术的深刻理解，他以富有洞察力的愿景吸引了听众对这些技术变革潜力的关注。
+              </p>
+              <p class="text-gray-700 mb-6 leading-relaxed">
+                他对广东智能终端工业设计研究所的访问，体现了其探索新前沿、推动技术进步的决心。
+              </p>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="grid grid-cols-2 h-full">
+              <div class="h-48 overflow-hidden">
+                <img src="r3.webp" loading="lazy" alt="Guangdong Conference 2019" class="w-full h-full object-cover">
+              </div>
+              <div class="h-48 overflow-hidden">
+                <img src="r6.webp" loading="lazy" alt="Dr. Kumar with Conference Attendees" class="w-full h-full object-cover">
+              </div>
+              <div class="h-48 overflow-hidden">
+                <img src="r4.webp" loading="lazy" alt="Dr. Kumar Presenting Research" class="w-full h-full object-cover">
+              </div>
+              <div class="h-48 overflow-hidden">
+                <img src="r5.webp" loading="lazy" alt="Guangdong Institute Visit" class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 公共社会提升 -->
-  <section id="health" class="py-12 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-4">公共社会提升</h2>
-      <p class="text-center text-gray-700 mb-8">
-        通过创新、社区服务和可持续实践为创造更美好的世界贡献力量。
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- 卡片 1：锻炼 / 运动 -->
-        <div class="bg-white rounded-lg shadow hover:shadow-xl transition">
-          <img src="images/1.jpg" alt="Workout / Exercise" class="w-full rounded-t-lg">
-          <div class="p-4">
-            <h2 class="text-xl font-bold text-blue-800 mb-2">锻炼 / 运动</h2>
-            <p class="text-gray-600 mb-4">
-              通过定制锻炼计划提升能量，增强体力。
-            </p>
-            <a href="https://raja21068.github.io/workout/" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-              了解更多
-            </a>
-          </div>
+<!-- Achievements Section -->
+<section id="achievements" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium tracking-wider mb-3">专业卓越</span>
+      <h2 class="text-4xl font-bold mb-4 text-gray-800">奖项与成就</h2>
+      <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+      <div class="p-8">
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-6 text-gray-800">备受赞誉的认可</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="ml-3 text-gray-700"><strong>最佳亚军</strong> - IEEE传感器期刊</span>
+            </li>
+            <li class="flex items-start">
+              <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="ml-3 text-gray-700"><strong>优秀表现奖</strong> - 博士研究</span>
+            </li>
+            <li class="flex items-start">
+              <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="ml-3 text-gray-700"><strong>最佳口头报告</strong> - 国际计算与人工智能会议</span>
+            </li>
+          </ul>
         </div>
-        <!-- 卡片 2：冥想 / 瑜伽 -->
-        <div class="bg-white rounded-lg shadow hover:shadow-xl transition">
-          <img src="images/4.jpg" alt="Meditation / Yoga" class="w-full rounded-t-lg">
-          <div class="p-4">
-            <h2 class="text-xl font-bold text-blue-800 mb-2">冥想 / 瑜伽</h2>
-            <p class="text-gray-600 mb-4">
-              通过引导瑜伽课程，找到内心平静与柔韧性。
-            </p>
-            <a href="https://raja21068.github.io/yoga/" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-              了解更多
-            </a>
-          </div>
-        </div>
-        <!-- 卡片 3：放松音乐 -->
-        <div class="bg-white rounded-lg shadow hover:shadow-xl transition">
-          <img src="images/5.jpg" alt="Relaxing Music" class="w-full rounded-t-lg">
-          <div class="p-4">
-            <h2 class="text-xl font-bold text-blue-800 mb-2">放松音乐</h2>
-            <p class="text-gray-600 mb-4">
-              通过精心挑选的舒缓音乐放松身心。
-            </p>
-            <a href="https://raja21068.github.io/music/" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-              了解更多
-            </a>
-          </div>
-        </div>
-        <!-- 卡片 4：护肤 -->
-        <div class="bg-white rounded-lg shadow hover:shadow-xl transition">
-          <img src="images/6.jpg" alt="Skincare" class="w-full rounded-t-lg">
-          <div class="p-4">
-            <h2 class="text-xl font-bold text-blue-800 mb-2">护肤</h2>
-            <p class="text-gray-600 mb-4">
-              通过个性化护肤建议和课程焕发光彩。
-            </p>
-            <a href="https://raja21068.github.io/skin/" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-              了解更多
-            </a>
+      
+        <div>
+          <h3 class="text-2xl font-bold mb-6 text-gray-800">技术认证</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg font-medium">Java</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg font-medium">PHP</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg font-medium">Android</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg font-medium">.Net</span>
           </div>
         </div>
       </div>
-      <p class="text-center text-gray-700 text-sm">
-        伦理声明：本网站为开源网站，旨在展示符合伦理的网页设计与开发实践，与任何商业项目或企业无关。欢迎在开源许可证下进行贡献和改进。
-      </p>
     </div>
-  </section>
 
-  <!-- 联系 -->
-  <section id="contact" class="py-12 bg-gray-50">
-    <div class="max-w-xl mx-auto px-4">
-      <h2 class="text-3xl font-bold gradient-text mb-6 text-center">联系</h2>
-      <div class="flex justify-center space-x-4">
-        <a href="mailto:raja@uestc.edu.cn" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">
-          给我发邮件
-        </a>
-        <a href="https://wa.me/923332836705" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded hover:bg-green-600 transition">
-          WhatsApp联系
-        </a>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="h-56 overflow-hidden rounded-lg shadow">
+        <img src="a1.webp" loading="lazy" alt="Achievement Recognition" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="h-56 overflow-hidden rounded-lg shadow">
+        <img src="a2.webp" loading="lazy" alt="Award Ceremony" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="h-56 overflow-hidden rounded-lg shadow">
+        <img src="a3.webp" loading="lazy" alt="Professional Recognition" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="h-56 overflow-hidden rounded-lg shadow">
+        <img src="a4.webp" loading="lazy" alt="Certificate Presentation" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
       </div>
     </div>
-  </section>
-</body>
+  </div>
+</section>
+
+
+
+
+
+ <!-- Contact Section -->
+<section id="contact" class="py-12 bg-gray-50">
+  <div class="max-w-xl mx-auto px-4">
+    <h2 class="text-3xl font-bold gradient-text mb-6 text-center">联系</h2>
+    <div class="flex justify-center space-x-4">
+      <a href="mailto:raja@uestc.edu.cn" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">
+        给我发邮件
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="health" class="py-8 bg-white border-t border-gray-200">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-xl font-semibold text-gray-800 mb-1">健康与生活创意网站</h2>
+    <p class="text-sm text-gray-600 mb-4">面向公众的业余项目，与我的学术研究无关。</p>
+    <div class="flex flex-wrap justify-center gap-3 mb-4">
+      <a href="https://raja21068.github.io/workout/" target="_blank" rel="noopener" class="px-4 py-2 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-blue-50 hover:text-blue-700 transition"><i class="fas fa-dumbbell mr-1" aria-hidden="true"></i> 健身</a>
+      <a href="https://raja21068.github.io/yoga/" target="_blank" rel="noopener" class="px-4 py-2 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-blue-50 hover:text-blue-700 transition"><i class="fas fa-spa mr-1" aria-hidden="true"></i> 冥想与瑜伽</a>
+      <a href="https://raja21068.github.io/music/" target="_blank" rel="noopener" class="px-4 py-2 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-blue-50 hover:text-blue-700 transition"><i class="fas fa-music mr-1" aria-hidden="true"></i> 放松音乐</a>
+      <a href="https://raja21068.github.io/skin/" target="_blank" rel="noopener" class="px-4 py-2 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-blue-50 hover:text-blue-700 transition"><i class="fas fa-hand-sparkles mr-1" aria-hidden="true"></i> 护肤</a>
+      <a href="https://raja21068.github.io/health/" target="_blank" rel="noopener" class="px-4 py-2 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-blue-50 hover:text-blue-700 transition"><i class="fas fa-heartbeat mr-1" aria-hidden="true"></i> 健康生活</a>
+    </div>
+    <p class="text-xs text-gray-500">
+      &copy; 2026 Rajesh Kumar 博士。伦理声明：本网站为开源项目，仅用于展示合乎伦理的网页设计与开发实践，不隶属于任何商业机构或企业。欢迎在开源许可下提出贡献与改进。
+    </p>
+  </div>
+</footer>
+
  
 
   <script>
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+      const open = mobileMenu.classList.toggle('hidden') === false;
+      menuToggle.setAttribute('aria-expanded', open);
+      menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     });
   </script>
   
@@ -1917,3 +2142,4 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body>
 </html>
+
