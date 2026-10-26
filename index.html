@@ -569,6 +569,8 @@
             color: var(--warning);
         }
         
+  /* Keep anchor targets clear of the sticky nav */
+  html { scroll-padding-top: 80px; }
   /* Research dropdown in the desktop nav */
   .nav-dropdown-menu { display: none; z-index: 60; }
   .nav-dropdown:hover .nav-dropdown-menu,
@@ -585,10 +587,10 @@
       <div class="hidden md:flex space-x-6">
         <a href="#about" class="hover:text-blue-600">About</a>
         <div class="nav-dropdown relative">
-          <a href="#research" class="hover:text-blue-600">Research <i class="fas fa-chevron-down text-xs"></i></a>
+          <a href="#flagship" class="hover:text-blue-600">Research <i class="fas fa-chevron-down text-xs"></i></a>
           <div class="nav-dropdown-menu absolute left-0 pt-2 w-48">
             <div class="bg-white rounded-lg shadow-lg py-2">
-              <a href="#research" class="block px-4 py-2 hover:bg-gray-100 hover:text-blue-600">Research Overview</a>
+              <a href="#flagship" class="block px-4 py-2 hover:bg-gray-100 hover:text-blue-600">Research Overview</a>
               <a href="Research_Lab/index.html" class="block px-4 py-2 hover:bg-gray-100 hover:text-blue-600">Research Lab</a>
             </div>
           </div>
@@ -609,7 +611,7 @@
       <div class="px-4 pt-2 pb-4 bg-white">
         <a href="#about" class="block py-2 hover:text-blue-600">About</a>
         <span class="block py-2">Research</span>
-        <a href="#research" class="block py-2 pl-4 hover:text-blue-600">Research Overview</a>
+        <a href="#flagship" class="block py-2 pl-4 hover:text-blue-600">Research Overview</a>
         <a href="Research_Lab/index.html" class="block py-2 pl-4 hover:text-blue-600">Research Lab</a>
         <a href="#education" class="block py-2 hover:text-blue-600">Education</a>
         <a href="#experience" class="block py-2 hover:text-blue-600">Experience</a>
@@ -736,7 +738,7 @@
 </section>
 
 <!-- Flagship Research -->
-<section id="flagship" class="py-12 bg-white">
+<section id="flagship" class="py-12 bg-white scroll-mt-16">
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center mb-10">
       <span class="inline-block px-4 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium tracking-wider mb-3">FLAGSHIP RESEARCH</span>
@@ -781,6 +783,7 @@
         <div class="flex flex-wrap gap-2 text-sm">
           <a href="https://www.nature.com/articles/s41598-021-97598-5" target="_blank" rel="noopener" class="px-3 py-1 bg-purple-600 text-white rounded hover:bg-purple-700"><i class="fas fa-file-alt mr-1" aria-hidden="true"></i>Paper</a>
           <a href="https://www.youtube.com/shorts/o-FAfs4jgMQ" target="_blank" rel="noopener" class="px-3 py-1 border border-purple-600 text-purple-700 rounded hover:bg-purple-50"><i class="fas fa-play mr-1" aria-hidden="true"></i>Demo</a>
+          <a href="#demo-fridge" class="px-3 py-1 text-purple-700 hover:underline">Details <i class="fas fa-arrow-down text-xs" aria-hidden="true"></i></a>
         </div>
       </article>
       <!-- Flagship 2: AI-assisted CT scan analysis -->
@@ -792,6 +795,7 @@
         <div class="flex flex-wrap gap-2 text-sm">
           <a href="https://www.sciencedirect.com/science/article/pii/S0895611122001094" target="_blank" rel="noopener" class="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"><i class="fas fa-file-alt mr-1" aria-hidden="true"></i>Paper</a>
           <a href="https://youtu.be/qHgiQj3YGL0" target="_blank" rel="noopener" class="px-3 py-1 border border-blue-600 text-blue-700 rounded hover:bg-blue-50"><i class="fas fa-play mr-1" aria-hidden="true"></i>Demo</a>
+          <a href="#demo-ct" class="px-3 py-1 text-blue-700 hover:underline">Details <i class="fas fa-arrow-down text-xs" aria-hidden="true"></i></a>
         </div>
       </article>
       <!-- Flagship 3: Smart traffic management -->
@@ -803,6 +807,7 @@
         <div class="flex flex-wrap gap-2 text-sm">
           <a href="https://www.mdpi.com/2227-7390/9/24/3162" target="_blank" rel="noopener" class="px-3 py-1 bg-indigo-600 text-white rounded hover:bg-indigo-700"><i class="fas fa-file-alt mr-1" aria-hidden="true"></i>Paper</a>
           <a href="https://youtu.be/EdNh4LCyOBo" target="_blank" rel="noopener" class="px-3 py-1 border border-indigo-600 text-indigo-700 rounded hover:bg-indigo-50"><i class="fas fa-play mr-1" aria-hidden="true"></i>Demo</a>
+          <a href="#demo-traffic" class="px-3 py-1 text-indigo-700 hover:underline">Details <i class="fas fa-arrow-down text-xs" aria-hidden="true"></i></a>
         </div>
       </article>
       <!-- Flagship 4: Wire-free robotic lawn mower -->
@@ -814,6 +819,7 @@
         <div class="flex flex-wrap gap-2 text-sm">
           <a href="https://github.com/raja21068/-Wire-Free-Robotic-Lawn-Mowers-" target="_blank" rel="noopener" class="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700"><i class="fab fa-github mr-1" aria-hidden="true"></i>Code</a>
           <a href="https://youtu.be/SehJvYrDLaw" target="_blank" rel="noopener" class="px-3 py-1 border border-green-600 text-green-700 rounded hover:bg-green-50"><i class="fas fa-play mr-1" aria-hidden="true"></i>Demo</a>
+          <a href="#demo-lawn" class="px-3 py-1 text-green-700 hover:underline">Details <i class="fas fa-arrow-down text-xs" aria-hidden="true"></i></a>
         </div>
       </article>
     </div>
@@ -1301,7 +1307,7 @@
 </div>
 
   <div id="projects" class="max-w-5xl mx-auto px-4 scroll-mt-24">
-    <h2 class="text-3xl font-bold text-center mb-8">Featured Projects</h2>
+    <h2 class="text-3xl font-bold text-center mb-8">Other Research Projects</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- Project Card 1 -->
       <div class="bg-white rounded-lg shadow hover:shadow-xl transition">
@@ -1387,42 +1393,17 @@
   <div class="max-w-6xl mx-auto px-6">
     <!-- Section Header -->
     <div class="text-center mb-16">
-      <span class="inline-block px-4 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium tracking-wider mb-3">INNOVATION HUB</span>
-      <h2 class="text-4xl font-bold mb-4 text-gray-800">Real-Time AI Projects</h2>
+      <span class="inline-block px-4 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium tracking-wider mb-3">VIDEO DEMONSTRATIONS</span>
+      <h2 class="text-4xl font-bold mb-4 text-gray-800">Project Demonstrations</h2>
       <div class="w-24 h-1 bg-purple-600 mx-auto mb-6"></div>
       <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-        Cutting-edge research combining artificial intelligence, computer vision, and blockchain technology to solve real-world challenges.
+        Full write-ups and video demonstrations of the research prototypes, with links to the underlying papers and code.
       </p>
-    </div>
-
-    <!-- Featured: Research Lab -->
-    <div id="research-lab" class="bg-white rounded-xl shadow-lg overflow-hidden mb-16 border-t-4 border-purple-600 scroll-mt-24">
-      <div class="md:flex">
-        <div class="md:w-1/3 bg-gradient-to-br from-purple-600 to-blue-700 flex items-center justify-center p-10">
-          <i class="fas fa-flask text-white text-7xl"></i>
-        </div>
-        <div class="md:w-2/3 p-8">
-          <span class="inline-block px-3 py-1 mb-3 text-xs font-semibold tracking-wider uppercase text-purple-800 bg-purple-100 rounded-full">Research Lab</span>
-          <h3 class="text-3xl font-bold text-gray-800 mb-4">AI &amp; Security Research Lab</h3>
-          <p class="text-gray-700 mb-6">
-            Our lab brings together artificial intelligence, computer vision, blockchain and cybersecurity research, turning ideas into real-time systems that solve real-world problems.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full">Artificial Intelligence</span>
-            <span class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full">Computer Vision</span>
-            <span class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full">Blockchain</span>
-            <span class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full">Cybersecurity</span>
-          </div>
-          <a href="Research_Lab/index.html" class="inline-flex items-center mt-6 px-5 py-2 bg-gradient-to-r from-purple-600 to-blue-700 text-white rounded-lg hover:opacity-90 transition-opacity font-medium">
-            Explore Research Lab <i class="fas fa-arrow-right ml-2"></i>
-          </a>
-        </div>
-      </div>
     </div>
 
     <div class="space-y-16">
       <!-- Project 1: The Fridge Has Eyes -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+      <div id="demo-fridge" class="scroll-mt-24 bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
         <div class="md:flex">
           <div class="md:w-2/5 bg-purple-900 relative">
             <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-700 opacity-90"></div>
@@ -1466,7 +1447,7 @@
 
 
     <!-- Project 2: AI Assists Real-Time CT Scan Analysis -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+      <div id="demo-ct" class="scroll-mt-24 bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
         <div class="md:flex">
           <div class="md:w-2/5 bg-blue-900 relative">
             <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-teal-700 opacity-90"></div>
@@ -1524,7 +1505,7 @@
 	  
    
    <!-- Project 3: Visualizing Urban Flow - Improved Version -->
-<div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+<div id="demo-traffic" class="scroll-mt-24 bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
   <div class="md:flex">
     <div class="md:w-1/3 bg-green-900 relative">
       <div class="absolute inset-0 bg-gradient-to-br from-green-600 to-blue-700 opacity-90"></div>
@@ -1581,7 +1562,7 @@
 
 
 <!-- Project 4: Wire-Free Robotic Lawn Mowers - Improved Version -->
-<div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl mt-8">
+<div id="demo-lawn" class="scroll-mt-24 bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl mt-8">
   <div class="md:flex">
     <div class="md:w-1/3 bg-green-900 relative">
       <!-- Changed from md:w-2/5 to md:w-1/3 to reduce width -->
