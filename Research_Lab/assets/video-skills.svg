@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 480">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#162540"/><stop offset="1" stop-color="#3b6673"/></linearGradient></defs>
+<rect width="850" height="480" fill="url(#bg)"/><circle cx="635" cy="165" r="205" fill="#7ce3de" opacity=".08"/><circle cx="635" cy="165" r="130" fill="#7ce3de" opacity=".07"/>
+<text x="64" y="100" font-size="19" font-family="monospace" fill="#b4f9e0" letter-spacing="2">ACADEMIC RESEARCH SKILLS</text>
+<rect x="62" y="151" width="202" height="176" rx="16" fill="#0d3448" stroke="#7ab6c8"/><text x="164" y="204" fill="#e2fdf6" font-family="sans-serif" text-anchor="middle" font-weight="bold" font-size="20">ONE PROMPT</text><path d="M104 239h112M104 254h82M104 269h103" stroke="#66a9b7" stroke-width="5" stroke-linecap="round"/>
+<path d="M279 237h73m-17-13 17 13-17 13" stroke="#9cebd1" stroke-width="4" fill="none"/>
+<rect x="369" y="133" width="404" height="218" rx="17" fill="#102e43" stroke="#78afbf"/>
+<g font-family="sans-serif" font-weight="bold" font-size="21" fill="#d6f9f1" text-anchor="middle"><rect x="393" y="164" width="114" height="137" rx="12" fill="#206073"/><text x="450" y="222">PAPER</text><rect x="516" y="164" width="114" height="137" rx="12" fill="#206073"/><text x="573" y="222">SLIDES</text><rect x="639" y="164" width="114" height="137" rx="12" fill="#206073"/><text x="696" y="222">CODE</text></g>
+<text x="62" y="397" fill="#aac7d3" font-family="monospace" font-size="13" letter-spacing="1.2">IDEATION → EXPERIMENTS → WRITING → REVIEW</text>
+</svg>

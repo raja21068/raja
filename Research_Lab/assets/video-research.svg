@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 480">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b283d"/><stop offset="1" stop-color="#0e5b66"/></linearGradient><linearGradient id="a"><stop stop-color="#55c6bf"/><stop offset="1" stop-color="#b4f7d8"/></linearGradient></defs>
+<rect width="850" height="480" fill="url(#bg)"/>
+<g opacity=".18" stroke="#a1f4ed"><path d="M0 80H850M0 160H850M0 240H850M0 320H850M0 400H850"/><path d="M85 0V480M170 0V480M255 0V480M340 0V480M425 0V480M510 0V480M595 0V480M680 0V480M765 0V480"/></g>
+<rect x="90" y="145" rx="18" width="205" height="178" fill="#0a3346" stroke="#63b9bb"/>
+<rect x="325" y="116" rx="18" width="205" height="236" fill="#0f4b55" stroke="#7ddbcc"/>
+<rect x="560" y="145" rx="18" width="205" height="178" fill="#0a3346" stroke="#63b9bb"/>
+<g fill="#b2f9dd" font-family="sans-serif" font-weight="bold" text-anchor="middle"><text x="192" y="197" font-size="17">RESEARCH</text><text x="192" y="220" font-size="17">QUESTION</text><text x="427" y="176" font-size="16">AI WORKFLOW</text><text x="427" y="290" font-size="15">METHODS · CHECKS</text><text x="662" y="197" font-size="17">VERIFIABLE</text><text x="662" y="220" font-size="17">OUTPUT</text></g>
+<g stroke="url(#a)" fill="none" stroke-width="3"><path d="M297 231H318m-7-7 7 7-7 7"/><path d="M533 231h22m-8-7 8 7-8 7"/><circle cx="427" cy="234" r="36"/><circle cx="427" cy="234" r="16"/><path d="M427 183v17M427 268v18M377 234h15M463 234h15"/></g>
+<text x="90" y="87" fill="#7cd5ce" font-size="16" font-family="monospace" letter-spacing="3">RESEARCH / AUTOMATION</text>
+</svg>
