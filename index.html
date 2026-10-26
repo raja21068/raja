@@ -6,6 +6,9 @@
   <title>Dr. Rajesh Kumar - Academic Portfolio</title>
   <meta name="description" content="Dr. Rajesh Kumar, researcher at UESTC working on artificial intelligence, computer vision, blockchain and cybersecurity. Publications, research lab, real-time AI projects and teaching." />
   <link rel="canonical" href="https://raja21068.github.io/raja/" />
+  <link rel="alternate" hreflang="en" href="https://raja21068.github.io/raja/"/>
+  <link rel="alternate" hreflang="zh-CN" href="https://raja21068.github.io/raja/cn.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://raja21068.github.io/raja/"/>
   <!-- Open Graph / social sharing -->
   <meta property="og:type" content="profile" />
   <meta property="og:title" content="Dr. Rajesh Kumar - Academic Portfolio" />
@@ -20,18 +23,41 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://raja21068.github.io/raja/#person",
     "name": "Dr. Rajesh Kumar",
     "url": "https://raja21068.github.io/raja/",
     "image": "https://raja21068.github.io/raja/pic2.jpg",
     "email": "mailto:raja@uestc.edu.cn",
     "jobTitle": "Associate Researcher & Teaching Fellow",
+    "description": "Associate Researcher and Teaching Fellow at the Yangtze Delta Region Institute (Huzhou), UESTC, working on blockchain, federated learning, medical imaging AI, cybersecurity and agentic AI.",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "ORCID",
+      "value": "0000-0003-0813-7485"
+    },
+    "worksFor": {
+      "@type": "ResearchOrganization",
+      "name": "Yangtze Delta Region Institute (Huzhou), University of Electronic Science and Technology of China",
+      "parentOrganization": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Electronic Science and Technology of China",
+        "alternateName": "UESTC"
+      }
+    },
     "affiliation": {
       "@type": "CollegeOrUniversity",
-      "name": "University of Electronic Science and Technology of China (UESTC)"
+      "name": "University of Electronic Science and Technology of China",
+      "alternateName": "UESTC"
     },
-    "knowsAbout": ["Artificial Intelligence", "Computer Vision", "Blockchain", "Cybersecurity", "Machine Learning"],
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "University of Electronic Science and Technology of China"},
+      {"@type": "CollegeOrUniversity", "name": "University of Sindh"}
+    ],
+    "knowsAbout": ["Blockchain", "Federated Learning", "Medical Imaging AI", "Cybersecurity", "Malware Detection", "Agentic AI", "Large Language Models", "Computer Vision", "Machine Learning"],
     "sameAs": [
+      "https://orcid.org/0000-0003-0813-7485",
       "https://scholar.google.com/citations?user=2_F5e_YAAAAJ",
+      "https://www.linkedin.com/in/rajesh-kumar-28abba358",
       "https://github.com/raja21068",
       "https://www.youtube.com/@RajaKumarraja21068"
     ]
@@ -601,6 +627,7 @@
         <a href="#publications" class="hover:text-blue-600">Publications</a>
         <a href="#teaching" class="hover:text-blue-600">Teaching</a>
         <a href="#contact" class="hover:text-blue-600">Contact</a>
+        <a href="cn.html" hreflang="zh-CN" lang="zh-CN" class="hover:text-blue-600" title="中文版">中文</a>
       </div>
       <button id="menu-toggle" type="button" class="md:hidden text-gray-800" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
         <i class="fas fa-bars text-2xl"></i>
@@ -619,6 +646,7 @@
         <a href="#publications" class="block py-2 hover:text-blue-600">Publications</a>
         <a href="#teaching" class="block py-2 hover:text-blue-600">Teaching</a>
         <a href="#contact" class="block py-2 hover:text-blue-600">Contact</a>
+        <a href="cn.html" hreflang="zh-CN" lang="zh-CN" class="block py-2 hover:text-blue-600">中文</a>
       </div>
     </div>
   </nav>
@@ -646,6 +674,10 @@
       </div>
       <p class="text-base md:text-xl mb-8">
         Expert in Network Security, Large Language Models, Deep Learning &amp; Blockchain
+      </p>
+      <p class="text-sm md:text-base text-blue-100 mb-8 max-w-2xl">
+        Dr. Rajesh Kumar is an Associate Researcher and Teaching Fellow at the Yangtze Delta Region Institute (Huzhou), University of Electronic Science and Technology of China (UESTC), with a PhD in Computer Science and Technology from UESTC (2019). Research areas: blockchain, federated learning, medical imaging AI, cybersecurity and agentic AI.
+        <a href="https://orcid.org/0000-0003-0813-7485" target="_blank" rel="noopener me" class="underline hover:text-white whitespace-nowrap"><i class="fab fa-orcid" aria-hidden="true"></i> ORCID 0000-0003-0813-7485</a>
       </p>
 	  
 
@@ -833,6 +865,34 @@
 <!-- Research Categories -->
 <section id="publications" class="py-12 bg-gray-50">
   <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-2 text-center">Selected Publications</h2>
+    <p class="text-center text-gray-600 mb-8">Representative papers. <a href="publications.html" class="text-blue-700 font-medium hover:underline">View the full publication list <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i></a></p>
+    <ol class="space-y-4 mb-12">
+      <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-yellow-500">
+        <a href="https://doi.org/10.48550/arXiv.2607.02520" target="_blank" rel="noopener" class="font-semibold text-gray-900 hover:text-blue-700">AutoResearch: An Execution-Grounded Multi-Agent Framework for Reliable Research Workflow Automation</a>
+        <p class="text-sm text-gray-600 mt-1"><strong>R. Kumar</strong>, W. Ali, J. Ahmed, A. A. Khan, S. Zeng. <em>arXiv preprint</em> arXiv:2607.02520, 2026.</p>
+      </li>
+      <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-600">
+        <a href="https://doi.org/10.1109/JSEN.2021.3076767" target="_blank" rel="noopener" class="font-semibold text-gray-900 hover:text-blue-700">Blockchain-Federated-Learning and Deep Learning Models for COVID-19 Detection Using CT Imaging</a>
+        <p class="text-sm text-gray-600 mt-1"><strong>R. Kumar</strong>, A. A. Khan, J. Kumar, et al. <em>IEEE Sensors Journal</em>, 21(14), 16301&ndash;16314, 2021.</p>
+      </li>
+      <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-600">
+        <a href="https://doi.org/10.1016/j.compmedimag.2020.101812" target="_blank" rel="noopener" class="font-semibold text-gray-900 hover:text-blue-700">An Integration of Blockchain and AI for Secure Data Sharing and Detection of CT Images for the Hospitals</a>
+        <p class="text-sm text-gray-600 mt-1"><strong>R. Kumar</strong>, W. Wang, J. Kumar, et al. <em>Computerized Medical Imaging and Graphics</em>, 87, 101812, 2021.</p>
+      </li>
+      <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-600">
+        <a href="https://ieeexplore.ieee.org/document/9321754" target="_blank" rel="noopener" class="font-semibold text-gray-900 hover:text-blue-700">An Efficient and Provably Secure ECC-Based Conditional Privacy-Preserving Authentication for Vehicle-to-Vehicle Communication in VANETs</a>
+        <p class="text-sm text-gray-600 mt-1">I. Ali, Y. Chen, N. Ullah, <strong>R. Kumar</strong>, W. He. <em>IEEE Transactions on Vehicular Technology</em>, 2021.</p>
+      </li>
+      <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-600">
+        <a href="https://doi.org/10.4218/etrij.2019-0362" target="_blank" rel="noopener" class="font-semibold text-gray-900 hover:text-blue-700">Secure Large-Scale E-Voting System Based on Blockchain Contract Using a Hybrid Consensus Model Combined with Sharding</a>
+        <p class="text-sm text-gray-600 mt-1">Y. Abuidris, <strong>R. Kumar</strong>, T. Yang, J. Onginjo. <em>ETRI Journal</em>, 43(2), 357&ndash;370, 2021.</p>
+      </li>
+      <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-600">
+        <a href="https://doi.org/10.1109/ACCESS.2019.2916886" target="_blank" rel="noopener" class="font-semibold text-gray-900 hover:text-blue-700">A Multimodal Malware Detection Technique for Android IoT Devices Using Various Features</a>
+        <p class="text-sm text-gray-600 mt-1"><strong>R. Kumar</strong>, X. Zhang, W. Wang, et al. <em>IEEE Access</em>, 7, 64411&ndash;64430, 2019.</p>
+      </li>
+    </ol>
     <h3 class="text-2xl font-bold mb-8 text-center">Research Categories</h3>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
       <!-- Journal Papers Card -->

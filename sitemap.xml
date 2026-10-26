@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://raja21068.github.io/raja/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://raja21068.github.io/raja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://raja21068.github.io/raja/cn.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raja21068.github.io/raja/"/>
+    <lastmod>2026-10-26</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://raja21068.github.io/raja/cn.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://raja21068.github.io/raja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://raja21068.github.io/raja/cn.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raja21068.github.io/raja/"/>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://raja21068.github.io/raja/Research_Lab/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://raja21068.github.io/raja/publications.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://raja21068.github.io/raja/journal-papers.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://raja21068.github.io/raja/conference-papers.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://raja21068.github.io/raja/book-chapter.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://raja21068.github.io/raja/preprints.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://raja21068.github.io/raja/other-articles.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://raja21068.github.io/raja/patents.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.6</priority>
+  </url>
+</urlset>
