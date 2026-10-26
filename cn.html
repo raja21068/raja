@@ -740,20 +740,22 @@
     </div>
     <!-- Right Column: Video & Profile Picture -->
     <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
-      <div class="relative">
+      <div class="relative w-full max-w-md">
         <!-- Profile Picture Overlay -->
         <div class="bg-white p-2 rounded-full shadow-xl absolute -top-4 -left-4 z-10">
           <img src="pic2.webp" alt="Dr. Rajesh Kumar" width="96" height="96" class="rounded-full w-24 h-24 object-cover" />
         </div>
         <!-- Video Card: research demo -->
         <div class="bg-blue-100 p-6 rounded-lg shadow-2xl text-center">
-          <iframe title="研究演示：The Fridge Has Eyes" class="mx-auto rounded-lg shadow-md" width="225" height="400" src="https://www.youtube.com/embed/o-FAfs4jgMQ" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p class="text-xs font-semibold uppercase tracking-wider text-purple-700 mt-4">研究演示</p>
-          <h3 class="text-blue-800 font-bold text-xl">The Fridge Has Eyes</h3>
-          <p class="text-gray-700 text-sm max-w-xs mx-auto">商用冰箱内置 AI 摄像头，实时跟踪库存并分析消费者行为。</p>
+          <div class="text-left pl-24 mb-4" style="min-height:4.5rem">
+            <p class="text-xs font-semibold uppercase tracking-wider text-purple-700">研究演示 · 医学 AI</p>
+            <h3 class="text-blue-800 font-bold text-xl">AI 辅助 CT 影像分析</h3>
+          </div>
+          <iframe title="研究演示：AI 辅助实时 CT 影像分析" class="w-full rounded-lg shadow-md mb-3" style="aspect-ratio:16/9;height:auto" src="https://www.youtube.com/embed/qHgiQj3YGL0" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p class="text-gray-700 text-sm max-w-sm mx-auto">实时 CT 影像分析，以区块链增强患者数据的隐私与安全。</p>
           <div class="flex justify-center gap-4 mt-2 text-sm">
-            <a href="https://www.nature.com/articles/s41598-021-97598-5" target="_blank" rel="noopener" class="text-purple-700 font-medium hover:underline"><i class="fas fa-file-alt mr-1" aria-hidden="true"></i>论文</a>
-            <a href="#demo-fridge" class="text-purple-700 font-medium hover:underline">详情 <i class="fas fa-arrow-down text-xs" aria-hidden="true"></i></a>
+            <a href="https://www.sciencedirect.com/science/article/pii/S0895611122001094" target="_blank" rel="noopener" class="text-purple-700 font-medium hover:underline"><i class="fas fa-file-alt mr-1" aria-hidden="true"></i>论文</a>
+            <a href="#demo-ct" class="text-purple-700 font-medium hover:underline">详情 <i class="fas fa-arrow-down text-xs" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
