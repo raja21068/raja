@@ -577,10 +577,11 @@
 
 </head>
 <body class="font-sans bg-gray-100 text-gray-800">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-blue-700 focus:rounded focus:shadow">Skip to main content</a>
   <!-- Navigation -->
   <nav class="bg-white shadow sticky top-0 z-50">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="text-2xl font-bold gradient-text">Dr. Rajesh Kumar</a>
+      <a href="#main" class="text-2xl font-bold gradient-text">Dr. Rajesh Kumar</a>
       <div class="hidden md:flex space-x-6">
         <a href="#about" class="hover:text-blue-600">About</a>
         <div class="nav-dropdown relative">
@@ -599,7 +600,7 @@
         <a href="#teaching" class="hover:text-blue-600">Teaching</a>
         <a href="#contact" class="hover:text-blue-600">Contact</a>
       </div>
-      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+      <button id="menu-toggle" type="button" class="md:hidden text-gray-800" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
         <i class="fas fa-bars text-2xl"></i>
       </button>
     </div>
@@ -620,9 +621,11 @@
     </div>
   </nav>
 
+<main id="main" tabindex="-1">
 
 
-<header class="relative bg-gradient-to-r from-blue-800 to-indigo-900 text-white">
+
+<header id="about" class="relative bg-gradient-to-r from-blue-800 to-indigo-900 text-white">
   <!-- Background Layers -->
   <div class="absolute inset-0">
     <div class="absolute inset-0 bg-blue-900 opacity-70"></div>
@@ -706,7 +709,6 @@
 
 
 
-<section id="about" class="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
  
 <!-- Stats Section -->
 <section id="stats" class="py-12 bg-gray-50">
@@ -738,10 +740,38 @@
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center mb-10">
       <span class="inline-block px-4 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium tracking-wider mb-3">FLAGSHIP RESEARCH</span>
-      <h2 class="text-3xl font-bold text-gray-800 mb-2">AI Systems Deployed in the Real World</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">Peer-reviewed AI research turned into working systems, each with a live demo.</p>
+      <h2 class="text-3xl font-bold text-gray-800 mb-2">Research Prototypes &amp; Demonstrations</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Selected research prototypes, each backed by a paper, preprint or public code, with a demo or documentation.</p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Flagship: ResearchLedger -->
+      <article class="flex flex-col bg-white rounded-xl shadow-md border-t-4 border-pink-600 p-5 hover:shadow-xl transition-shadow">
+        <div class="flex items-center justify-between mb-3">
+          <i class="fas fa-clipboard-check text-3xl text-pink-600" aria-hidden="true"></i>
+          <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-pink-100 text-pink-700">New · 2026</span>
+        </div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-pink-700">Agentic AI · Research Infrastructure</span>
+        <h3 class="text-lg font-bold text-gray-800 mt-1 mb-2">ResearchLedger</h3>
+        <p class="text-sm text-gray-600 mb-4 flex-grow">Evidence-first research automation linking hypotheses, executed runs, evidence records and manuscript claims. Software prototype.</p>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <a href="https://github.com/raja21068/ResearchLedger" target="_blank" rel="noopener" class="px-3 py-1 bg-pink-600 text-white rounded hover:bg-pink-700"><i class="fab fa-github mr-1" aria-hidden="true"></i>Code</a>
+          <a href="Research_Lab/index.html#pipeline" class="px-3 py-1 border border-pink-600 text-pink-700 rounded hover:bg-pink-50"><i class="fas fa-sitemap mr-1" aria-hidden="true"></i>Workflow</a>
+        </div>
+      </article>
+      <!-- Flagship: AutoResearch -->
+      <article class="flex flex-col bg-white rounded-xl shadow-md border-t-4 border-yellow-600 p-5 hover:shadow-xl transition-shadow">
+        <div class="flex items-center justify-between mb-3">
+          <i class="fas fa-project-diagram text-3xl text-yellow-600" aria-hidden="true"></i>
+          <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800">Preprint · 2026</span>
+        </div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-yellow-800">Agentic AI · Multi-Agent Systems</span>
+        <h3 class="text-lg font-bold text-gray-800 mt-1 mb-2">AutoResearch</h3>
+        <p class="text-sm text-gray-600 mb-4 flex-grow">An execution-grounded multi-agent framework for reliable research workflow automation.</p>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <a href="https://arxiv.org/abs/2607.02520" target="_blank" rel="noopener" class="px-3 py-1 bg-yellow-600 text-white rounded hover:bg-yellow-700"><i class="fas fa-file-alt mr-1" aria-hidden="true"></i>Preprint</a>
+          <a href="https://github.com/raja21068/AutoResearch" target="_blank" rel="noopener" class="px-3 py-1 border border-yellow-600 text-yellow-800 rounded hover:bg-yellow-50"><i class="fab fa-github mr-1" aria-hidden="true"></i>Code</a>
+        </div>
+      </article>
       <!-- Flagship 1: The Fridge Has Eyes -->
       <article class="flex flex-col bg-white rounded-xl shadow-md border-t-4 border-purple-600 p-5 hover:shadow-xl transition-shadow">
         <i class="fas fa-camera text-3xl text-purple-600 mb-3" aria-hidden="true"></i>
@@ -787,7 +817,10 @@
         </div>
       </article>
     </div>
-    <p class="text-center mt-8"><a href="#research" class="text-purple-700 font-medium hover:underline">See all real-time AI projects <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i></a></p>
+    <p class="text-center mt-8 space-x-6">
+      <a href="Research_Lab/index.html" class="text-purple-700 font-medium hover:underline">Explore the Research Lab <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i></a>
+      <a href="#research" class="text-purple-700 font-medium hover:underline">See all AI project demos <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i></a>
+    </p>
   </div>
 </section>
 
@@ -1164,37 +1197,16 @@
         </div>
     </div>
 </section>
-<section>
+<section id="funded-projects">
 <div class="max-w-5xl mx-auto px-4">
-  <h2 class="text-3xl font-bold text-center mb-8">Current Research Projects</h2>
+  <h2 class="text-3xl font-bold text-center mb-2">Funded Research Projects</h2>
+  <p class="text-center text-gray-600 mb-8">Active projects first, then completed and historical grants.</p>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-    <!-- Project Card 1 -->
-    <div class="bg-white rounded-lg shadow hover:shadow-xl transition">
-      <div class="p-4 rounded-t-lg flex items-center justify-center" style="background-color: #3949ab;">
-        <i class="fas fa-dna text-white text-3xl"></i>
-      </div>
-      <div class="p-4">
-        <h3 class="text-xl font-bold mb-2">Collaborative Learning with Federated Blockchain for PET-CT Imaging Analysis</h3>
-        <div class="flex flex-col gap-2 mb-4">
-          <div class="flex justify-between text-sm">
-            <span class="text-gray-600">Project Number:</span>
-            <span class="font-medium">U0723003</span>
-          </div>
-          <div class="flex justify-between text-sm">
-            <span class="text-gray-600">End Date:</span>
-            <span class="font-medium">June 2025</span>
-          </div>
-        </div>
-        <div class="bg-blue-100 text-blue-600 text-sm font-medium px-3 py-1 rounded text-center">
-          5,000 RMB
-        </div>
-      </div>
-    </div>
-    
-    <!-- Project Card 2 -->
-    <div class="bg-white rounded-lg shadow hover:shadow-xl transition">
+    <!-- Active -->
+    <div class="relative bg-white rounded-lg shadow hover:shadow-xl transition">
       <div class="p-4 rounded-t-lg flex items-center justify-center" style="background-color: #5c6bc0;">
         <i class="fas fa-robot text-white text-3xl"></i>
+        <span class="absolute top-2 right-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-green-100 text-green-800">Active</span>
       </div>
       <div class="p-4">
         <h3 class="text-xl font-bold mb-2">Intelligent Image Generation Software Based on Private Large Language Models</h3>
@@ -1213,11 +1225,12 @@
         </div>
       </div>
     </div>
-    
-    <!-- Project Card 3 -->
-    <div class="bg-white rounded-lg shadow hover:shadow-xl transition">
+
+    <!-- Completed · Aug 2026 -->
+    <div class="relative bg-white rounded-lg shadow hover:shadow-xl transition">
       <div class="p-4 rounded-t-lg flex items-center justify-center" style="background-color: #7986cb;">
         <i class="fas fa-link text-white text-3xl"></i>
+        <span class="absolute top-2 right-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">Completed</span>
       </div>
       <div class="p-4">
         <h3 class="text-xl font-bold mb-2">High-Performance Lightweight Industrial Blockchain Technology and Applications</h3>
@@ -1231,16 +1244,41 @@
             <span class="font-medium">August 3, 2026</span>
           </div>
         </div>
-        <div class="bg-blue-100 text-blue-600 text-sm font-medium px-3 py-1 rounded text-center">
-          400,000 RMB
+        <div class="bg-gray-100 text-gray-600 text-sm font-medium px-3 py-1 rounded text-center">
+          400,000 RMB (Completed)
         </div>
       </div>
     </div>
-    
-    <!-- Project Card 4 -->
-    <div class="bg-white rounded-lg shadow hover:shadow-xl transition">
+
+    <!-- Completed · Jun 2025 -->
+    <div class="relative bg-white rounded-lg shadow hover:shadow-xl transition">
+      <div class="p-4 rounded-t-lg flex items-center justify-center" style="background-color: #3949ab;">
+        <i class="fas fa-dna text-white text-3xl"></i>
+        <span class="absolute top-2 right-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">Completed</span>
+      </div>
+      <div class="p-4">
+        <h3 class="text-xl font-bold mb-2">Collaborative Learning with Federated Blockchain for PET-CT Imaging Analysis</h3>
+        <div class="flex flex-col gap-2 mb-4">
+          <div class="flex justify-between text-sm">
+            <span class="text-gray-600">Project Number:</span>
+            <span class="font-medium">U0723003</span>
+          </div>
+          <div class="flex justify-between text-sm">
+            <span class="text-gray-600">End Date:</span>
+            <span class="font-medium">June 2025</span>
+          </div>
+        </div>
+        <div class="bg-gray-100 text-gray-600 text-sm font-medium px-3 py-1 rounded text-center">
+          5,000 RMB (Completed)
+        </div>
+      </div>
+    </div>
+
+    <!-- Historical · 2021 -->
+    <div class="relative bg-white rounded-lg shadow hover:shadow-xl transition">
       <div class="p-4 rounded-t-lg flex items-center justify-center" style="background-color: #9fa8da;">
         <i class="fas fa-cubes text-white text-3xl"></i>
+        <span class="absolute top-2 right-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800">Historical</span>
       </div>
       <div class="p-4">
         <h3 class="text-xl font-bold mb-2">Research on Blockchain Sharding Consensus</h3>
@@ -1666,6 +1704,9 @@
   </div>
 </div>
 
+    </div>
+  </div>
+</section>
 
 <!-- Teaching Resources -->
 <section id="teaching" class="py-16 bg-gradient-to-b from-gray-50 to-gray-100">
@@ -1908,7 +1949,9 @@
   </div>
 </section>
 
-<section id="health" class="py-8 bg-white border-t border-gray-200">
+</main>
+
+<footer id="health" class="py-8 bg-white border-t border-gray-200">
   <div class="max-w-5xl mx-auto px-6 text-center">
     <h2 class="text-xl font-semibold text-gray-800 mb-1">Creative Websites for Health &amp; Wellbeing</h2>
     <p class="text-sm text-gray-600 mb-4">Side projects built for the public, outside my academic research.</p>
@@ -1920,10 +1963,10 @@
       <a href="https://raja21068.github.io/health/" target="_blank" rel="noopener" class="px-4 py-2 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-blue-50 hover:text-blue-700 transition"><i class="fas fa-heartbeat mr-1" aria-hidden="true"></i> Healthy Lifestyle</a>
     </div>
     <p class="text-xs text-gray-500">
-      Ethical Statement: This website is open source and is intended solely to showcase ethical web design and development practices. It is not affiliated with any commercial venture or business. Contributions and improvements are welcome under an open source license.
+      &copy; 2026 Dr. Rajesh Kumar. Ethical Statement: This website is open source and is intended solely to showcase ethical web design and development practices. It is not affiliated with any commercial venture or business. Contributions and improvements are welcome under an open source license.
     </p>
   </div>
-</section>
+</footer>
 
  
 
@@ -1931,7 +1974,9 @@
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+      const open = mobileMenu.classList.toggle('hidden') === false;
+      menuToggle.setAttribute('aria-expanded', open);
+      menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     });
   </script>
   
