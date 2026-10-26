@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutoResearch: execution-grounded multi-agent research automation — Case study | Dr. Rajesh Kumar</title>
+<meta name="description" content="Case study of AutoResearch (arXiv:2607.02520) by Dr. Rajesh Kumar et al.: research problem, novelty, multi-agent method, measured results, reproducibility status and author contribution.">
+<link rel="canonical" href="https://raja21068.github.io/raja/Research_Lab/case-studies/autoresearch.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Dr. Rajesh Kumar - Research Lab">
+<meta property="og:title" content="AutoResearch: execution-grounded multi-agent research automation — Case study | Dr. Rajesh Kumar">
+<meta property="og:description" content="Case study of AutoResearch (arXiv:2607.02520) by Dr. Rajesh Kumar et al.: research problem, novelty, multi-agent method, measured results, reproducibility status and author contribution.">
+<meta property="og:url" content="https://raja21068.github.io/raja/Research_Lab/case-studies/autoresearch.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AutoResearch: execution-grounded multi-agent research automation — Case study | Dr. Rajesh Kumar">
+<meta name="twitter:description" content="Case study of AutoResearch (arXiv:2607.02520) by Dr. Rajesh Kumar et al.: research problem, novelty, multi-agent method, measured results, reproducibility status and author contribution.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case-study.css?v=20261026">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ScholarlyArticle", "headline": "AutoResearch: An Execution-Grounded Multi-Agent Framework for Reliable Research Workflow Automation", "url": "https://arxiv.org/abs/2607.02520", "identifier": "https://doi.org/10.48550/arXiv.2607.02520", "datePublished": "2026-05-04", "isBasedOn": "https://github.com/raja21068/AutoResearch", "author": {"@type": "Person", "@id": "https://raja21068.github.io/raja/#person", "name": "Dr. Rajesh Kumar", "url": "https://raja21068.github.io/raja/"}, "mainEntityOfPage": "https://raja21068.github.io/raja/Research_Lab/case-studies/autoresearch.html", "description": "Case study of AutoResearch (arXiv:2607.02520) by Dr. Rajesh Kumar et al.: research problem, novelty, multi-agent method, measured results, reproducibility status and author contribution."}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="cs-header"><div class="wrap">
+  <a class="cs-brand" href="../index.html">DR. RAJESH KUMAR<small>RESEARCH LAB · CASE STUDIES</small></a>
+  <nav class="cs-nav" aria-label="Site"><a href="../index.html">&larr; Research Lab</a><a href="../../index.html">Main portfolio</a><a href="../../index.html#collaborate">Collaborate</a></nav>
+</div></header>
+<div class="cs-hero"><div class="wrap">
+  <p class="crumbs"><a href="../../index.html">Portfolio</a> / <a href="../index.html">Research Lab</a> / Case studies</p>
+  <p class="eyebrow">Case study 02 · Agentic AI · Multi-agent systems</p>
+  <h1>AutoResearch: execution-grounded multi-agent research automation</h1>
+  <p class="lede">A multi-agent framework that keeps only the research artifacts that survive sandboxed execution, citation verification and review.</p>
+  <ul class="chips"><li>arXiv:2607.02520</li><li>May 2026</li><li>cs.CY · cs.AI · cs.SE</li><li>MIT licence</li><li>CC BY 4.0 paper</li></ul>
+  <div class="cs-links"><a class="btn btn-primary" href="https://arxiv.org/abs/2607.02520" target="_blank" rel="noopener">Read the paper ↗</a><a class="btn btn-ghost" href="https://github.com/raja21068/AutoResearch" target="_blank" rel="noopener">Source code ↗</a><a class="btn btn-ghost" href="https://youtu.be/0NrF5dtS3KI" target="_blank" rel="noopener">Watch the demo ↗</a></div>
+</div></div>
+<main id="main"><div class="wrap">
+<nav class="toc" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#problem">Research problem</a></li><li><a href="#novelty">What is new</a></li><li><a href="#method">Method</a></li><li><a href="#results">Results</a></li><li><a href="#reproducibility">Reproducibility</a></li><li><a href="#contribution">My contribution</a></li><li><a href="#limitations">Limitations</a></li><li><a href="#cite">Cite</a></li></ol></nav>
+<section class="cs" id="problem" aria-labelledby="problem-h"><h2 id="problem-h"><span class="num">01</span>Research problem</h2><p>Research agents increasingly write code, retrieve literature and draft scientific artifacts, but they often do not check
+whether the generated experiments actually execute, or whether the cited sources actually support the claims. The result is output that
+looks complete but fails when run or read closely.</p></section><section class="cs" id="novelty" aria-labelledby="novelty-h"><h2 id="novelty-h"><span class="num">02</span>What is new</h2><ul>
+<li><strong>An execution-grounded reliability pattern.</strong> Runtime errors, citation-verification failures and review-agent feedback are treated as filtering signals for generated artifacts, not just as messages to the user.</li>
+<li><strong>One loop instead of separate tools.</strong> Sandboxed Python/PyTorch execution, iterative code repair, citation verification, claim-support auditing, decision control and structured LaTeX generation are coupled in a single multi-agent workflow.</li>
+<li><strong>Explicit scope.</strong> The paper positions AutoResearch as a reliability-oriented research assistant, not a fully autonomous scientist or a manuscript-quality benchmark.</li>
+</ul></section><section class="cs" id="method" aria-labelledby="method-h"><h2 id="method-h"><span class="num">03</span>Method</h2><p>Specialised agents cooperate under an orchestrator:</p>
+<ul>
+<li><strong>Orchestrator and planner</strong> decompose the task and control stage transitions.</li>
+<li><strong>CodeAgent</strong> generates code and repairs it after sandbox failures (self-healing loop).</li>
+<li><strong>Experiment agent</strong> runs experiments and compares against baselines.</li>
+<li><strong>Research agent and verification engine</strong> retrieve literature, verify citations and audit claim support.</li>
+<li><strong>Review agents</strong> critique outputs; a <strong>decision engine</strong> chooses the next action.</li>
+<li><strong>MetaClaw</strong> reuses learned repair skills across runs.</li>
+</ul></section><section class="cs" id="results" aria-labelledby="results-h"><h2 id="results-h"><span class="num">04</span>Results</h2><div class="metrics">
+<div class="metric"><b>3.5%</b><span>externally annotated invalid-citation rate (baselines 31–38%)</span></div>
+<div class="metric"><b>79%</b><span>sandbox execution success (baselines 41–64%)</span></div>
+<div class="metric"><b>88.1% / 87.4%</b><span>HumanEval / MBPP final pass rate</span></div>
+<div class="metric"><b>78%</b><span>directly supported claim–citation pairs, n = 500 (Tool-Agent 45%)</span></div>
+</div>
+<div class="table-scroll"><table>
+<caption>Integrated research-workflow comparison (paper Table V; mean over three runs where applicable)</caption>
+<thead><tr><th scope="col">Method</th><th scope="col">Invalid citations ↓</th><th scope="col">Execution success ↑</th><th scope="col">Reproducibility ↑</th><th scope="col">HumanEval</th><th scope="col">MBPP</th></tr></thead>
+<tbody>
+<tr><td>Vanilla LLM</td><td>38%</td><td>41%</td><td>0.42</td><td>42.1%</td><td>47.3%</td></tr>
+<tr><td>RAG-only</td><td>31%</td><td>46%</td><td>0.48</td><td>49.4%</td><td>52.1%</td></tr>
+<tr><td>ReAct</td><td>32%</td><td>55%</td><td>0.50</td><td>58.2%</td><td>61.5%</td></tr>
+<tr><td>AutoGPT</td><td>33%</td><td>58%</td><td>0.51</td><td>61.3%</td><td>63.9%</td></tr>
+<tr><td>Retry-only (with memory)</td><td>32%</td><td>64%</td><td>0.53</td><td>68.2%</td><td>69.5%</td></tr>
+<tr class="ours"><td>AutoResearch</td><td>3.5%</td><td>79%</td><td>0.68</td><td>88.1%</td><td>87.4%</td></tr>
+</tbody></table></div>
+<p><strong>End-to-end stress test.</strong> AutoResearch completed 11 of 15 CrossDomain-15 tasks (73.3%). In the ablation, removing sandboxed execution dropped completion to 40% and removing the verification layer to 48%.
+Code-oriented agents are reported separately as partial comparisons: SWE-agent and OpenHands reached 68% and 70% execution success.</p>
+<p class="note">The paper treats these as evidence within its controlled experimental design, not as universal rankings. CrossDomain-15 is a small stress test rather than a broad benchmark.</p></section><section class="cs" id="reproducibility" aria-labelledby="reproducibility-h"><h2 id="reproducibility-h"><span class="num">05</span>Reproducibility</h2><div class="table-scroll"><table><thead><tr><th scope="col">Item</th><th scope="col">Details</th><th scope="col">Status</th></tr></thead><tbody><tr><th scope="row">Source code</th><td>Public on GitHub, MIT licence</td><td><span class="status s-ok">Available</span></td></tr><tr><th scope="row">Paper and prompt library</th><td>arXiv, CC BY 4.0; prompts in Appendix F</td><td><span class="status s-ok">Available</span></td></tr><tr><th scope="row">Artifact checklist</th><td>Task IDs, prompts, raw logs, citation and claim-support annotations, cost logs and table scripts are defined in Table XVII</td><td><span class="status s-part">Defined</span></td></tr><tr><th scope="row">Frozen release identifiers</th><td>Repository commit and Docker image digest are listed as "TBD" in arXiv v1</td><td><span class="status s-no">Not yet</span></td></tr><tr><th scope="row">Archived artifact record</th><td>To be confirmed with the frozen release</td><td><span class="status s-no">Pending</span></td></tr></tbody></table></div><pre><code>git clone https://github.com/raja21068/AutoResearch.git
+cd AutoResearch
+# follow the README; benchmark task IDs are listed in the paper&#x27;s appendix</code></pre></section><section class="cs" id="contribution" aria-labelledby="contribution-h"><h2 id="contribution-h"><span class="num">06</span>My contribution</h2><p><strong>First author</strong> of five (Rajesh Kumar, Waqar Ali, Junaid Ahmed, Abdullah Aman Khan, Shaoning Zeng) and
+<strong>sole committer</strong> to the public repository (17 of 17 commits).</p></section><section class="cs" id="limitations" aria-labelledby="limitations-h"><h2 id="limitations-h"><span class="num">07</span>Limitations</h2><ul>
+<li>Remaining failure modes in the logged failure events: incorrect tool usage (12%), noisy retrieval (8%) and unstable repair loops (5%).</li>
+<li>Open-ended creative search remains weak, and one of five ML pipelines (a VAE with a custom loss) could not be repaired.</li>
+<li>Sandboxed execution shows code runs; it does not establish scientific correctness or novelty.</li>
+<li>Frozen release identifiers are still to be published.</li>
+</ul></section><section class="cs" id="cite" aria-labelledby="cite-h"><h2 id="cite-h"><span class="num">08</span>Cite</h2><pre><code>@misc{kumar2026autoresearch,
+  title         = {AutoResearch: An Execution-Grounded Multi-Agent Framework for Reliable Research Workflow Automation},
+  author        = {Kumar, Rajesh and Ali, Waqar and Ahmed, Junaid and Khan, Abdullah Aman and Zeng, Shaoning},
+  year          = {2026},
+  eprint        = {2607.02520},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CY},
+  doi           = {10.48550/arXiv.2607.02520}
+}</code></pre><p>AutoResearch is a separate framework from <a href="researchledger.html">ResearchLedger</a>, which adds an explicit evidence ledger and validation gates.</p><div class="video"><iframe referrerpolicy="strict-origin-when-cross-origin" loading="lazy" title="AutoResearch demo video" src="https://www.youtube.com/embed/0NrF5dtS3KI" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></section>
+<section class="cs" aria-labelledby="more-h"><h2 id="more-h">More case studies</h2><div class="next"><a href="researchledger.html"><small>Case study 01</small><b>ResearchLedger</b></a><a href="blockchain-federated-ct.html"><small>Case study 03</small><b>Blockchain-federated CT</b></a></div></section>
+</div></main>
+<footer class="cs-footer"><div class="wrap">
+  <div><a href="../index.html">Research Lab</a><a href="../../index.html">Main portfolio</a><a href="../../cn.html" lang="zh-CN">中文</a></div>
+  <span>&copy; 2026 Dr. Rajesh Kumar · Figures are taken from the cited paper or repository.</span>
+</div></footer>
+</body>
+</html>

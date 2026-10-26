@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blockchain-federated learning for COVID-19 detection from CT — Case study | Dr. Rajesh Kumar</title>
+<meta name="description" content="Case study of Kumar et al., IEEE Sensors Journal 2021: blockchain-based federated learning and capsule networks for COVID-19 detection from multi-hospital CT, with the CC-19 dataset, results and reproducibility status.">
+<link rel="canonical" href="https://raja21068.github.io/raja/Research_Lab/case-studies/blockchain-federated-ct.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Dr. Rajesh Kumar - Research Lab">
+<meta property="og:title" content="Blockchain-federated learning for COVID-19 detection from CT — Case study | Dr. Rajesh Kumar">
+<meta property="og:description" content="Case study of Kumar et al., IEEE Sensors Journal 2021: blockchain-based federated learning and capsule networks for COVID-19 detection from multi-hospital CT, with the CC-19 dataset, results and reproducibility status.">
+<meta property="og:url" content="https://raja21068.github.io/raja/Research_Lab/case-studies/blockchain-federated-ct.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Blockchain-federated learning for COVID-19 detection from CT — Case study | Dr. Rajesh Kumar">
+<meta name="twitter:description" content="Case study of Kumar et al., IEEE Sensors Journal 2021: blockchain-based federated learning and capsule networks for COVID-19 detection from multi-hospital CT, with the CC-19 dataset, results and reproducibility status.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case-study.css?v=20261026">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ScholarlyArticle", "headline": "Blockchain-Federated-Learning and Deep Learning Models for COVID-19 Detection Using CT Imaging", "url": "https://doi.org/10.1109/JSEN.2021.3076767", "identifier": "https://doi.org/10.1109/JSEN.2021.3076767", "datePublished": "2021-07-15", "isPartOf": {"@type": "Periodical", "name": "IEEE Sensors Journal"}, "author": {"@type": "Person", "@id": "https://raja21068.github.io/raja/#person", "name": "Dr. Rajesh Kumar", "url": "https://raja21068.github.io/raja/"}, "mainEntityOfPage": "https://raja21068.github.io/raja/Research_Lab/case-studies/blockchain-federated-ct.html", "description": "Case study of Kumar et al., IEEE Sensors Journal 2021: blockchain-based federated learning and capsule networks for COVID-19 detection from multi-hospital CT, with the CC-19 dataset, results and reproducibility status."}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="cs-header"><div class="wrap">
+  <a class="cs-brand" href="../index.html">DR. RAJESH KUMAR<small>RESEARCH LAB · CASE STUDIES</small></a>
+  <nav class="cs-nav" aria-label="Site"><a href="../index.html">&larr; Research Lab</a><a href="../../index.html">Main portfolio</a><a href="../../index.html#collaborate">Collaborate</a></nav>
+</div></header>
+<div class="cs-hero"><div class="wrap">
+  <p class="crumbs"><a href="../../index.html">Portfolio</a> / <a href="../index.html">Research Lab</a> / Case studies</p>
+  <p class="eyebrow">Case study 03 · Medical AI · Federated learning</p>
+  <h1>Blockchain-federated learning for COVID-19 detection from CT</h1>
+  <p class="lede">Training a shared COVID-19 CT detector across hospitals without pooling patient data: federated learning keeps data local and a blockchain authenticates each hospital&#x27;s contribution.</p>
+  <ul class="chips"><li>IEEE Sensors Journal 21(14), 2021</li><li>Open access</li><li>CC-19 dataset</li><li>435 citations (Crossref, Oct 2026)</li></ul>
+  <div class="cs-links"><a class="btn btn-primary" href="https://doi.org/10.1109/JSEN.2021.3076767" target="_blank" rel="noopener">Read the paper ↗</a><a class="btn btn-ghost" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8791443/" target="_blank" rel="noopener">Open-access full text ↗</a><a class="btn btn-ghost" href="https://github.com/abdkhanstd/COVID-19" target="_blank" rel="noopener">CC-19 dataset ↗</a></div>
+</div></div>
+<main id="main"><div class="wrap">
+<nav class="toc" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#problem">Research problem</a></li><li><a href="#novelty">What is new</a></li><li><a href="#method">Method</a></li><li><a href="#results">Results</a></li><li><a href="#reproducibility">Reproducibility</a></li><li><a href="#contribution">My contribution</a></li><li><a href="#limitations">Limitations</a></li><li><a href="#cite">Cite</a></li></ol></nav>
+<section class="cs" id="problem" aria-labelledby="problem-h"><h2 id="problem-h"><span class="num">01</span>Research problem</h2><p>Early in the pandemic, test kits were scarce and not always reliable, and CT imaging offered a complementary route to diagnosis.
+Deep-learning detectors need far more data than any single hospital had, yet hospitals could not pool patient scans because of privacy rules.
+Scans from different hospitals also came from different CT scanners, so the data were heterogeneous as well as scarce.</p></section><section class="cs" id="novelty" aria-labelledby="novelty-h"><h2 id="novelty-h"><span class="num">02</span>What is new</h2><ul>
+<li><strong>Normalisation for multi-hospital, multi-scanner data</strong>, so models can learn from heterogeneous CT sources.</li>
+<li><strong>Capsule-network detection:</strong> SegCaps segmentation followed by Capsule Network classification of COVID-19 patterns in lung CT.</li>
+<li><strong>Blockchain-based federated learning:</strong> hospitals share locally trained model weights, not scans; a blockchain authenticates contributions and Laplace noise adds differential privacy.</li>
+<li><strong>A new public dataset, CC-19</strong>, released to the research community.</li>
+</ul></section><section class="cs" id="method" aria-labelledby="method-h"><h2 id="method-h"><span class="num">03</span>Method</h2><p><strong>Data.</strong> CC-19 contains 34,006 CT slices (28,395 COVID-positive) from 89 subjects, 68 positive and 21 negative, collected at three hospitals in Chengdu on six scanners, about 231 CT volumes in total.</p>
+<ol>
+<li>Normalise slices using Hounsfield-unit ranges to reduce scanner differences.</li>
+<li>Segment lungs and infection with SegCaps, then classify with a Capsule Network.</li>
+<li>Train local models at each hospital, adding Laplace noise for differential privacy.</li>
+<li>Aggregate local models into a global model through blockchain consensus, which also checks local model quality.</li>
+</ol>
+<p><strong>Baselines.</strong> Thirteen ImageNet-pretrained networks (VGG, AlexNet, Xception, ResNet, Inception, MobileNet, DenseNet) were fine-tuned with Adam at a learning rate of 10<sup>−5</sup> with early stopping.</p></section><section class="cs" id="results" aria-labelledby="results-h"><h2 id="results-h"><span class="num">04</span>Results</h2><div class="metrics">
+<div class="metric"><b>0.987</b><span>sensitivity (recall), highest of the 14 networks compared</span></div>
+<div class="metric"><b>0.912</b><span>best baseline sensitivity (MobileNet)</span></div>
+<div class="metric"><b>0.830</b><span>precision, in line with the baselines (0.827–0.833)</span></div>
+<div class="metric"><b>≈11,450</b><span>CT slices across three test lists</span></div>
+</div>
+<div class="table-scroll"><table>
+<caption>Selected rows from the paper's Table IV. See the paper for all 14 networks.</caption>
+<thead><tr><th scope="col">Network</th><th scope="col">Pre-trained</th><th scope="col">Precision</th><th scope="col">Sensitivity / recall</th></tr></thead>
+<tbody>
+<tr><td>VGG16</td><td>ImageNet</td><td>0.827</td><td>0.829</td></tr>
+<tr><td>ResNet50</td><td>ImageNet</td><td>0.833</td><td>0.771</td></tr>
+<tr><td>DenseNet121</td><td>ImageNet</td><td>0.832</td><td>0.903</td></tr>
+<tr><td>MobileNet</td><td>ImageNet</td><td>0.830</td><td>0.912</td></tr>
+<tr class="ours"><td>SegCaps + Capsule Network (ours)</td><td>–</td><td>0.830</td><td>0.987</td></tr>
+</tbody></table></div>
+<p><strong>Federated training.</strong> Distributing the data over three hospital nodes reached accuracy similar to training one model on all the data, while keeping each hospital's scans local. Running cost grows with the number of hospitals and transactions.</p>
+<p class="note">Sensitivity was prioritised because missing a COVID-19 case is costly; precision is comparable to the baselines rather than higher. The evaluation is slice-level, on data from hospitals in one city.</p></section><section class="cs" id="reproducibility" aria-labelledby="reproducibility-h"><h2 id="reproducibility-h"><span class="num">05</span>Reproducibility</h2><div class="table-scroll"><table><thead><tr><th scope="col">Item</th><th scope="col">Details</th><th scope="col">Status</th></tr></thead><tbody><tr><th scope="row">Paper</th><td>Open access in PubMed Central (PMC8791443)</td><td><span class="status s-ok">Available</span></td></tr><tr><th scope="row">CC-19 dataset</th><td>Public on GitHub, hosted by co-author Abdullah Aman Khan; no explicit licence file</td><td><span class="status s-part">Available, unlicensed</span></td></tr><tr><th scope="row">Training and federation code</th><td>Not publicly released</td><td><span class="status s-no">Not public</span></td></tr><tr><th scope="row">Hyperparameters</th><td>Optimiser, learning rate, decay and early stopping reported for the baselines</td><td><span class="status s-part">Partly reported</span></td></tr></tbody></table></div></section><section class="cs" id="contribution" aria-labelledby="contribution-h"><h2 id="contribution-h"><span class="num">06</span>My contribution</h2><p><strong>First author</strong> of nine: Rajesh Kumar, Abdullah Aman Khan, Jay Kumar, Zakria, Noorbakhsh Amiri Golilarz,
+Simin Zhang, Yang Ting, Chengyu Zheng and Wenyong Wang (University of Electronic Science and Technology of China).</p></section><section class="cs" id="limitations" aria-labelledby="limitations-h"><h2 id="limitations-h"><span class="num">07</span>Limitations</h2><ul>
+<li>Small cohort (89 subjects) from one region; no external multi-site validation.</li>
+<li>Slice-level evaluation rather than patient-level diagnosis.</li>
+<li>Training and federation code are not public, which limits independent reproduction.</li>
+<li>Developed in the early-pandemic context of 2020–2021.</li>
+</ul></section><section class="cs" id="cite" aria-labelledby="cite-h"><h2 id="cite-h"><span class="num">08</span>Cite</h2><pre><code>@article{kumar2021blockchain,
+  title   = {Blockchain-Federated-Learning and Deep Learning Models for COVID-19 Detection Using CT Imaging},
+  author  = {Kumar, Rajesh and Khan, Abdullah Aman and Kumar, Jay and Zakria and Golilarz, Noorbakhsh Amiri
+             and Zhang, Simin and Ting, Yang and Zheng, Chengyu and Wang, Wenyong},
+  journal = {IEEE Sensors Journal},
+  volume  = {21},
+  number  = {14},
+  pages   = {16301--16314},
+  year    = {2021},
+  doi     = {10.1109/JSEN.2021.3076767}
+}</code></pre><p>A related real-time CT analysis demo, built on this line of blockchain-secured medical-imaging work, is shown below.</p><div class="video"><iframe referrerpolicy="strict-origin-when-cross-origin" loading="lazy" title="Related demo: AI-assisted real-time CT scan analysis" src="https://www.youtube.com/embed/qHgiQj3YGL0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></section>
+<section class="cs" aria-labelledby="more-h"><h2 id="more-h">More case studies</h2><div class="next"><a href="researchledger.html"><small>Case study 01</small><b>ResearchLedger</b></a><a href="autoresearch.html"><small>Case study 02</small><b>AutoResearch</b></a></div></section>
+</div></main>
+<footer class="cs-footer"><div class="wrap">
+  <div><a href="../index.html">Research Lab</a><a href="../../index.html">Main portfolio</a><a href="../../cn.html" lang="zh-CN">中文</a></div>
+  <span>&copy; 2026 Dr. Rajesh Kumar · Figures are taken from the cited paper or repository.</span>
+</div></footer>
+</body>
+</html>
