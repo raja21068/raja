@@ -1,0 +1,35 @@
+/* brand.css: shared styles for the main portfolio (index.html and cn.html).
+   Keeps the site's own blue and colourful accents. Adds readable typography, calmer motion,
+   visible keyboard focus, and contrast fixes for the few colours that were too light to read. */
+:root {
+  --font-body: 'DM Sans', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', system-ui, sans-serif;
+  --font-head: 'Manrope', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', system-ui, sans-serif;
+}
+
+/* Typography */
+body { font-family: var(--font-body) !important; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+h1, h2, h3, h4, .font-bold { font-family: var(--font-head); letter-spacing: -0.01em; }
+p, li { line-height: 1.65; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; border-radius: 4px; }
+
+/* Calm motion: no growing, lifting or tilting on hover; keep gentle shadow and colour changes */
+.hover\:scale-105:hover, .hover\:scale-110:hover, .hover-zoom:hover { --tw-scale-x: 1 !important; --tw-scale-y: 1 !important; transform: none !important; }
+.hover\:-translate-y-1:hover, .hover\:-translate-y-2:hover { --tw-translate-y: 0 !important; }
+.transition, .transition-all, .transition-shadow, .transition-colors { transition-duration: 150ms !important; }
+/* No endlessly pulsing timeline dots; the one-time fade-in stays */
+.timeline-item .rounded-full, .timeline-item:nth-child(n) .rounded-full { animation: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* Contrast fixes: same colour family, one step darker where white or light text was hard to read */
+.bg-blue-500.text-white { background-color: #2563eb !important; }                 /* blue-600: 5.2:1 */
+.bg-blue-500.text-white:hover, .bg-blue-500.hover\:bg-blue-600:hover { background-color: #1d4ed8 !important; }
+.bg-green-600.text-white { background-color: #047857 !important; }                /* green-700: 5.5:1 */
+.bg-green-600.text-white:hover { background-color: #065f46 !important; }
+.bg-yellow-600.text-white { background-color: #b45309 !important; }              /* amber-700: 5.0:1 */
+.bg-yellow-600.text-white:hover { background-color: #92400e !important; }
+.bg-blue-100.text-blue-600 { color: #1d4ed8 !important; }                         /* blue-700 on light blue */
+.text-green-600 { color: #047857 !important; }                                     /* green-700 */
+.text-yellow-600 { color: #b45309 !important; }                                    /* amber-700 */
+.education-header { background: #1e40af !important; }                              /* white year labels readable */
